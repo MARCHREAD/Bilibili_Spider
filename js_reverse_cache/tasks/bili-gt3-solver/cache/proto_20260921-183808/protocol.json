@@ -1,0 +1,62 @@
+{
+  "gt": "ac597a4506fee079629df5d8b66dd4fe",
+  "base_challenge": "92c89e166d02d1257af2c240d8bb11a3",
+  "token": "b0d9991861354b25baea85871c959682",
+  "requests": [
+    {
+      "id": 1,
+      "kind": "img",
+      "path": "data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wAiMwAgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA",
+      "params": {}
+    }
+  ],
+  "http": [
+    {
+      "url": "https://passport.bilibili.com/x/passport-login/captcha",
+      "status": 200,
+      "len": 224
+    }
+  ],
+  "helper_ready": {
+    "type": "ready",
+    "assets": [
+      "geetest.6.0.9.js",
+      "fullpage.9.2.0-guwyxh.js"
+    ],
+    "loadLog": [
+      "ok:geetest.6.0.9.js",
+      "ok:fullpage.9.2.0-guwyxh.js"
+    ],
+    "diag": [
+      "loaded:bom/navigator.js",
+      "loaded:bom/location.js",
+      "loaded:dom/document.js"
+    ],
+    "gt": "ac597a4506fee079629df5d8b66dd4fe",
+    "challenge": "92c89e166d02d1257af2c240d8bb11a3"
+  },
+  "helper_done": {
+    "type": "done",
+    "requests": [],
+    "pending": [
+      {
+        "kind": "img",
+        "url": "data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wAiMwAgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA"
+      }
+    ],
+    "log": [],
+    "errors": [
+      "no-initGeetest-global"
+    ],
+    "pendingTimers": 0,
+    "output": [
+      [
+        "log",
+        "[String len=24]"
+      ]
+    ]
+  },
+  "transcripts": [],
+  "w_values": [],
+  "http_used": 1
+}

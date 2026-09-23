@@ -1,0 +1,556 @@
+{
+  "round_01@bench_logs_serial10": [
+    {
+      "pic": "pic_7.jpg",
+      "prompt": [
+        "\u9165",
+        "\u534a",
+        "\u8089"
+      ],
+      "n": 3,
+      "ms": 6426,
+      "fallback": 1,
+      "min_score": 0,
+      "points": [
+        [
+          172,
+          49
+        ],
+        [
+          226,
+          195
+        ],
+        [
+          111,
+          266
+        ]
+      ],
+      "verdict": "fail",
+      "archived": "attempts_pics\\round_01@bench_logs_serial10__fail__pic_7.jpg"
+    },
+    {
+      "pic": "pic_12.jpg",
+      "prompt": [
+        "\u6f6e",
+        "\u534a",
+        "\u7f51"
+      ],
+      "n": 3,
+      "ms": 6125,
+      "fallback": 0,
+      "min_score": 1.0,
+      "points": [
+        [
+          285,
+          62
+        ],
+        [
+          98,
+          65
+        ],
+        [
+          215,
+          135
+        ]
+      ],
+      "verdict": "fail",
+      "archived": "attempts_pics\\round_01@bench_logs_serial10__fail__pic_12.jpg"
+    },
+    {
+      "pic": "pic_14.jpg",
+      "prompt": [
+        "\u9178",
+        "\u72d7",
+        "\u7b1b"
+      ],
+      "n": 3,
+      "ms": 6282,
+      "fallback": 1,
+      "min_score": 0,
+      "points": [
+        [
+          45,
+          255
+        ],
+        [
+          161,
+          283
+        ],
+        [
+          224,
+          249
+        ]
+      ],
+      "verdict": "success",
+      "archived": "attempts_pics\\round_01@bench_logs_serial10__success__pic_14.jpg"
+    }
+  ],
+  "round_02@bench_logs_serial10": [
+    {
+      "pic": "pic_7.jpg",
+      "prompt": [
+        "\u5408",
+        "\u6cb9",
+        "\u9165"
+      ],
+      "n": 3,
+      "ms": 6790,
+      "fallback": 0,
+      "min_score": 2.0,
+      "points": [
+        [
+          165,
+          116
+        ],
+        [
+          160,
+          274
+        ],
+        [
+          85,
+          219
+        ]
+      ],
+      "verdict": "success",
+      "archived": "attempts_pics\\round_02@bench_logs_serial10__success__pic_7.jpg"
+    }
+  ],
+  "round_03@bench_logs_serial10": [
+    {
+      "pic": "pic_7.jpg",
+      "prompt": [
+        "\u7ecd",
+        "\u4e49",
+        "\u9ebb",
+        "\u9e2d"
+      ],
+      "n": 4,
+      "ms": 7429,
+      "fallback": 1,
+      "min_score": 0,
+      "points": [
+        [
+          156,
+          275
+        ],
+        [
+          50,
+          192
+        ],
+        [
+          280,
+          40
+        ],
+        [
+          224,
+          153
+        ]
+      ],
+      "verdict": "fail",
+      "archived": "attempts_pics\\round_03@bench_logs_serial10__fail__pic_7.jpg"
+    },
+    {
+      "pic": "pic_12.jpg",
+      "prompt": [
+        "\u51c9",
+        "\u745c",
+        "\u8c46",
+        "\u7c89"
+      ],
+      "n": 4,
+      "ms": 6939,
+      "fallback": 2,
+      "min_score": 0,
+      "points": [
+        [
+          83,
+          50
+        ],
+        [
+          44,
+          180
+        ],
+        [
+          289,
+          118
+        ],
+        [
+          144,
+          187
+        ]
+      ],
+      "verdict": "fail",
+      "archived": "attempts_pics\\round_03@bench_logs_serial10__fail__pic_12.jpg"
+    },
+    {
+      "pic": "pic_14.jpg",
+      "prompt": [
+        "\u5b9c",
+        "\u5bbe",
+        "\u71c3",
+        "\u9762"
+      ],
+      "n": 4,
+      "ms": 7106,
+      "fallback": 0,
+      "min_score": 17.0,
+      "points": [
+        [
+          45,
+          183
+        ],
+        [
+          147,
+          212
+        ],
+        [
+          269,
+          152
+        ],
+        [
+          89,
+          98
+        ]
+      ],
+      "verdict": "success",
+      "archived": "attempts_pics\\round_03@bench_logs_serial10__success__pic_14.jpg"
+    }
+  ],
+  "round_04@bench_logs_serial10": [
+    {
+      "pic": "pic_7.jpg",
+      "prompt": [
+        "\u63d0",
+        "\u4e1d",
+        "\u53d1",
+        "\u7cd5"
+      ],
+      "n": 4,
+      "ms": 7915,
+      "fallback": 0,
+      "min_score": 10.0,
+      "points": [
+        [
+          135,
+          204
+        ],
+        [
+          255,
+          152
+        ],
+        [
+          140,
+          282
+        ],
+        [
+          173,
+          106
+        ]
+      ],
+      "verdict": "success",
+      "archived": "attempts_pics\\round_04@bench_logs_serial10__success__pic_7.jpg"
+    }
+  ],
+  "round_05@bench_logs_serial10": [
+    {
+      "pic": "pic_7.jpg",
+      "prompt": [
+        "\u8377",
+        "\u6708"
+      ],
+      "n": 2,
+      "ms": 5027,
+      "fallback": 0,
+      "min_score": 18.0,
+      "points": [
+        [
+          162,
+          111
+        ],
+        [
+          268,
+          266
+        ]
+      ],
+      "verdict": "success",
+      "archived": "attempts_pics\\round_05@bench_logs_serial10__success__pic_7.jpg"
+    }
+  ],
+  "round_06@bench_logs_serial10": [
+    {
+      "pic": "pic_7.jpg",
+      "prompt": [
+        "\u6851",
+        "\u8a89",
+        "\u7ca5"
+      ],
+      "n": 3,
+      "ms": 6113,
+      "fallback": 1,
+      "min_score": 0,
+      "points": [
+        [
+          292,
+          126
+        ],
+        [
+          42,
+          274
+        ],
+        [
+          217,
+          72
+        ]
+      ],
+      "verdict": "fail",
+      "archived": "attempts_pics\\round_06@bench_logs_serial10__fail__pic_7.jpg"
+    },
+    {
+      "pic": "pic_12.jpg",
+      "prompt": [
+        "\u6d46",
+        "\u5507",
+        "\u4e4b",
+        "\u65c5"
+      ],
+      "n": 4,
+      "ms": 7004,
+      "fallback": 0,
+      "min_score": 8.0,
+      "points": [
+        [
+          35,
+          241
+        ],
+        [
+          43,
+          115
+        ],
+        [
+          151,
+          51
+        ],
+        [
+          161,
+          118
+        ]
+      ],
+      "verdict": "success",
+      "archived": "attempts_pics\\round_06@bench_logs_serial10__success__pic_12.jpg"
+    }
+  ],
+  "round_07@bench_logs_serial10": [
+    {
+      "pic": "pic_7.jpg",
+      "prompt": [
+        "\u8000",
+        "\u9732",
+        "\u8377",
+        "\u85d5"
+      ],
+      "n": 4,
+      "ms": 7034,
+      "fallback": 2,
+      "min_score": 0,
+      "points": [
+        [
+          134,
+          141
+        ],
+        [
+          266,
+          224
+        ],
+        [
+          194,
+          42
+        ],
+        [
+          120,
+          68
+        ]
+      ],
+      "verdict": "fail",
+      "archived": "attempts_pics\\round_07@bench_logs_serial10__fail__pic_7.jpg"
+    },
+    {
+      "pic": "pic_12.jpg",
+      "prompt": [
+        "\u9e21",
+        "\u4ee5",
+        "\u94f6",
+        "\u8033"
+      ],
+      "n": 4,
+      "ms": 7314,
+      "fallback": 0,
+      "min_score": 1.0,
+      "points": [
+        [
+          247,
+          44
+        ],
+        [
+          59,
+          277
+        ],
+        [
+          67,
+          90
+        ],
+        [
+          259,
+          256
+        ]
+      ],
+      "verdict": "success",
+      "archived": "attempts_pics\\round_07@bench_logs_serial10__success__pic_12.jpg"
+    }
+  ],
+  "round_08@bench_logs_serial10": [
+    {
+      "pic": "pic_7.jpg",
+      "prompt": [
+        "\u5146",
+        "\u83dc",
+        "\u7092",
+        "\u8089"
+      ],
+      "n": 4,
+      "ms": 7856,
+      "fallback": 2,
+      "min_score": 0,
+      "points": [
+        [
+          178,
+          177
+        ],
+        [
+          160,
+          44
+        ],
+        [
+          239,
+          224
+        ],
+        [
+          267,
+          54
+        ]
+      ],
+      "verdict": "fail",
+      "archived": "attempts_pics\\round_08@bench_logs_serial10__fail__pic_7.jpg"
+    },
+    {
+      "pic": "pic_12.jpg",
+      "prompt": [
+        "\u85e4",
+        "\u6ede"
+      ],
+      "n": 2,
+      "ms": 5804,
+      "fallback": 1,
+      "min_score": 0,
+      "points": [
+        [
+          153,
+          182
+        ],
+        [
+          119,
+          90
+        ]
+      ],
+      "verdict": "fail",
+      "archived": "attempts_pics\\round_08@bench_logs_serial10__fail__pic_12.jpg"
+    },
+    {
+      "pic": "pic_14.jpg",
+      "prompt": [
+        "\u6851",
+        "\u82bd",
+        "\u8336"
+      ],
+      "n": 3,
+      "ms": 6126,
+      "fallback": 0,
+      "min_score": 20.0,
+      "points": [
+        [
+          263,
+          86
+        ],
+        [
+          140,
+          267
+        ],
+        [
+          55,
+          33
+        ]
+      ],
+      "verdict": "success",
+      "archived": "attempts_pics\\round_08@bench_logs_serial10__success__pic_14.jpg"
+    }
+  ],
+  "round_09@bench_logs_serial10": [
+    {
+      "pic": "pic_7.jpg",
+      "prompt": [
+        "\u54c8",
+        "\u5bc6",
+        "\u74dc"
+      ],
+      "n": 3,
+      "ms": 6769,
+      "fallback": 1,
+      "min_score": 0,
+      "points": [
+        [
+          47,
+          56
+        ],
+        [
+          118,
+          147
+        ],
+        [
+          197,
+          70
+        ]
+      ],
+      "verdict": "success",
+      "archived": "attempts_pics\\round_09@bench_logs_serial10__success__pic_7.jpg"
+    }
+  ],
+  "round_10@bench_logs_serial10": [
+    {
+      "pic": "pic_7.jpg",
+      "prompt": [
+        "\u767e",
+        "\u82b1",
+        "\u71d5"
+      ],
+      "n": 3,
+      "ms": 6275,
+      "fallback": 1,
+      "min_score": 0,
+      "points": [
+        [
+          180,
+          62
+        ],
+        [
+          215,
+          182
+        ],
+        [
+          87,
+          63
+        ]
+      ],
+      "verdict": "success",
+      "archived": "attempts_pics\\round_10@bench_logs_serial10__success__pic_7.jpg"
+    }
+  ]
+}

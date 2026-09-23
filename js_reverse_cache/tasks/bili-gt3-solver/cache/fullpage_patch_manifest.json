@@ -1,0 +1,11 @@
+{
+  "raw": "fullpage.9.2.0-guwyxh.js",
+  "raw_sha256": "923a147d20ec0a941a44ab815991034fee5af16d5bb59fa23dcc86eb1a8734e1",
+  "patched": "fullpage.patched-core.js",
+  "patched_sha256": "26f0cb08f9e2a2436f08cbfd18f4b227ef71db9fd73b4f0959c528ca4d8fbae7",
+  "needle": "=new nt(",
+  "needle_offset": 247585,
+  "size_delta": 21,
+  "inserted": "globalThis.__gt3Core=",
+  "context": "n[$_CEFDY(1149)]&&(n[$_CEFEq(829)]=n[$_CEFEq(1149)]),n[$_CEFEq(899)]&&n[$_CEFEq(1062)](n[$_CEFDY(899)]),t[$_CEFDY(1175)]=new nt(t),t[$_CEFDY(1145)](),t[$_CEFDY(1175)][$_CEFEq(1140)]);},function(){var $_CEFIS=Vwtrj.$_CV,$_CEFHF=['$_CEGBJ'].c"
+}

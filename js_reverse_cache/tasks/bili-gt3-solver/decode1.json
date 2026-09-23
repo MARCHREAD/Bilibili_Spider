@@ -1,0 +1,14 @@
+﻿{
+  "type": "decode",
+  "decoded": {
+    "Vwtrj.$_CV(439)": "$_FIw",
+    "Vwtrj.$_CV(491)": "addEventListener",
+    "Vwtrj.$_CV(416)": "attachEvent",
+    "Vwtrj.$_CV(618)": "on",
+    "Vwtrj.$_CV(693)": "$_BBDX",
+    "Vwtrj.$_CV(59)": "$_EBg",
+    "Vwtrj.$_CV(71)": "length"
+  }
+}
+{"type":"ready","assets":["fullpage.9.2.0-guwyxh.js"],"loadLog":["ok:fullpage.9.2.0-guwyxh.js"],"diag":["loaded:bom/navigator.js","loaded:bom/location.js","loaded:dom/document.js"],"gt":"x","challenge":"y"}
+{"type":"done","requests":[],"pending":[],"log":[],"errors":["construct:TypeError:$[e[$_DADP(...)]] is not a constructor|stack:TypeError: $[e[$_DADP(...)]] is not a constructor\n    at new $ (fullpage.9.2.0-guwyxh.js:1:157875)\n    at evalmachine.<anonymous>:6:24\n    at evalmachine.<anonymous>:18:9\n    at Script.runInContext (node:vm:149:12)\n    at Object.runInContext (node:vm:301:6)\n    at file:///A:/agent/work/bilibili/js_reverse_cache/tasks/bili-gt3-solver/env/run.js:364:8\n    at ModuleJob.run (node:internal/modules/esm/"],"pendingTimers":0,"output":[["log","[String len=24]"]]}

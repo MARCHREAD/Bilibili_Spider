@@ -1,0 +1,14 @@
+{
+  "source": "A:\\agent\\work\\bilibili\\js_reverse_cache\\tasks\\bili-login-captcha\\raw\\chunks\\264.60f4e88f.js",
+  "offset": 168565,
+  "length": 3979,
+  "sha256": "2651dd341940bf650a803b91d14d612d2bc912ea80fdf0fa75f2144f3f473291",
+  "checks": {
+    "initGeetest": true,
+    "gettype.php": true,
+    "api.geetest.com": true,
+    "new t.Geetest": true,
+    "fallback_config": true
+  },
+  "tail": "v(\"networkError\",n):\"loading\"===s&&l[i].push(o)})}}(window);"
+}

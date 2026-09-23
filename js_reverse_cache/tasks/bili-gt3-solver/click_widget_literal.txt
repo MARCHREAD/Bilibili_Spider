@@ -1,0 +1,5 @@
+literal start guess: 166903
+context before literal: l=['$_BJEDF'].concat($_BJEAr),$_BJEBF=$_BJDJl[1];$_BJDJl.shift();var $_BJECr=$_BJDJl[0];return this[$_BJEAr(366)][$_BJEBF(66)]($_BJEBF(593));}},Be[$_CGAs(270)]={"\u0024\u005f\u0042\u0049\u0045\u0074":
+literal end guess: 183809 (length 16906)
+methods in literal (19): $_BIEt, $_BGIS, $_CBi, $_BFDL, $_BJHe, $_CIU, $_CCv, $_BJJQ, tt, $_CADm, $_BJBT, $_CAER, $_JBl, $_BBBw, $_BBAF, $_JDb, $_CAFh, $_CABQ, $_CAAe
+plain-named methods: u0046, u004c, u0051, u0052, u0053, u0054, u0055, u0062, u0065, u0068, u0069, u006c, u006d, u0074, u0076, u0077

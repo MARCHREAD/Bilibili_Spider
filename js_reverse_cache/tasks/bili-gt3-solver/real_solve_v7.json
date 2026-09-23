@@ -1,0 +1,129 @@
+{
+  "pic": "cache\\real_round_whale.jpg",
+  "size": [
+    344,
+    384
+  ],
+  "prompt_box": [
+    0,
+    344,
+    150,
+    40
+  ],
+  "card_h": 32,
+  "field_boxes": [
+    [
+      209,
+      14,
+      70,
+      70
+    ],
+    [
+      178,
+      179,
+      68,
+      67
+    ],
+    [
+      233,
+      256,
+      69,
+      67
+    ]
+  ],
+  "per_glyph": [
+    {
+      "score": 0.5033,
+      "angle": 50,
+      "x": 28,
+      "y": 4,
+      "w": 33,
+      "h": 32,
+      "field_index": 0,
+      "field_box": [
+        209,
+        14,
+        70,
+        70
+      ]
+    },
+    {
+      "score": 0.3965,
+      "angle": 120,
+      "x": 32,
+      "y": 5,
+      "w": 28,
+      "h": 32,
+      "field_index": 1,
+      "field_box": [
+        178,
+        179,
+        68,
+        67
+      ]
+    },
+    {
+      "score": 0.5331,
+      "angle": 110,
+      "x": 30,
+      "y": 5,
+      "w": 35,
+      "h": 32,
+      "field_index": 2,
+      "field_box": [
+        233,
+        256,
+        69,
+        67
+      ]
+    }
+  ],
+  "chosen_order": [
+    0,
+    2,
+    1
+  ],
+  "matches": [
+    {
+      "prompt_index": 0,
+      "field_index": 0,
+      "match_score": 0.5033,
+      "angle": 50,
+      "card_x": 28,
+      "x": 244,
+      "y": 49
+    },
+    {
+      "prompt_index": 1,
+      "field_index": 2,
+      "match_score": 0.5331,
+      "angle": 110,
+      "card_x": 30,
+      "x": 267,
+      "y": 289
+    },
+    {
+      "prompt_index": 2,
+      "field_index": 1,
+      "match_score": 0.3965,
+      "angle": 120,
+      "card_x": 32,
+      "x": 212,
+      "y": 212
+    }
+  ],
+  "click_points": [
+    [
+      244,
+      49
+    ],
+    [
+      267,
+      289
+    ],
+    [
+      212,
+      212
+    ]
+  ]
+}

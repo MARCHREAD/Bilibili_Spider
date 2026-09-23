@@ -1,0 +1,206 @@
+{
+  "outdir": "A:\\agent\\work\\bilibili\\js_reverse_cache\\tasks\\bili-gt3-solver\\cache\\round_20260921-183341",
+  "bili_token": "dbfeba749db24d9cba07f3db8f1a3f5e",
+  "gt_source": "bilibili-live",
+  "gt": "ac597a4506fee079629df5d8b66dd4fe",
+  "base_challenge": "8f633bd9cfea2fb78504e41d34edbb53",
+  "gettype": {
+    "status": "success",
+    "data": {
+      "type": "fullpage",
+      "static_servers": [
+        "static.geetest.com/",
+        "static.geevisit.com/"
+      ],
+      "click": "/static/js/click.3.1.2.js",
+      "beeline": "/static/js/beeline.1.0.1.js",
+      "voice": "/static/js/voice.1.2.6.js",
+      "fullpage": "/static/js/fullpage.9.2.0-guwyxh.js",
+      "slide": "/static/js/slide.7.9.3.js",
+      "geetest": "/static/js/geetest.6.0.9.js",
+      "aspect_radio": {
+        "slide": 103,
+        "click": 128,
+        "voice": 128,
+        "beeline": 50
+      }
+    }
+  },
+  "get_initial": {
+    "status": "success",
+    "data": {
+      "theme": "wind",
+      "theme_version": "1.5.8",
+      "static_servers": [
+        "static.geetest.com",
+        "static.geevisit.com"
+      ],
+      "api_server": "api.geetest.com",
+      "logo": false,
+      "feedback": "",
+      "c": [
+        12,
+        58,
+        98,
+        36,
+        43,
+        95,
+        62,
+        15,
+        12
+      ],
+      "s": "53424d31",
+      "i18n_labels": {
+        "copyright": "\u7531\u6781\u9a8c\u63d0\u4f9b\u6280\u672f\u652f\u6301",
+        "error": "\u7f51\u7edc\u4e0d\u7ed9\u529b",
+        "error_content": "\u8bf7\u70b9\u51fb\u6b64\u5904\u91cd\u8bd5",
+        "error_title": "\u7f51\u7edc\u8d85\u65f6",
+        "fullpage": "\u667a\u80fd\u68c0\u6d4b\u4e2d",
+        "goto_cancel": "\u53d6\u6d88",
+        "goto_confirm": "\u524d\u5f80",
+        "goto_homepage": "\u662f\u5426\u524d\u5f80\u9a8c\u8bc1\u670d\u52a1Geetest\u5b98\u7f51",
+        "loading_content": "\u667a\u80fd\u9a8c\u8bc1\u68c0\u6d4b\u4e2d",
+        "next": "\u6b63\u5728\u52a0\u8f7d\u9a8c\u8bc1",
+        "next_ready": "\u8bf7\u5b8c\u6210\u9a8c\u8bc1",
+        "read_reversed": false,
+        "ready": "\u70b9\u51fb\u6309\u94ae\u8fdb\u884c\u9a8c\u8bc1",
+        "refresh_page": "\u9875\u9762\u51fa\u73b0\u9519\u8bef\u5566\uff01\u8981\u7ee7\u7eed\u64cd\u4f5c\uff0c\u8bf7\u5237\u65b0\u6b64\u9875\u9762",
+        "reset": "\u8bf7\u70b9\u51fb\u91cd\u8bd5",
+        "success": "\u9a8c\u8bc1\u6210\u529f",
+        "success_title": "\u901a\u8fc7\u9a8c\u8bc1"
+      }
+    }
+  },
+  "initial_keys": [
+    "api_server",
+    "c",
+    "feedback",
+    "i18n_labels",
+    "logo",
+    "s",
+    "static_servers",
+    "theme",
+    "theme_version"
+  ],
+  "initial_c": [
+    12,
+    58,
+    98,
+    36,
+    43,
+    95,
+    62,
+    15,
+    12
+  ],
+  "initial_s": "53424d31",
+  "ajax_pre": {
+    "status": "success",
+    "data": {
+      "result": "click"
+    }
+  },
+  "get_slide": {
+    "status": "success",
+    "data": {
+      "theme": "silver",
+      "theme_version": "1.5.4",
+      "static_servers": [
+        "static.geetest.com/",
+        "static.geevisit.com/"
+      ],
+      "api_server": "https://api.geetest.com",
+      "logo": false,
+      "feedback": "",
+      "spec": "1*1",
+      "sign": "",
+      "pic": "/captcha_v3/batch/v3/154055/2026-09-21T18/word/dc9a92150b3440549665e35d7ed62f4f.jpg",
+      "pic_type": "word",
+      "num": 0,
+      "image_servers": [
+        "static.geetest.com/",
+        "dn-staticdown.qbox.me/"
+      ],
+      "resource_servers": [
+        "static.geetest.com/",
+        "static.geevisit.com/"
+      ],
+      "c": [
+        12,
+        58,
+        98,
+        36,
+        43,
+        95,
+        62,
+        15,
+        12
+      ],
+      "s": "5a627779",
+      "i18n_labels": {
+        "atip": "\u8bf7\u6309_\u8bed\u5e8f_\u4f9d\u6b21_\u70b9\u51fb\u4e0b\u56fe\u6587\u5b57:",
+        "cancel": "\u53d6\u6d88",
+        "close": "\u5173\u95ed\u9a8c\u8bc1",
+        "commit": "\u786e\u8ba4",
+        "fail": "\u9a8c\u8bc1\u5931\u8d25 \u8bf7\u6309\u63d0\u793a\u91cd\u65b0\u64cd\u4f5c",
+        "fail_short": "\u9a8c\u8bc1\u5931\u8d25",
+        "feedback": "\u5e2e\u52a9\u53cd\u9988",
+        "forbidden": "\u9a8c\u8bc1\u51fa\u5c0f\u5dee\u5566 \u8bf73\u79d2\u540e\u91cd\u8bd5",
+        "loading": "\u52a0\u8f7d\u4e2d...",
+        "maze": "\u8bf7_\u70b9\u51fb_\u56fe\u7247\u4ee5_\u79fb\u52a8_\u5c0f\u9ec4\u7403\uff0c\u8ffd\u4e0a\u5c0f\u65d7\u6746",
+        "read_reversed": false,
+        "refresh": "\u5237\u65b0\u9a8c\u8bc1",
+        "small_tip": "\u8bf7\u9009\u4e2d\u4e0b\u56fe\u4e2d\u6240\u6709\u7684\uff1a",
+        "success": "\u9a8c\u8bc1\u6210\u529f \u60a8\u7684\u901f\u5ea6\u5df2\u8d85\u8fc7 %s%% \u7684\u7528\u6237",
+        "success_short": "\u9a8c\u8bc1\u6210\u529f",
+        "tip": "\u8bf7\u5728\u4e0b\u56fe_\u4f9d\u6b21_\u70b9\u51fb\uff1a",
+        "voice": "\u89c6\u89c9\u969c\u788d"
+      },
+      "gct_path": "/static/js/gct.b71a9027509bc6bcfef9fc6a196424f5.js"
+    }
+  },
+  "slide_keys": [
+    "api_server",
+    "c",
+    "feedback",
+    "gct_path",
+    "i18n_labels",
+    "image_servers",
+    "logo",
+    "num",
+    "pic",
+    "pic_type",
+    "resource_servers",
+    "s",
+    "sign",
+    "spec",
+    "static_servers",
+    "theme",
+    "theme_version"
+  ],
+  "slide_challenge": null,
+  "slide_c": [
+    12,
+    58,
+    98,
+    36,
+    43,
+    95,
+    62,
+    15,
+    12
+  ],
+  "slide_s": "5a627779",
+  "slide_ypos": null,
+  "gct_path": "/static/js/gct.b71a9027509bc6bcfef9fc6a196424f5.js",
+  "images": {},
+  "ajax_final_empty_w": {
+    "status": "success",
+    "data": {
+      "result": "fail",
+      "msg": [
+        "unknown exception"
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "rounds": 1,
+  "successes": 1,
+  "validates": [
+    "834bd4cbd945f30a7546d991e2ec52a0"
+  ],
+  "results": [
+    {
+      "round": 1,
+      "ok": true,
+      "validate": "834bd4cbd945f30a7546d991e2ec52a0",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "834bd4cbd945f30a7546d991e2ec52a0",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 11,
+      "seconds": 17.7
+    }
+  ]
+}

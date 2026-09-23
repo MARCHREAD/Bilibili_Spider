@@ -1,0 +1,150 @@
+{
+  "pic": "A:\\agent\\work\\bilibili\\js_reverse_cache\\tasks\\bili-gt3-solver\\cache\\proto_20260921-185330\\pic_6.jpg",
+  "size": [
+    344,
+    384
+  ],
+  "prompt_box": [
+    0,
+    343,
+    150,
+    41
+  ],
+  "card_h": 39,
+  "field_boxes": [
+    [
+      50,
+      19,
+      71,
+      71
+    ],
+    [
+      4,
+      149,
+      66,
+      67
+    ],
+    [
+      53,
+      218,
+      66,
+      67
+    ],
+    [
+      223,
+      255,
+      58,
+      47
+    ]
+  ],
+  "per_glyph": [
+    {
+      "score": 0.4282,
+      "angle": 240,
+      "x": 27,
+      "y": 2,
+      "w": 37,
+      "h": 39,
+      "field_index": 0,
+      "field_box": [
+        50,
+        19,
+        71,
+        71
+      ]
+    },
+    {
+      "score": 0.3252,
+      "angle": 260,
+      "x": 29,
+      "y": 2,
+      "w": 36,
+      "h": 39,
+      "field_index": 1,
+      "field_box": [
+        4,
+        149,
+        66,
+        67
+      ]
+    },
+    {
+      "score": 0.4012,
+      "angle": 250,
+      "x": 59,
+      "y": 2,
+      "w": 39,
+      "h": 39,
+      "field_index": 2,
+      "field_box": [
+        53,
+        218,
+        66,
+        67
+      ]
+    },
+    {
+      "score": 0.3485,
+      "angle": 240,
+      "x": 56,
+      "y": 2,
+      "w": 37,
+      "h": 39,
+      "field_index": 3,
+      "field_box": [
+        223,
+        255,
+        58,
+        47
+      ]
+    }
+  ],
+  "chosen_order": [
+    0,
+    3,
+    2
+  ],
+  "matches": [
+    {
+      "prompt_index": 0,
+      "field_index": 0,
+      "match_score": 0.4282,
+      "angle": 240,
+      "card_x": 27,
+      "x": 85,
+      "y": 54
+    },
+    {
+      "prompt_index": 1,
+      "field_index": 3,
+      "match_score": 0.3485,
+      "angle": 240,
+      "card_x": 56,
+      "x": 252,
+      "y": 278
+    },
+    {
+      "prompt_index": 2,
+      "field_index": 2,
+      "match_score": 0.4012,
+      "angle": 250,
+      "card_x": 59,
+      "x": 86,
+      "y": 251
+    }
+  ],
+  "click_points": [
+    [
+      85,
+      54
+    ],
+    [
+      252,
+      278
+    ],
+    [
+      86,
+      251
+    ]
+  ]
+}

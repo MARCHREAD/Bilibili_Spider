@@ -1,0 +1,31 @@
+﻿  ajax#1: geetest_1789991558514({"status": "success", "data": {"result": "click"}})
+  ajax#2: geetest_1789991556623({"status": "error", "error": "runtime error", "error_code": "error_00", "user_error": "\u7f51\u7edc\u4e0d\u7ed9\u529b"})
+  ajax#3: {}
+  ajax#4: geetest_1789991563698({"status": "error", "error": "runtime error", "error_code": "error_00", "user_error": "\u7f51\u7edc\u4e0d\u7ed9\u529b"})
+  ajax#5: {}
+  ajax#6: geetest_1789991570766({"status": "error", "error": "runtime error", "error_code": "error_00", "user_error": "\u7f51\u7edc\u4e0d\u7ed9\u529b"})
+  ajax#7: {}
+  ajax#8: geetest_1789991573343({"status": "error", "error": "runtime error", "error_code": "error_00", "user_error": "\u7f51\u7edc\u4e0d\u7ed9\u529b"})
+  ajax#9: {}
+  ajax#10: geetest_1789991572569({"status": "error", "error": "runtime error", "error_code": "error_00", "user_error": "\u7f51\u7edc\u4e0d\u7ed9\u529b"})
+  ajax#11: {}
+  ajax#12: geetest_1789991574022({"status": "error", "error": "runtime error", "error_code": "error_00", "user_error": "\u7f51\u7edc\u4e0d\u7ed9\u529b"})
+  ajax#13: {}
+
+w shapes (submissions carry a dot + 256 hex tail):
+   id= 3 path=get.php    len= 1452 dotAt= 1195 tailHex=True
+   id= 5 path=ajax.php   len=  704 dotAt=   -1 tailHex=False
+   id=11 path=ajax.php   len=  664 dotAt=  407 tailHex=True
+   id=13 path=ajax.php   len=  664 dotAt=  407 tailHex=True
+   id=15 path=ajax.php   len=  664 dotAt=  407 tailHex=True
+   id=17 path=ajax.php   len=  664 dotAt=  407 tailHex=True
+   id=19 path=ajax.php   len=  684 dotAt=  427 tailHex=True
+   id=21 path=ajax.php   len=  664 dotAt=  407 tailHex=True
+
+call-widget formats:
+   raw: sync:undefined|answer=[[143,112],[171,221]]|passtime=3200
+   flat: sync:undefined|answer="143,112,171,221"|passtime=3200
+   semi: sync:undefined|answer="143,112;171,221"|passtime=3200
+   strarray: sync:undefined|answer=["143,112","171,221"]|passtime=3200
+   objarray: sync:undefined|answer=[{"x":143,"y":112},{"x":171,"y":221}]|passtime=3200
+   None: sync:undefined

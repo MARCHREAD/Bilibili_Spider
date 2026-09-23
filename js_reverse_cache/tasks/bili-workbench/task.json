@@ -1,0 +1,60 @@
+{
+  "task_id": "bili-workbench",
+  "shape": "collector",
+  "route": "python-collector",
+  "gateFamily": "signer-gated",
+  "secondaryGateTags": ["transport-gated", "decode-gated", "session-gated"],
+  "status": "delivered",
+  "scope": {
+    "scheme": "https",
+    "hosts": ["api.bilibili.com", "passport.bilibili.com", "www.bilibili.com", "search.bilibili.com"],
+    "port": 443
+  },
+  "permissions": {
+    "browserRecon": true,
+    "liveReplay": true,
+    "accountOrSessionUse": "user-owned login session via QR scan (uid 494757969), read-only",
+    "targetCodeExecution": "blocked",
+    "dependencyInstall": "used: segno (pure-python QR)",
+    "writeMode": "project-write"
+  },
+  "deliverable": {
+    "entrypoint": "main.py",
+    "runtime": "pure Python + curl_cffi; local FastAPI console",
+    "browser_free": true,
+    "generation_truth_label": "algorithmic"
+  },
+  "capabilitySnapshot": {
+    "browserMode": "launch (chrome-devtools MCP)",
+    "jsReverse": "absent",
+    "silentValueCaptureBackend": "absent",
+    "debuggerAttachGap": true,
+    "silentValueCaptureGap": true,
+    "debuggerTraceMeansUsed": "page-world initScript XHR hook (6 live w_rid oracles)",
+    "curlCffiImpersonate": "chrome"
+  },
+  "fixedVectors": {
+    "wbi": {"result": "6/6 match", "negativeControl": "defaultWbiKey 0/6"},
+    "midhash": {"scheme": "crc32(str(uid)) hex8", "hits": 47, "otherCandidates": 0,
+                "randomExpectation": 0.00175, "reproductions": 2}
+  },
+  "liveAcceptance": {
+    "offlineSelftest": "25/25",
+    "midhashRegression": "9/9",
+    "noLogin": "9/9",
+    "loggedIn": "16/16",
+    "batchJobs": "14/14"
+  },
+  "artifacts": {
+    "report": "js_reverse_cache/tasks/bili-workbench/report.md",
+    "proofManifest": "analysis/proof_manifest.json",
+    "fixtures": "js_reverse_cache/tasks/bili-workbench/fixtures/",
+    "readme": "README.md"
+  },
+  "notClaimed": [
+    "page/runtime understanding (js-reverse and silent-value backends unavailable)",
+    "商单（花火任务）判定：公开 web 端无字段",
+    "弹幕发送者 uid 100% 还原（依赖候选池覆盖）",
+    "cookie 主动 refresh"
+  ]
+}

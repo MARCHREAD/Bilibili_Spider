@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Resource>/bfs/static/2233-monorepo/passport-h5/static/js/4632.255ec1f8.js</Resource><RequestId>1790144137766430427</RequestId><HostId>bfs-proxy-2881072-658b675b6d-wkt54</HostId></Error>

@@ -1,0 +1,16 @@
+{
+  "gt": "ac597a4506fee079629df5d8b66dd4fe",
+  "base_challenge": "6df17d1f16b680c1c482414fad668367",
+  "token": "d58753eb25da4a42bf20f8a2be9500d5",
+  "requests": [],
+  "http": [
+    {
+      "url": "https://passport.bilibili.com/x/passport-login/captcha",
+      "status": 200,
+      "len": 224
+    }
+  ],
+  "transcripts": [],
+  "w_values": [],
+  "http_used": 1
+}

@@ -1,0 +1,71 @@
+{
+  "account": 1,
+  "report": [
+    {
+      "phase": "cold",
+      "rounds": 5,
+      "soft_risk": 3,
+      "rate": 0.6,
+      "verdicts": [
+        "OK result=30",
+        "OK result=30",
+        "SOFT-RISK",
+        "SOFT-RISK",
+        "SOFT-RISK"
+      ]
+    },
+    {
+      "phase": "warm",
+      "rounds": 5,
+      "soft_risk": 3,
+      "rate": 0.6,
+      "verdicts": [
+        "OK result=30",
+        "SOFT-RISK",
+        "OK result=20",
+        "SOFT-RISK",
+        "SOFT-RISK"
+      ]
+    },
+    {
+      "phase": "warm+gaia",
+      "rounds": 5,
+      "soft_risk": 1,
+      "rate": 0.2,
+      "verdicts": [
+        "OK result=20",
+        "OK result=30",
+        "SOFT-RISK",
+        "OK result=30",
+        "OK result=30"
+      ]
+    },
+    {
+      "phase": "soft-risk self-heal",
+      "attempts": 3,
+      "healed": 2,
+      "detail": [
+        {
+          "first": "SOFT-RISK",
+          "after_recover": "OK result=30"
+        },
+        {
+          "first": "SOFT-RISK",
+          "after_recover": "SOFT-RISK"
+        },
+        {
+          "first": "SOFT-RISK",
+          "after_recover": "OK result=30"
+        },
+        {
+          "first": "OK result=30",
+          "after_recover": null
+        },
+        {
+          "first": "OK result=30",
+          "after_recover": null
+        }
+      ]
+    }
+  ]
+}

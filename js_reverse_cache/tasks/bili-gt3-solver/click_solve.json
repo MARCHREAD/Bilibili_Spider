@@ -1,0 +1,58 @@
+{
+  "pic": "A:\\agent\\work\\bilibili\\js_reverse_cache\\tasks\\bili-gt3-solver\\cache\\proto_20260921-185330\\pic_6.jpg",
+  "size": [
+    344,
+    384
+  ],
+  "prompt_box": [
+    0,
+    343,
+    150,
+    41
+  ],
+  "prompt_boxes": [
+    [
+      0,
+      7,
+      85,
+      31
+    ]
+  ],
+  "field_boxes": [
+    [
+      63,
+      43,
+      51,
+      27
+    ],
+    [
+      76,
+      238,
+      41,
+      37
+    ]
+  ],
+  "score_matrix": [
+    [
+      0.4126,
+      0.3208
+    ]
+  ],
+  "matches": [
+    {
+      "prompt_index": 0,
+      "field_index": 0,
+      "x": 88,
+      "y": 56,
+      "score": 0.4126,
+      "angle": 0,
+      "scale": 1.0
+    }
+  ],
+  "click_points": [
+    [
+      88,
+      56
+    ]
+  ]
+}

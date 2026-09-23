@@ -1,0 +1,18 @@
+{
+  "status": 200,
+  "final_url": "https://passport.bilibili.com/h5-app/passport/risk/verify?gourl=https%3A%2F%2Fwww.bilibili.com%2F&request_id=6fce4b5b1c764260b9a5184c8b860880&source=risk&tmp_token=81543bf464e0ad6edf9b7ef591572192",
+  "scripts": [
+    "https://s1.hdslb.com/bfs/seed/jinkela/short/b-mirror/biliMirror.umd.mini.js",
+    "//s1.hdslb.com/bfs/static/2233-monorepo/passport-h5/static/js/lib-polyfill.8728d617.js",
+    "//s1.hdslb.com/bfs/static/2233-monorepo/passport-h5/static/js/lib-vue.e25557ad.js",
+    "//s1.hdslb.com/bfs/static/2233-monorepo/passport-h5/static/js/lib-router.46035d60.js",
+    "//s1.hdslb.com/bfs/static/2233-monorepo/passport-h5/static/js/622.622fc7ab.js",
+    "//s1.hdslb.com/bfs/static/2233-monorepo/passport-h5/static/js/index.933966bb.js",
+    "https://s1.hdslb.com/bfs/seed/jinkela/short/report-native/log-reporter.js"
+  ],
+  "links": [
+    "//s1.hdslb.com/bfs/static/2233-monorepo/passport-h5/static/css/622.fdac4d95.css",
+    "//s1.hdslb.com/bfs/static/2233-monorepo/passport-h5/static/css/index.488be2f8.css"
+  ],
+  "visible_text": ""
+}

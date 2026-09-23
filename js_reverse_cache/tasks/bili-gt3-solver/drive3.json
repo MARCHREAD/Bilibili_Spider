@@ -1,0 +1,56 @@
+﻿{
+  "assets": [
+    "geetest.6.0.9.js",
+    "fullpage.9.2.0-guwyxh.js"
+  ],
+  "loadLog": [
+    "ok:geetest.6.0.9.js",
+    "ok:fullpage.9.2.0-guwyxh.js"
+  ],
+  "assetOk": true,
+  "diag": [
+    "loaded:bom/navigator.js",
+    "loaded:bom/location.js",
+    "loaded:dom/document.js"
+  ],
+  "timerRounds": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "requests": [
+    {
+      "kind": "img.src",
+      "url": "data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wAiMwAgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA"
+    },
+    {
+      "kind": "script.src",
+      "url": "https://api.geetest.com/get.php?gt=ac597a4506fee079629df5d8b66dd4fe&challenge=4ea578385f4fa9bc08a675ca4ad63792&offline=false&new_captcha=true&product=bind&lang=zh-cn&https=true&type=slide&callback=geetest_1789986995510"
+    }
+  ],
+  "http": [],
+  "log": [],
+  "errors": [
+    "construct:TypeError:Cannot read properties of undefined (reading 'appendChild')"
+  ],
+  "pendingTimers": 0,
+  "instProto": [],
+  "hasGeetest": "function",
+  "monitorUndefined": [],
+  "decodedRequests": [
+    {
+      "kind": "script.src",
+      "base": "https://api.geetest.com/get.php",
+      "gt": "ac597a4506fee079629df5d8b66dd4fe",
+      "challenge": "4ea578385f4fa9bc08a675ca4ad63792",
+      "offline": "false",
+      "new_captcha": "true",
+      "product": "bind",
+      "lang": "zh-cn",
+      "https": "true",
+      "type": "slide",
+      "callback": "geetest_1789986995510"
+    }
+  ]
+}

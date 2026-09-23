@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>GT3 文字点选 · 本地调试台</title>
+<style>
+  :root {
+    --bg: #0f1218; --panel: #171c25; --panel2: #1e2531; --line: #2b3444;
+    --fg: #e6edf6; --dim: #8b98ab; --accent: #4ea1ff; --ok: #3ddc97; --bad: #ff6b6b; --warn: #ffc857;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Cascadia Mono", monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 14px/1.5 -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; }
+  header { display: flex; align-items: center; gap: 14px; padding: 14px 20px;
+           border-bottom: 1px solid var(--line); background: var(--panel); }
+  header h1 { font-size: 16px; margin: 0; font-weight: 600; letter-spacing: .3px; }
+  header .tag { font-size: 12px; color: var(--dim); }
+  .grow { flex: 1; }
+  button { background: var(--panel2); color: var(--fg); border: 1px solid var(--line);
+           border-radius: 8px; padding: 8px 14px; font-size: 13px; cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #06121f; font-weight: 600; }
+  button.danger { border-color: #5a2b2b; color: #ffb3b3; }
+  button:disabled { opacity: .45; cursor: not-allowed; }
+  main { display: grid; grid-template-columns: 420px 1fr 460px; gap: 14px; padding: 14px 20px 28px; }
+  @media (max-width: 1500px) { main { grid-template-columns: 380px 1fr; } .col-log { grid-column: 1 / -1; } }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+  .card h2 { margin: 0 0 10px; font-size: 13px; color: var(--dim); font-weight: 600;
+             text-transform: uppercase; letter-spacing: .08em; }
+  .row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .kv { display: grid; grid-template-columns: 96px 1fr; gap: 4px 10px; font-size: 13px; }
+  .kv dt { color: var(--dim); }
+  .kv dd { margin: 0; font-family: var(--mono); word-break: break-all; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px;
+           border: 1px solid var(--line); font-family: var(--mono); }
+  .badge.ok { color: #06121f; background: var(--ok); border-color: var(--ok); font-weight: 700; }
+  .badge.bad { color: #2a0b0b; background: var(--bad); border-color: var(--bad); font-weight: 700; }
+  .badge.warn { color: #2a1f00; background: var(--warn); border-color: var(--warn); font-weight: 700; }
+  .strip { display: flex; gap: 10px; align-items: flex-start; }
+  .roundwrap { position: relative; width: 344px; height: 384px; background: #0a0d12;
+               border: 1px solid var(--line); border-radius: 10px; overflow: hidden; flex: none; }
+  .roundwrap img { width: 344px; height: 384px; display: block; }
+  .marker { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px;
+            border: 2px solid #ff4d4d; border-radius: 50%; color: #fff; font: 700 12px/22px var(--mono);
+            text-align: center; background: rgba(255, 77, 77, .22); box-shadow: 0 0 0 1px rgba(0,0,0,.6); }
+  .cardzoom { width: 232px; height: 80px; border: 1px solid var(--line); border-radius: 8px;
+              background-repeat: no-repeat; background-size: 688px 768px; background-position: 0 -688px;
+              image-rendering: pixelated; }
+  .promptchars { font-size: 26px; letter-spacing: 6px; margin-top: 8px; }
+  .cols { display: flex; gap: 12px; }
+  .col { flex: 1; }
+  pre.log { margin: 0; max-height: 520px; overflow: auto; background: #0b0e13; border: 1px solid var(--line);
+            border-radius: 8px; padding: 10px; font: 12px/1.45 var(--mono); white-space: pre-wrap; }
+  pre.log .h { color: var(--accent); }
+  pre.log .s { color: var(--ok); font-weight: 700; }
+  pre.log .e { color: var(--bad); }
+  pre.log .w { color: var(--warn); }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  th { color: var(--dim); font-weight: 600; }
+  tr.clickable:hover { background: var(--panel2); cursor: pointer; }
+  .muted { color: var(--dim); }
+  .pill { font-family: var(--mono); font-size: 12px; color: var(--dim); }
+  .wlen { display: flex; gap: 6px; flex-wrap: wrap; }
+  .wlen span { border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; font-family: var(--mono); font-size: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>GT3 文字点选 · 本地调试台</h1>
+  <span class="tag" id="health">…</span>
+  <span class="grow"></span>
+  <button class="primary" id="run1">跑 1 轮</button>
+  <button id="run2">跑 2 轮</button>
+  <button id="run3">跑 3 轮</button>
+  <button class="danger" id="stop" disabled>停止</button>
+</header>
+
+<main>
+  <section class="card">
+    <h2>本次运行</h2>
+    <div class="row" style="margin-bottom:10px">
+      <span class="badge" id="status">idle</span>
+      <span class="badge" id="verdict">-</span>
+      <span class="pill" id="timing"></span>
+    </div>
+    <dl class="kv">
+      <dt>run</dt><dd id="runid">-</dd>
+      <dt>challenge</dt><dd id="challenge">-</dd>
+      <dt>提示词</dt><dd id="promptChars">-</dd>
+      <dt>字数</dt><dd id="nclicks">-</dd>
+      <dt>点击点</dt><dd id="points">-</dd>
+      <dt>提交答案</dt><dd id="wire">-</dd>
+      <dt>validate</dt><dd id="validate">-</dd>
+      <dt>score</dt><dd id="score">-</dd>
+      <dt>HTTP 用量</dt><dd id="http">-</dd>
+      <dt>w 长度</dt><dd id="wlens" class="wlen">-</dd>
+    </dl>
+    <h2 style="margin-top:16px">求解明细（v11）</h2>
+    <pre class="log" id="solveinfo" style="max-height:150px">等待运行…</pre>
+  </section>
+
+  <section class="card">
+    <h2>轮次图 / 点击位置</h2>
+    <div class="strip">
+      <div class="roundwrap" id="roundwrap">
+        <img id="roundimg" alt="round image" style="visibility:hidden" />
+      </div>
+      <div>
+        <div class="muted" style="font-size:12px;margin-bottom:6px">提示词卡（放大 2×）</div>
+        <div class="cardzoom" id="cardzoom"></div>
+        <div class="promptchars" id="promptBig">—</div>
+        <div class="muted" style="font-size:12px;margin-top:14px">判决原文</div>
+        <pre class="log" id="verdictRaw" style="max-height:150px">-</pre>
+      </div>
+    </div>
+    <h2 style="margin-top:16px">历史</h2>
+    <table>
+      <thead><tr><th>#</th><th>时间</th><th>提示词</th><th>结果</th><th>validate</th><th>score</th></tr></thead>
+      <tbody id="hist"></tbody>
+    </table>
+  </section>
+
+  <section class="card col-log">
+    <h2>实时日志</h2>
+    <div class="row" style="margin-bottom:8px">
+      <label class="pill"><input type="checkbox" id="autoscroll" checked /> 自动滚动</label>
+      <span class="grow"></span>
+      <span class="pill" id="logcount">0 行</span>
+    </div>
+    <pre class="log" id="log"></pre>
+  </section>
+</main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+let currentRun = null, logFrom = 0, pollTimer = null, startedAt = 0;
+
+function cls(line) {
+  if (line.includes('=== SUCCESS')) return 's';
+  if (line.includes('[verdict]')) return line.includes('"success"') ? 's' : 'e';
+  if (line.includes('[api]') || line.startsWith('=====')) return 'h';
+  if (line.includes('[warn]') || line.includes('fail') || line.includes('error')) return 'w';
+  return '';
+}
+function appendLog(lines) {
+  const box = $('log');
+  for (const l of lines) {
+    const span = document.createElement('span');
+    span.className = cls(l);
+    span.textContent = l + '\n';
+    box.appendChild(span);
+  }
+  $('logcount').textContent = (box.childElementCount) + ' 行';
+  if ($('autoscroll').checked) box.scrollTop = box.scrollHeight;
+}
+function fmtTime(ts) { return ts ? new Date(ts * 1000).toLocaleTimeString() : '-'; }
+function showImage(runId, pic) {
+  if (!runId || !pic) return;
+  const url = `/api/image/${runId}/${encodeURIComponent(pic)}`;
+  const img = $('roundimg');
+  img.onload = () => { img.style.visibility = 'visible'; };
+  img.src = url + '?t=' + Date.now();
+  $('cardzoom').style.backgroundImage = `url("${url}")`;
+}
+function drawMarkers(points) {
+  document.querySelectorAll('.marker').forEach(e => e.remove());
+  const wrap = $('roundwrap');
+  (points || []).forEach((p, i) => {
+    const d = document.createElement('div');
+    d.className = 'marker';
+    d.style.left = p[0] + 'px';
+    d.style.top = p[1] + 'px';
+    d.textContent = String(i + 1);
+    wrap.appendChild(d);
+  });
+}
+function applyRun(r) {
+  $('runid').textContent = r.id || '-';
+  $('status').textContent = r.status || '-';
+  $('status').className = 'badge ' + (r.status === 'done' ? (r.ok ? 'ok' : 'bad') : (r.status === 'running' ? 'warn' : ''));
+  $('challenge').textContent = r.challenge || '-';
+  $('promptChars').textContent = (r.prompt || []).join(' ') || '-';
+  $('promptBig').textContent = (r.prompt || []).join('') || '—';
+  $('nclicks').textContent = r.n_clicks ?? '-';
+  $('points').textContent = JSON.stringify(r.points || []) || '-';
+  $('wire').textContent = r.wire_answer || '-';
+  $('validate').textContent = r.validate || '-';
+  $('score').textContent = r.score ?? '-';
+  $('http').textContent = r.http_used ?? '-';
+  $('wlens').innerHTML = (r.w_values || []).map(w => `<span>${w.key} ${w.len}</span>`).join('') || '-';
+  const v = r.verdict;
+  $('verdictRaw').textContent = v ? JSON.stringify(v, null, 1) : '-';
+  $('verdict').textContent = v && v.data ? (v.data.result || v.status) : (v ? 'error' : '-');
+  $('verdict').className = 'badge ' + (r.ok ? 'ok' : (v ? 'bad' : ''));
+  if (r.solve) $('solveinfo').textContent = JSON.stringify({
+    solver: r.solve.solver, prompt: r.solve.prompt, n: r.solve.n,
+    size: r.solve.size, field_boxes: r.solve.field_boxes,
+    cell_candidates: r.solve.prompt_candidates,
+    candidate_lengths: r.solve.candidate_lengths,
+    matches: r.solve.matches
+  }, null, 1);
+  showImage(r.id, r.pic);
+  drawMarkers(r.points);
+  if (r.started) {
+    const end = r.status === 'running' ? Date.now() / 1000 : (window.__finishedAt || Date.now() / 1000);
+    $('timing').textContent = `${Math.round(end - r.started)}s`;
+  }
+}
+async function poll() {
+  if (!currentRun) return;
+  const r = await (await fetch(`/api/run/${currentRun}?log_from=${logFrom}`)).json();
+  if (r.log && r.log.length) { appendLog(r.log); logFrom = r.log_total; }
+  applyRun(r);
+  if (r.status !== 'running') {
+    clearInterval(pollTimer); pollTimer = null;
+    window.__finishedAt = Date.now() / 1000;
+    $('stop').disabled = true;
+    loadHistory();
+  }
+}
+async function start(rounds) {
+  if (currentRun && pollTimer) return;
+  const res = await (await fetch('/api/run', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ rounds })
+  })).json();
+  currentRun = res.run_id; logFrom = 0; startedAt = Date.now() / 1000;
+  $('log').textContent = ''; $('logcount').textContent = '0 行';
+  $('stop').disabled = false;
+  document.querySelectorAll('.marker').forEach(e => e.remove());
+  $('roundimg').style.visibility = 'hidden';
+  $('status').textContent = 'running'; $('status').className = 'badge warn';
+  pollTimer = setInterval(poll, 700);
+  poll();
+}
+async function loadHistory() {
+  const r = await (await fetch('/api/runs')).json();
+  const tbody = $('hist');
+  tbody.innerHTML = '';
+  (r.runs || []).forEach((run, i) => {
+    const tr = document.createElement('tr');
+    tr.className = 'clickable';
+    tr.innerHTML = `<td>${i + 1}</td><td>${fmtTime(run.started)}</td>
+      <td>${(run.prompt || []).join('') || '<span class="muted">-</span>'}</td>
+      <td>${run.ok ? '<span class="badge ok">success</span>' : `<span class="badge ${run.status === 'running' ? 'warn' : 'bad'}">${run.status || '-'}</span>`}</td>
+      <td class="pill">${run.validate || '-'}</td><td>${run.score ?? '-'}</td>`;
+    tr.onclick = () => { currentRun = run.id; logFrom = 0; $('log').textContent = ''; if (pollTimer) clearInterval(pollTimer); pollTimer = null; poll(); };
+    tbody.appendChild(tr);
+  });
+}
+$('run1').onclick = () => start(1);
+$('run2').onclick = () => start(2);
+$('run3').onclick = () => start(3);
+$('stop').onclick = async () => {
+  if (!currentRun) return;
+  await fetch(`/api/run/${currentRun}/stop`, { method: 'POST' });
+};
+(async () => {
+  const h = await (await fetch('/api/health')).json();
+  $('health').textContent = `task=${h.task}`;
+  loadHistory();
+})();
+</script>
+</body>
+</html>

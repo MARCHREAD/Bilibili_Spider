@@ -1,0 +1,671 @@
+{
+  "gt": "ac597a4506fee079629df5d8b66dd4fe",
+  "base_challenge": "a7b059a2c9e819c5b9edd13aead5cb8b",
+  "token": "86dab1fa6ab34d9db931d7bf7256d9ef",
+  "requests": [
+    {
+      "id": 1,
+      "kind": "script",
+      "path": "https://api.geetest.com/gettype.php",
+      "params": {
+        "gt": "ac597a4506fee079629df5d8b66dd4fe",
+        "callback": "geetest_1789990576547"
+      }
+    },
+    {
+      "id": 2,
+      "kind": "script",
+      "path": "https://static.geetest.com/static/js/fullpage.9.2.0-guwyxh.js",
+      "params": {}
+    },
+    {
+      "id": 3,
+      "kind": "script",
+      "path": "https://api.geetest.com/get.php",
+      "params": {
+        "gt": "ac597a4506fee079629df5d8b66dd4fe",
+        "challenge": "a7b059a2c9e819c5b9edd13aead5cb8b",
+        "lang": "zh-cn",
+        "pt": "0",
+        "client_type": "web",
+        "w": "[len=1452]",
+        "callback": "geetest_1789990580998"
+      }
+    },
+    {
+      "id": 4,
+      "kind": "link",
+      "path": "https://static.geetest.com/static/wind/style_https.1.5.8.css",
+      "params": {}
+    },
+    {
+      "id": 5,
+      "kind": "script",
+      "path": "https://api.geetest.com/ajax.php",
+      "params": {
+        "gt": "ac597a4506fee079629df5d8b66dd4fe",
+        "challenge": "a7b059a2c9e819c5b9edd13aead5cb8b",
+        "lang": "zh-cn",
+        "pt": "0",
+        "client_type": "web",
+        "w": "[len=704]",
+        "callback": "geetest_1789990576171"
+      }
+    },
+    {
+      "id": 6,
+      "kind": "script",
+      "path": "https://static.geetest.com/static/js/click.3.1.2.js",
+      "params": {}
+    },
+    {
+      "id": 7,
+      "kind": "script",
+      "path": "https://api.geetest.com/get.php",
+      "params": {
+        "is_next": "true",
+        "type": "click",
+        "gt": "ac597a4506fee079629df5d8b66dd4fe",
+        "challenge": "a7b059a2c9e819c5b9edd13aead5cb8b",
+        "lang": "zh-cn",
+        "https": "true",
+        "protocol": "https://",
+        "offline": "false",
+        "product": "embed",
+        "api_server": "api.geetest.com",
+        "isPC": "true",
+        "autoReset": "true",
+        "width": "100%",
+        "callback": "geetest_1789990582040"
+      }
+    },
+    {
+      "id": 8,
+      "kind": "script",
+      "path": "https://static.geetest.com/static/js/gct.b71a9027509bc6bcfef9fc6a196424f5.js",
+      "params": {}
+    },
+    {
+      "id": 9,
+      "kind": "link",
+      "path": "https://static.geetest.com/static/silver/style_https.1.5.4.css",
+      "params": {}
+    },
+    {
+      "id": 10,
+      "kind": "script",
+      "path": "https://monitor.geetest.com/monitor/send",
+      "params": {
+        "time": "2026-09-21 19:36:16",
+        "captcha_id": "ac597a4506fee079629df5d8b66dd4fe",
+        "challenge": "a7b059a2c9e819c5b9edd13aead5cb8b",
+        "pt": "0",
+        "exception_url": "./usercallback/error",
+        "error_code": "604",
+        "msg": "\u7528\u6237\u56de\u8c03\u51fd\u6570\u6267\u884c\u5f02\u5e38"
+      }
+    }
+  ],
+  "http": [
+    {
+      "url": "https://passport.bilibili.com/x/passport-login/captcha",
+      "status": 200,
+      "len": 224
+    },
+    {
+      "url": "https://api.geetest.com/gettype.php",
+      "status": 200,
+      "len": 465
+    },
+    {
+      "url": "https://api.geetest.com/get.php",
+      "status": 200,
+      "len": 1233
+    },
+    {
+      "url": "https://static.geetest.com/static/wind/style_https.1.5.8.css",
+      "status": 200,
+      "len": 40702
+    },
+    {
+      "url": "https://api.geetest.com/ajax.php",
+      "status": 200,
+      "len": 73
+    },
+    {
+      "url": "https://api.geetest.com/get.php",
+      "status": 200,
+      "len": 1647
+    },
+    {
+      "url": "https://static.geetest.com/captcha_v3/batch/v3/154059/2026-09-21T19/word/e0df467128384e7e91c3780c620b5b73.jpg",
+      "status": 200,
+      "len": 76884
+    },
+    {
+      "url": "https://static.geetest.com/static/js/gct.b71a9027509bc6bcfef9fc6a196424f5.js",
+      "status": 200,
+      "len": 21163
+    },
+    {
+      "url": "https://static.geetest.com/static/silver/style_https.1.5.4.css",
+      "status": 200,
+      "len": 31327
+    },
+    {
+      "url": "https://monitor.geetest.com/monitor/send",
+      "status": 200,
+      "len": 2
+    }
+  ],
+  "helper_ready": {
+    "type": "ready",
+    "assets": [
+      "gt_loader_from_bili.js"
+    ],
+    "loadLog": [
+      "ok:gt_loader_from_bili.js"
+    ],
+    "diag": [
+      "loaded:bom/navigator.js",
+      "loaded:bom/location.js",
+      "loaded:dom/document.js"
+    ],
+    "gt": "ac597a4506fee079629df5d8b66dd4fe",
+    "challenge": "a7b059a2c9e819c5b9edd13aead5cb8b"
+  },
+  "helper_other": [
+    {
+      "type": "after-response",
+      "id": 1,
+      "after": "{\"core\":false,\"timers\":1,\"delays\":[0],\"instKeys\":-1}"
+    },
+    {
+      "type": "after-response",
+      "id": 2,
+      "after": "{\"core\":false,\"timers\":1,\"delays\":[0],\"instKeys\":-1}"
+    },
+    {
+      "type": "after-response",
+      "id": 3,
+      "after": "{\"core\":true,\"timers\":5,\"delays\":[0,2000,30000,30000,540000],\"instKeys\":2}"
+    },
+    {
+      "type": "verify",
+      "result": "ok:object"
+    },
+    {
+      "type": "after-response",
+      "id": 5,
+      "after": "{\"core\":true,\"timers\":6,\"delays\":[0,27990,27990,29990,30000,537990],\"instKeys\":2}"
+    },
+    {
+      "type": "after-response",
+      "id": 6,
+      "after": "{\"core\":true,\"timers\":6,\"delays\":[0,27990,27990,29990,30000,537990],\"instKeys\":2}"
+    },
+    {
+      "type": "after-response",
+      "id": 7,
+      "after": "{\"core\":true,\"timers\":11,\"delays\":[0,2000,27990,27990,29990,30000,30000,30000,30000,537990,540000],\"instKeys\":2}"
+    },
+    {
+      "type": "after-response",
+      "id": 8,
+      "after": "{\"core\":true,\"timers\":12,\"delays\":[0,2490,25480,25480,27480,27490,27490,27490,27490,29490,535480,537490],\"instKeys\":2}"
+    },
+    {
+      "type": "after-response",
+      "id": 10,
+      "after": "{\"core\":true,\"timers\":12,\"delays\":[0,2490,25480,25480,27480,27490,27490,27490,27490,29490,535480,537490],\"instKeys\":2}"
+    },
+    {
+      "type": "probe-plan",
+      "count": 64,
+      "names": [
+        "$_BAAk",
+        "$_JDi",
+        "$_EIc",
+        "$_EJN",
+        "$_CADl",
+        "$",
+        "$_CAEm",
+        "$_CAFC",
+        "$_CAGW",
+        "$_CAHt",
+        "$_CAIT",
+        "$_BHCf",
+        "$_CFIc",
+        "$_CFJN",
+        "$_CCJx",
+        "$_CGDl",
+        "$_CBDo",
+        "$_CGGK",
+        "$_CFCt",
+        "$_CFDQ",
+        "$_CFEo",
+        "$_CFFB",
+        "$_CBBN",
+        "$_CFHO",
+        "$_BGGo",
+        "$_CGCj",
+        "$_JIQ",
+        "$_JGb",
+        "$_CGIX",
+        "$_BJJT",
+        "$_CCEJ",
+        "$_CHAw",
+        "$_CHBa",
+        "$_CBEW",
+        "$_CBFh",
+        "$_IIs",
+        "$_CHDN",
+        "$_CHJT",
+        "$_CGAM",
+        "$_CGBJ",
+        "$_CBAF",
+        "$_FHo",
+        "$_CDEO",
+        "$_CDFf",
+        "$_CBGd",
+        "$_CIFX",
+        "$_CIGU",
+        "$_CGEW",
+        "$_CEIW",
+        "$_CIIN",
+        "$_CBJy",
+        "$_CBIB",
+        "$_CHEd",
+        "$_CHHy",
+        "$_CIJ_",
+        "$_CHGV",
+        "$_CHFp",
+        "$_CCAN",
+        "$_CCDV",
+        "$_CJBw",
+        "$_CIEU",
+        "$_CJAX",
+        "$_CGFn",
+        "$_CCCU"
+      ]
+    },
+    {
+      "type": "probe",
+      "name": "$_BAAk",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_JDi",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_EIc",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_EJN",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CADl",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$",
+      "line": "\"threw:TypeError:e[$_FCJR(...)] is not a function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CAEm",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CAFC",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CAGW",
+      "line": "\"ok:object\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CAHt",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CAIT",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_BHCf",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CFIc",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CFJN",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CCJx",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CGDl",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CBDo",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CGGK",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CFCt",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CFDQ",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CFEo",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CFFB",
+      "line": "\"not-a-function\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CBBN",
+      "line": "\"ok:undefined\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_CFHO",
+      "line": "\"ok:undefined\"",
+      "newPending": 0
+    },
+    {
+      "type": "probe",
+      "name": "$_BGGo",
+      "line": "\"ok:object\"",
+      "newPending": 1
+    },
+    {
+      "type": "probe-trigger",
+      "name": "$_BGGo",
+      "line": "\"ok:object\"",
+      "note": "stopping sweep: this method started a request"
+    },
+    {
+      "type": "core-dump",
+      "dump": {
+        "hasInstance": true,
+        "keys": [
+          "$_CABR",
+          "$_CACk"
+        ],
+        "proto": [],
+        "protoDecoded": [],
+        "coreKeys": [
+          "$_BAAk",
+          "$_JDi",
+          "$_EIc",
+          "$_EJN",
+          "$_CADl",
+          "$",
+          "$_CAEm",
+          "$_CAFC",
+          "$_CAGW",
+          "$_CAHt",
+          "$_CAIT",
+          "$_BHCf",
+          "$_CFIc",
+          "$_CFJN",
+          "$_CCJx",
+          "$_CGDl",
+          "$_CBDo",
+          "$_CGGK"
+        ],
+        "coreProtoDecoded": [
+          "$_CFCt",
+          "$_CFDQ",
+          "$_CFEo",
+          "$_CFFB",
+          "$_CBBN",
+          "$_CFHO",
+          "$_BGGo",
+          "$_CGCj",
+          "$_JIQ",
+          "$_JGb",
+          "$_CGIX",
+          "$_BJJT",
+          "$_CCEJ",
+          "$_CHAw",
+          "$_CHBa",
+          "$_CBEW",
+          "$_CBFh",
+          "$_IIs",
+          "$_CHDN",
+          "$_CHJT",
+          "$_CGAM",
+          "$_CGBJ",
+          "$_CBAF",
+          "$_FHo",
+          "$_CDEO",
+          "$_CDFf",
+          "$_CBGd",
+          "$_CIFX",
+          "$_CIGU",
+          "$_CGEW",
+          "$_CEIW",
+          "$_CIIN",
+          "$_CBJy",
+          "$_CBIB",
+          "$_CHEd",
+          "$_CHHy",
+          "$_CIJ_",
+          "$_CHGV",
+          "$_CHFp",
+          "$_CCAN",
+          "$_CCDV",
+          "$_CJBw",
+          "$_CIEU",
+          "$_CJAX",
+          "$_CGFn",
+          "$_CCCU"
+        ],
+        "hasCore": true
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": 7,
+      "key": "pic",
+      "file": "pic_7.jpg",
+      "bytes": 76884,
+      "url": "https://static.geetest.com/captcha_v3/batch/v3/154059/2026-09-21T19/word/e0df467128384e7e91c3780c620b5b73.jpg"
+    }
+  ],
+  "helper_done": {
+    "type": "done",
+    "diag": [
+      "loaded:bom/navigator.js",
+      "loaded:bom/location.js",
+      "loaded:dom/document.js"
+    ],
+    "requests": [],
+    "pending": [
+      {
+        "kind": "script",
+        "url": "https://api.geetest.com/gettype.php?gt=ac597a4506fee079629df5d8b66dd4fe&callback=geetest_1789990576547"
+      },
+      {
+        "kind": "script",
+        "url": "https://static.geetest.com/static/js/fullpage.9.2.0-guwyxh.js"
+      },
+      {
+        "kind": "script",
+        "url": "https://api.geetest.com/get.php?gt=ac597a4506fee079629df5d8b66dd4fe&challenge=a7b059a2c9e819c5b9edd13aead5cb8b&lang=zh-cn&pt=0&client_type=web&w=3inXHuwJYP33qlyiohDaFvzdi67PHV2eiVjv(J)Ywir1YwdGPvH13ixVDnR7c(nKwUr2KBgMyo3UajH5L7HV0F56p0AnAvBYn4WNKdFzFKytzY3tp6tZgAvstLGFIWnJaaR0mveo3RmTdIF4zIbpKyx33HEaMm9vpS18IjisclPzmHkuQYx4f9EcCjr6F(iZyGMUQDFW(kDz59tcY5YopsT0gcXhSqc25YJGLop3vem)ovRnLeSRQdGWUc7CntMGUJ01ESC431ntK(bPzLfgvsKDKg976s)jtGPZl11RgjE2eDCpJRvvoHdc60g6f5jhakt(YDQ0ADSKoOSQcBFC5a31t69rrUTCXrfCB)gjox3sfZHL7Y0ejKC8y)eTf38LNIPgLTVlajywaCZQQHuUrBoMhSDiq1256CrFLZQJN3yPQOm420YJAxobp0X5yHcWTKe04)G4xO3u2XXvieB3ia)GaKZWJcydQkHjvKE47gxM5FxU41TpyFwV6HyJYxgcvGuEyIBopyhZu4pXV77B6EyUYmExPmeLmuzTXbNXfvu6NCnVwPByoQ2MXljrxzexSR5Ew7CoPP641x1jOqyFt0jJU5zLldNlN0NjvzMrfRS2H)GTc12sJM77QpdHSqIOk0rOr3sUaaEr(ITdcm6hUtGvXSml5pPBpQyzz55U(YOSY2pgVrmJ6WJ35ksyYGcAMlVTvkC8BF5ccct9iA8ka1yZ55OPBENxXoc177b8dhH0sDyqOCiNd(p0ng0eFsRxfPwVo(zOZ6uWjl3IUDRPAfDJj5Rgju4JFUNaq1CNZPVYdg5FFtKDIuPIC)coEmvAwIPosLnIcLsvKOPpkkfcnpYSRJX70YPyRqjBOMqa1ttrkhpvVTKuxnhQp7tmAgDL70OwqesEu5dd(YaxTDuEhfrjH3Inf3OBxhBHlctTxZf2dl4RCkYSz0fHhac95SJioO(ou7SFFb8dfWpkLHi4IrQWZ(lzN2RSz1VRqwE3smeknxJJz4jOFPPb(d1aY3ocPUQpy46So8UtdH6m3yF8GOZQSFGlFVBgA31rehxYF2GwG8JGv8wTRWXzMrrgzGOWtDsGgru92ofSdkAPijlXkoY6uSEY9giL)UiePdxNELhElIxJfCwVZILS0mMoXrnDI0n0be8NGK9BwiBFvatwwb4Tw7l5PWBAkJzLYOSCkeU.3d2d85faa7055d8e9b26f81ef02158af8e030d58df1d3eb580c85d0573afc2532061b5b3c6925419b098b654beda8af498665ae5359e2165723422702cb470a4c3a3c55ffa0ac133b41d3ffc68f504ba65721c36b646eb469582b6c73af32a26a313dfb8b486b16c28f6c0cd803e1246c527692552f90a206fad7da214c77c7e&callback=geetest_1789990580998"
+      },
+      {
+        "kind": "link",
+        "url": "https://static.geetest.com/static/wind/style_https.1.5.8.css"
+      },
+      {
+        "kind": "script",
+        "url": "https://api.geetest.com/ajax.php?gt=ac597a4506fee079629df5d8b66dd4fe&challenge=a7b059a2c9e819c5b9edd13aead5cb8b&lang=zh-cn&pt=0&client_type=web&w=BwueO9aHCR9knSn49ZStHdCAnnLeSiBO0Gz4VCmi8DcyBol2e4RP0UF1VgyhR3frJ8gyiJ3CXSh9KtPky(8)s84YKkxdYzd6PG(NFsX(WiXsgO994A3nR7X(82CsThxW8lWd5yb2zKPK0(ZBoX)0gC4LwPOMyna3j1SJs0rs1jpTJFkyzMZj(OBWD0cZ0R1YVp7iL3XgPYSvcU)jBe6nhlm)60iQBVcvuxjUJ6kafWRGoGs152V0mwlHu)28EQkonWv9pTSX6raqMCtlKlJsKPV90nLQVtZZAYKX(CP5mmhR8bvGBkDlxIu1eJezTLEmhK0QC9sB6AyoheCTIF8CBpYa4(YFTjp84d67uEx3H1ir4(je)wuWIreaaHXaPGZxJP)C1tnyzY9w(QLwy3sS9TWr2YT9WQflnyMe0PDfEuz19pUakgcvvBnnKTvwyrSaB)UNAUCa80uw)9)5ImHghfYCp)pD3BvFx500Wi3i8Vw9ksUMyZ9Tn0SUzuQEdk4YdjWldLSdXwlNAYMOpU4wHYDv)k3NvEN2wwP5rqloQ8Tta6uMEoEcBXtkseDfx7LrA1tykzKassz6xwGMNFYrSzH7Jx5p(kysTjnrwzGiL8D8AsdSW8VsMY5SeRDaGAo(OnyQIom1LdJ0Z7Ys(gDLBu1hGnSjpXE9XD4vnx(IuW(OG3ER)y(AWJwkI6y8N60b&callback=geetest_1789990576171"
+      },
+      {
+        "kind": "script",
+        "url": "https://static.geetest.com/static/js/click.3.1.2.js"
+      },
+      {
+        "kind": "script",
+        "url": "https://api.geetest.com/get.php?is_next=true&type=click&gt=ac597a4506fee079629df5d8b66dd4fe&challenge=a7b059a2c9e819c5b9edd13aead5cb8b&lang=zh-cn&https=true&protocol=https%3A%2F%2F&offline=false&product=embed&api_server=api.geetest.com&isPC=true&autoReset=true&width=100%25&callback=geetest_1789990582040"
+      },
+      {
+        "kind": "script",
+        "url": "https://static.geetest.com/static/js/gct.b71a9027509bc6bcfef9fc6a196424f5.js"
+      },
+      {
+        "kind": "link",
+        "url": "https://static.geetest.com/static/silver/style_https.1.5.4.css"
+      },
+      {
+        "kind": "script",
+        "url": "https://monitor.geetest.com/monitor/send?time=2026-09-21%2019%3A36%3A16&captcha_id=ac597a4506fee079629df5d8b66dd4fe&challenge=a7b059a2c9e819c5b9edd13aead5cb8b&pt=0&exception_url=.%2Fusercallback%2Ferror&error_code=604&msg=%E7%94%A8%E6%88%B7%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%89%A7%E8%A1%8C%E5%BC%82%E5%B8%B8"
+      },
+      {
+        "kind": "link",
+        "url": "https://static.geetest.com/static/wind/style_https.1.5.8.css"
+      }
+    ],
+    "log": [
+      "jsonp-diag:{\"cbName\":\"geetest_1789990576547\",\"isFn\":\"function\",\"globals\":1,\"ret\":\"undefined:undefined\",\"instKeys\":-1}",
+      "initGeetest-callback",
+      "appendTo",
+      "jsonp-diag:{\"cbName\":\"geetest_1789990580998\",\"isFn\":\"function\",\"globals\":1,\"ret\":\"undefined:undefined\",\"instKeys\":2}",
+      "onReady",
+      "jsonp-diag:{\"cbName\":\"geetest_1789990576171\",\"isFn\":\"function\",\"globals\":1,\"ret\":\"undefined:undefined\",\"instKeys\":2}",
+      "jsonp-diag:{\"cbName\":\"geetest_1789990582040\",\"isFn\":\"function\",\"globals\":1,\"ret\":\"undefined:undefined\",\"instKeys\":2}"
+    ],
+    "errors": [],
+    "pendingTimers": 12,
+    "payloads": [],
+    "output": [
+      [
+        "log",
+        "[String len=24]"
+      ],
+      [
+        "error",
+        "[Object]"
+      ],
+      [
+        "error",
+        "[Object]"
+      ]
+    ]
+  },
+  "transcripts": [
+    {
+      "id": 1,
+      "url": "https://api.geetest.com/gettype.php?gt=ac597a4506fee079629df5d8b66dd4fe&callback=geetest_1789990576547",
+      "status": 200,
+      "body": "geetest_1789990576547({\"status\": \"success\", \"data\": {\"type\": \"fullpage\", \"static_servers\": [\"static.geetest.com/\", \"static.geevisit.com/\"], \"click\": \"/static/js/click.3.1.2.js\", \"beeline\": \"/static/js/beeline.1.0.1.js\", \"voice\": \"/static/js/voice.1.2.6.js\", \"fullpage\": \"/static/js/fullpage.9.2.0-guwyxh.js\", \"slide\": \"/static/js/slide.7.9.3.js\", \"geetest\": \"/static/js/geetest.6.0.9.js\", \"aspect_radio\": {\"slide\": 103, \"click\": 128, \"voice\": 128, \"beeline\": 50}}})"
+    },
+    {
+      "id": 3,
+      "url": "https://api.geetest.com/get.php?gt=ac597a4506fee079629df5d8b66dd4fe&challenge=a7b059a2c9e819c5b9edd13aead5cb8b&lang=zh-cn&pt=0&client_type=web&w=3inXHuwJYP33qlyiohDaFvzdi67PHV2eiVjv(J)Ywir1YwdGPvH13ixVDnR7c(nKwUr2KBgMyo3UajH5L7HV0F56p0AnAvBYn4WNKdFzFKytzY3tp6tZgAvstLGFIWnJaaR0mveo3RmTdIF4zIbpKyx33HEaMm9vpS18IjisclPzmHkuQYx4f9EcCjr6F(iZyGMUQDFW(kDz59tcY5YopsT0gcXhSqc25YJGLop3vem)ovRnLeSRQdGWUc7CntMGUJ01ESC431ntK(bPzLfgvsKDKg976s)jtGPZl11RgjE2eDCpJRvvoHdc60g6f5jhakt(YDQ0ADSKoOSQcBFC5a31t69rrUTCXrfCB)gjox3sfZHL7Y0ejKC8y)eTf38LNIPgLTVlajywaCZQQHuUrBoMhSDiq1256CrFLZQJN3yPQOm420YJAxobp0X5yHcWTKe04)G4xO3u2XXvieB3ia)GaKZWJcydQkHjvKE47gxM5FxU41TpyFwV6HyJYxgcvGuEyIBopyhZu4pXV77B6EyUYmExPmeLmuzTXbNXfvu6NCnVwPByoQ2MXljrxzexSR5Ew7CoPP641x1jOqyFt0jJU5zLldNlN0NjvzMrfRS2H)GTc12sJM77QpdHSqIOk0rOr3sUaaEr(ITdcm6hUtGvXSml5pPBpQyzz55U(YOSY2pgVrmJ6WJ35ksyYGcAMlVTvkC8BF5ccct9iA8ka1yZ55OPBENxXoc177b8dhH0sDyqOCiNd(p0ng0eFsRxfPwVo(zOZ6uWjl3IUDRPAfDJj5Rgju4JFUNaq1CNZPVYdg5FFtKDIuPIC)coEmvAwIPosLnIcLsvKOPpkkfcnpYSRJX70YPyRqjBOMqa1ttrkhpvVTKuxnhQp7tmAgDL70OwqesEu5dd(YaxTDuEhfrjH3Inf3OBxhBHlctTxZf2dl4RCkYSz0fHhac95SJioO(ou7SFFb8dfWpkLHi4IrQWZ(lzN2RSz1VRqwE3smeknxJJz4jOFPPb(d1aY3ocPUQpy46So8UtdH6m3yF8GOZQSFGlFVBgA31rehxYF2GwG8JGv8wTRWXzMrrgzGOWtDsGgru92ofSdkAPijlXkoY6uSEY9giL)UiePdxNELhElIxJfCwVZILS0mMoXrnDI0n0be8NGK9BwiBFvatwwb4Tw7l5PWBAkJzLYOSCkeU.3d2d85faa7055d8e9b26f81ef02158af8e030d58df1d3eb580c85d0573afc2532061b5b3c6925419b098b654beda8af498665ae5359e2165723422702cb470a4c3a3c55ffa0ac133b41d3ffc68f504ba65721c36b646eb469582b6c73af32a26a313dfb8b486b16c28f6c0cd803e1246c527692552f90a206fad7da214c77c7e&callback=geetest_1789990580998",
+      "status": 200,
+      "body": "geetest_1789990580998({\"status\": \"success\", \"data\": {\"theme\": \"wind\", \"theme_version\": \"1.5.8\", \"static_servers\": [\"static.geetest.com\", \"static.geevisit.com\"], \"api_server\": \"api.geetest.com\", \"logo\": false, \"feedback\": \"\", \"c\": [12, 58, 98, 36, 43, 95, 62, 15, 12], \"s\": \"356c6f68\", \"i18n_labels\": {\"copyright\": \"\\u7531\\u6781\\u9a8c\\u63d0\\u4f9b\\u6280\\u672f\\u652f\\u6301\", \"error\": \"\\u7f51\\u7edc\\u4e0d\\u7ed9\\u529b\", \"error_content\": \"\\u8bf7\\u70b9\\u51fb\\u6b64\\u5904\\u91cd\\u8bd5\", \"error_title\": \"\\u7f51\\u7edc\\u8d85\\u65f6\", \"fullpage\": \"\\u667a\\u80fd\\u68c0\\u6d4b\\u4e2d\", \"goto_cancel\": \"\\u53d6\\u6d88\", \"goto_confirm\": \"\\u524d\\u5f80\", \"goto_homepage\": \"\\u662f\\u5426\\u524d\\u5f80\\u9a8c\\u8bc1\\u670d\\u52a1Geetest\\u5b98\\u7f51\", \"loading_content\": \"\\u667a\\u80fd\\u9a8c\\u8bc1\\u68c0\\u6d4b\\u4e2d\", \"next\": \"\\u6b63\\u5728\\u52a0\\u8f7d\\u9a8c\\u8bc1\", \"next_ready\": \"\\u8bf7\\u5b8c\\u6210\\u9a8c\\u8bc1\", \"read_reversed\": false, \"ready\": \"\\u70b9\\u51fb\\u6309\\u94ae\\u8fdb\\u884c\\u9a8c\\u8bc1\", \"refresh_page\": \"\\u9875\\u9762\\u51fa\\u73b0\\u9519\\u8bef\\u5566\\uff01\\u8981\\u7ee7\\u7eed\\u64cd\\u4f5c\\uff0c\\u8bf7\\u5237\\u65b0\\u6b64\\u9875\\u9762\", \"reset\": \"\\u8bf7\\u70b9\\u51fb\\u91cd\\u8bd5\", \"success\": \"\\u9a8c\\u8bc1\\u6210\\u529f\", \"success_title\": \"\\u901a\\u8fc7\\u9a8c\\u8bc1\"}}})"
+    },
+    {
+      "id": 5,
+      "url": "https://api.geetest.com/ajax.php?gt=ac597a4506fee079629df5d8b66dd4fe&challenge=a7b059a2c9e819c5b9edd13aead5cb8b&lang=zh-cn&pt=0&client_type=web&w=BwueO9aHCR9knSn49ZStHdCAnnLeSiBO0Gz4VCmi8DcyBol2e4RP0UF1VgyhR3frJ8gyiJ3CXSh9KtPky(8)s84YKkxdYzd6PG(NFsX(WiXsgO994A3nR7X(82CsThxW8lWd5yb2zKPK0(ZBoX)0gC4LwPOMyna3j1SJs0rs1jpTJFkyzMZj(OBWD0cZ0R1YVp7iL3XgPYSvcU)jBe6nhlm)60iQBVcvuxjUJ6kafWRGoGs152V0mwlHu)28EQkonWv9pTSX6raqMCtlKlJsKPV90nLQVtZZAYKX(CP5mmhR8bvGBkDlxIu1eJezTLEmhK0QC9sB6AyoheCTIF8CBpYa4(YFTjp84d67uEx3H1ir4(je)wuWIreaaHXaPGZxJP)C1tnyzY9w(QLwy3sS9TWr2YT9WQflnyMe0PDfEuz19pUakgcvvBnnKTvwyrSaB)UNAUCa80uw)9)5ImHghfYCp)pD3BvFx500Wi3i8Vw9ksUMyZ9Tn0SUzuQEdk4YdjWldLSdXwlNAYMOpU4wHYDv)k3NvEN2wwP5rqloQ8Tta6uMEoEcBXtkseDfx7LrA1tykzKassz6xwGMNFYrSzH7Jx5p(kysTjnrwzGiL8D8AsdSW8VsMY5SeRDaGAo(OnyQIom1LdJ0Z7Ys(gDLBu1hGnSjpXE9XD4vnx(IuW(OG3ER)y(AWJwkI6y8N60b&callback=geetest_1789990576171",
+      "status": 200,
+      "body": "geetest_1789990576171({\"status\": \"success\", \"data\": {\"result\": \"click\"}})"
+    },
+    {
+      "id": 7,
+      "url": "https://api.geetest.com/get.php?is_next=true&type=click&gt=ac597a4506fee079629df5d8b66dd4fe&challenge=a7b059a2c9e819c5b9edd13aead5cb8b&lang=zh-cn&https=true&protocol=https%3A%2F%2F&offline=false&product=embed&api_server=api.geetest.com&isPC=true&autoReset=true&width=100%25&callback=geetest_1789990582040",
+      "status": 200,
+      "body": "geetest_1789990582040({\"status\": \"success\", \"data\": {\"theme\": \"silver\", \"theme_version\": \"1.5.4\", \"static_servers\": [\"static.geetest.com/\", \"static.geevisit.com/\"], \"api_server\": \"https://api.geetest.com\", \"logo\": false, \"feedback\": \"\", \"spec\": \"1*1\", \"sign\": \"\", \"pic\": \"/captcha_v3/batch/v3/154059/2026-09-21T19/word/e0df467128384e7e91c3780c620b5b73.jpg\", \"pic_type\": \"word\", \"num\": 0, \"image_servers\": [\"static.geetest.com/\", \"dn-staticdown.qbox.me/\"], \"resource_servers\": [\"static.geetest.com/\", \"static.geevisit.com/\"], \"c\": [12, 58, 98, 36, 43, 95, 62, 15, 12], \"s\": \"40504e4c\", \"i18n_labels\": {\"atip\": \"\\u8bf7\\u6309_\\u8bed\\u5e8f_\\u4f9d\\u6b21_\\u70b9\\u51fb\\u4e0b\\u56fe\\u6587\\u5b57:\", \"cancel\": \"\\u53d6\\u6d88\", \"close\": \"\\u5173\\u95ed\\u9a8c\\u8bc1\", \"commit\": \"\\u786e\\u8ba4\", \"fail\": \"\\u9a8c\\u8bc1\\u5931\\u8d25 \\u8bf7\\u6309\\u63d0\\u793a\\u91cd\\u65b0\\u64cd\\u4f5c\", \"fail_short\": \"\\u9a8c\\u8bc1\\u5931\\u8d25\", \"feedback\": \"\\u5e2e\\u52a9\\u53cd\\u9988\", \"forbidden\": \"\\u9a8c\\u8bc1\\u51fa\\u5c0f\\u5dee\\u5566 \\u8bf73\\u79d2\\u540e\\u91cd\\u8bd5\", \"loading\": \"\\u52a0\\u8f7d\\u4e2d...\", \"maze\": \"\\u8bf7_\\u70b9\\u51fb_\\u56fe\\u7247\\u4ee5_\\u79fb\\u52a8_\\u5c0f\\u9ec4\\u7403\\uff0c\\u8ffd\\u4e0a\\u5c0f\\u65d7\\u6746\", \"read_reversed\": false, \"refresh\": \"\\u5237\\u65b0\\u9a8c\\u8bc1\", \"small_tip\": \"\\u8bf7\\u9009\\u4e2d\\u4e0b\\u56fe\\u4e2d\\u6240\\u6709\\u7684\\uff1a\", \"success\": \"\\u9a8c\\u8bc1\\u6210\\u529f \\u60a8\\u7684\\u901f\\u5ea6\\u5df2\\u8d85\\u8fc7 %s%% \\u7684\\u7528\\u6237\", \"success_short\": \"\\u9a8c\\u8bc1\\u6210\\u529f\", \"tip\": \"\\u8bf7\\u5728\\u4e0b\\u56fe_\\u4f9d\\u6b21_\\u70b9\\u51fb\\uff1a\", \"voice\": \"\\u89c6\\u89c9\\u969c\\u788d\"}, \"gct_path\": \"/static/js/gct.b71a9027509bc6bcfef9fc6a196424f5.js\"}})"
+    },
+    {
+      "id": 10,
+      "url": "https://monitor.geetest.com/monitor/send?time=2026-09-21%2019%3A36%3A16&captcha_id=ac597a4506fee079629df5d8b66dd4fe&challenge=a7b059a2c9e819c5b9edd13aead5cb8b&pt=0&exception_url=.%2Fusercallback%2Ferror&error_code=604&msg=%E7%94%A8%E6%88%B7%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%89%A7%E8%A1%8C%E5%BC%82%E5%B8%B8",
+      "status": 200,
+      "body": "{}"
+    }
+  ],
+  "w_values": [
+    {
+      "id": 3,
+      "key": "w",
+      "value": "3inXHuwJYP33qlyiohDaFvzdi67PHV2eiVjv(J)Ywir1YwdGPvH13ixVDnR7c(nKwUr2KBgMyo3UajH5L7HV0F56p0AnAvBYn4WNKdFzFKytzY3tp6tZgAvstLGFIWnJaaR0mveo3RmTdIF4zIbpKyx33HEaMm9vpS18IjisclPzmHkuQYx4f9EcCjr6F(iZyGMUQDFW(kDz59tcY5YopsT0gcXhSqc25YJGLop3vem)ovRnLeSRQdGWUc7CntMGUJ01ESC431ntK(bPzLfgvsKDKg976s)jtGPZl11RgjE2eDCpJRvvoHdc60g6f5jhakt(YDQ0ADSKoOSQcBFC5a31t69rrUTCXrfCB)gjox3sfZHL7Y0ejKC8y)eTf38LNIPgLTVlajywaCZQQHuUrBoMhSDiq1256CrFLZQJN3yPQOm420YJAxobp0X5yHcWTKe04)G4xO3u2XXvieB3ia)GaKZWJcydQkHjvKE47gxM5FxU41TpyFwV6HyJYxgcvGuEyIBopyhZu4pXV77B6EyUYmExPmeLmuzTXbNXfvu6NCnVwPByoQ2MXljrxzexSR5Ew7CoPP641x1jOqyFt0jJU5zLldNlN0NjvzMrfRS2H)GTc12sJM77QpdHSqIOk0rOr3sUaaEr(ITdcm6hUtGvXSml5pPBpQyzz55U(YOSY2pgVrmJ6WJ35ksyYGcAMlVTvkC8BF5ccct9iA8ka1yZ55OPBENxXoc177b8dhH0sDyqOCiNd(p0ng0eFsRxfPwVo(zOZ6uWjl3IUDRPAfDJj5Rgju4JFUNaq1CNZPVYdg5FFtKDIuPIC)coEmvAwIPosLnIcLsvKOPpkkfcnpYSRJX70YPyRqjBOMqa1ttrkhpvVTKuxnhQp7tmAgDL70OwqesEu5dd(YaxTDuEhfrjH3Inf3OBxhBHlctTxZf2dl4RCkYSz0fHhac95SJioO(ou7SFFb8dfWpkLHi4IrQWZ(lzN2RSz1VRqwE3smeknxJJz4jOFPPb(d1aY3ocPUQpy46So8UtdH6m3yF8GOZQSFGlFVBgA31rehxYF2GwG8JGv8wTRWXzMrrgzGOWtDsGgru92ofSdkAPijlXkoY6uSEY9giL)UiePdxNELhElIxJfCwVZILS0mMoXrnDI0n0be8NGK9BwiBFvatwwb4Tw7l5PWBAkJzLYOSCkeU.3d2d85faa7055d8e9b26f81ef02158af8e030d58df1d3eb580c85d0573afc2532061b5b3c6925419b098b654beda8af498665ae5359e2165723422702cb470a4c3a3c55ffa0ac133b41d3ffc68f504ba65721c36b646eb469582b6c73af32a26a313dfb8b486b16c28f6c0cd803e1246c527692552f90a206fad7da214c77c7e",
+      "path": "https://api.geetest.com/get.php",
+      "url": "https://api.geetest.com/get.php?gt=ac597a4506fee079629df5d8b66dd4fe&challenge=a7b059a2c9e819c5b9edd13aead5cb8b&lang=zh-cn&pt=0&client_type=web&w=3inXHuwJYP33qlyiohDaFvzdi67PHV2eiVjv(J)Ywir1YwdGPvH13ixVDnR7c(nKwUr2KBgMyo3UajH5L7HV0F56p0AnAvBYn4WNKdFzFKytzY3tp6tZgAvstLGFIWnJaaR0mveo3RmTdIF4zIbpKyx33HEaMm9vpS18IjisclPzmHkuQYx4f9EcCjr6F(iZyGMUQDFW(kDz59tcY5YopsT0gcXhSqc25YJGLop3vem)ovRnLeSRQdGWUc7CntMGUJ01ESC431ntK(bPzLfgvsKDKg976s)jtGPZl11RgjE2eDCpJRvvoHdc60g6f5jhakt(YDQ0ADSKoOSQcBFC5a31t69rrUTCXrfCB)gjox3sfZHL7Y0ejKC8y)eTf38LNIPgLTVlajywaCZQQHuUrBoMhSDiq1256CrFLZQJN3yPQOm420YJAxobp0X5yHcWTKe04)G4xO3u2XXvieB3ia)GaKZWJcydQkHjvKE47gxM5FxU41TpyFwV6HyJYxgcvGuEyIBopyhZu4pXV77B6EyUYmExPmeLmuzTXbNXfvu6NCnVwPByoQ2MXljrxzexSR5Ew7CoPP641x1jOqyFt0jJU5zLldNlN0NjvzMrfRS2H)GTc12sJM77QpdHSqIOk0rOr3sUaaEr(ITdcm6hUtGvXSml5pPBpQyzz55U(YOSY2pgVrmJ6WJ35ksyYGcAMlVTvkC8BF5ccct9iA8ka1yZ55OPBENxXoc177b8dhH0sDyqOCiNd(p0ng0eFsRxfPwVo(zOZ6uWjl3IUDRPAfDJj5Rgju4JFUNaq1CNZPVYdg5FFtKDIuPIC)coEmvAwIPosLnIcLsvKOPpkkfcnpYSRJX70YPyRqjBOMqa1ttrkhpvVTKuxnhQp7tmAgDL70OwqesEu5dd(YaxTDuEhfrjH3Inf3OBxhBHlctTxZf2dl4RCkYSz0fHhac95SJioO(ou7SFFb8dfWpkLHi4IrQWZ(lzN2RSz1VRqwE3smeknxJJz4jOFPPb(d1aY3ocPUQpy46So8UtdH6m3yF8GOZQSFGlFVBgA31rehxYF2GwG8JGv8wTRWXzMrrgzGOWtDsGgru92ofSdkAPijlXkoY6uSEY9giL)UiePdxNELhElIxJfCwVZILS0mMoXrnDI0n0be8NGK9BwiBFvatwwb4Tw7l5PWBAkJzLYOSCkeU.3d2d85faa7055d8e9b26f81ef02158af8e030d58df1d3eb580c85d0573afc2532061b5b3c6925419b098b654beda8af498665ae5359e2165723422702cb470a4c3a3c55ffa0ac133b41d3ffc68f504ba65721c36b646eb469582b6c73af32a26a313dfb8b486b16c28f6c0cd803e1246c527692552f90a206fad7da214c77c7e&callback=geetest_1789990580998",
+      "encoded_in_url": false
+    },
+    {
+      "id": 5,
+      "key": "w",
+      "value": "BwueO9aHCR9knSn49ZStHdCAnnLeSiBO0Gz4VCmi8DcyBol2e4RP0UF1VgyhR3frJ8gyiJ3CXSh9KtPky(8)s84YKkxdYzd6PG(NFsX(WiXsgO994A3nR7X(82CsThxW8lWd5yb2zKPK0(ZBoX)0gC4LwPOMyna3j1SJs0rs1jpTJFkyzMZj(OBWD0cZ0R1YVp7iL3XgPYSvcU)jBe6nhlm)60iQBVcvuxjUJ6kafWRGoGs152V0mwlHu)28EQkonWv9pTSX6raqMCtlKlJsKPV90nLQVtZZAYKX(CP5mmhR8bvGBkDlxIu1eJezTLEmhK0QC9sB6AyoheCTIF8CBpYa4(YFTjp84d67uEx3H1ir4(je)wuWIreaaHXaPGZxJP)C1tnyzY9w(QLwy3sS9TWr2YT9WQflnyMe0PDfEuz19pUakgcvvBnnKTvwyrSaB)UNAUCa80uw)9)5ImHghfYCp)pD3BvFx500Wi3i8Vw9ksUMyZ9Tn0SUzuQEdk4YdjWldLSdXwlNAYMOpU4wHYDv)k3NvEN2wwP5rqloQ8Tta6uMEoEcBXtkseDfx7LrA1tykzKassz6xwGMNFYrSzH7Jx5p(kysTjnrwzGiL8D8AsdSW8VsMY5SeRDaGAo(OnyQIom1LdJ0Z7Ys(gDLBu1hGnSjpXE9XD4vnx(IuW(OG3ER)y(AWJwkI6y8N60b",
+      "path": "https://api.geetest.com/ajax.php",
+      "url": "https://api.geetest.com/ajax.php?gt=ac597a4506fee079629df5d8b66dd4fe&challenge=a7b059a2c9e819c5b9edd13aead5cb8b&lang=zh-cn&pt=0&client_type=web&w=BwueO9aHCR9knSn49ZStHdCAnnLeSiBO0Gz4VCmi8DcyBol2e4RP0UF1VgyhR3frJ8gyiJ3CXSh9KtPky(8)s84YKkxdYzd6PG(NFsX(WiXsgO994A3nR7X(82CsThxW8lWd5yb2zKPK0(ZBoX)0gC4LwPOMyna3j1SJs0rs1jpTJFkyzMZj(OBWD0cZ0R1YVp7iL3XgPYSvcU)jBe6nhlm)60iQBVcvuxjUJ6kafWRGoGs152V0mwlHu)28EQkonWv9pTSX6raqMCtlKlJsKPV90nLQVtZZAYKX(CP5mmhR8bvGBkDlxIu1eJezTLEmhK0QC9sB6AyoheCTIF8CBpYa4(YFTjp84d67uEx3H1ir4(je)wuWIreaaHXaPGZxJP)C1tnyzY9w(QLwy3sS9TWr2YT9WQflnyMe0PDfEuz19pUakgcvvBnnKTvwyrSaB)UNAUCa80uw)9)5ImHghfYCp)pD3BvFx500Wi3i8Vw9ksUMyZ9Tn0SUzuQEdk4YdjWldLSdXwlNAYMOpU4wHYDv)k3NvEN2wwP5rqloQ8Tta6uMEoEcBXtkseDfx7LrA1tykzKassz6xwGMNFYrSzH7Jx5p(kysTjnrwzGiL8D8AsdSW8VsMY5SeRDaGAo(OnyQIom1LdJ0Z7Ys(gDLBu1hGnSjpXE9XD4vnx(IuW(OG3ER)y(AWJwkI6y8N60b&callback=geetest_1789990576171",
+      "encoded_in_url": false
+    }
+  ],
+  "http_used": 10
+}

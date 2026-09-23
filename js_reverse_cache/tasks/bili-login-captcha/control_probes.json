@@ -1,0 +1,18 @@
+{
+  "img_no_token": {
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "json": {
+      "code": -400,
+      "message": "Key: 'Token' Error:Field validation for 'Token' failed on the 'required' tag",
+      "ttl": 1
+    }
+  },
+  "img_bogus_token": {
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 6298,
+    "is_jpeg": true
+  },
+  "budget_note": "2 requests; total probes recorded in network.jsonl"
+}

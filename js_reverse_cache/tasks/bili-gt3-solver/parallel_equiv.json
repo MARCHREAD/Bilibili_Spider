@@ -1,0 +1,121 @@
+[
+  {
+    "pic": "cache\\live.jpg",
+    "prompt": [
+      "\u9e21",
+      "\u8c46",
+      "\u51b0",
+      "\u7c89"
+    ],
+    "n": 4,
+    "identical": true,
+    "serial_s": 42.97,
+    "pooled_s": 8.2,
+    "speedup": 5.24
+  },
+  {
+    "pic": "cache\\live2.jpg",
+    "prompt": [
+      "\u9c7c",
+      "\u897f"
+    ],
+    "n": 2,
+    "identical": true,
+    "serial_s": 18.67,
+    "pooled_s": 5.7,
+    "speedup": 3.28
+  },
+  {
+    "pic": "cache\\live3.jpg",
+    "prompt": [
+      "\u561b",
+      "\u9c7c",
+      "\u82af"
+    ],
+    "n": 3,
+    "identical": true,
+    "serial_s": 25.09,
+    "pooled_s": 7.62,
+    "speedup": 3.29
+  },
+  {
+    "pic": "cache\\proto_20260921-210823\\pic_12.jpg",
+    "prompt": [
+      "\u674f",
+      "\u8089"
+    ],
+    "n": 2,
+    "identical": true,
+    "serial_s": 17.69,
+    "pooled_s": 4.82,
+    "speedup": 3.67
+  },
+  {
+    "pic": "cache\\proto_20260921-210823\\pic_7.jpg",
+    "prompt": [
+      "\u7fb2",
+      "\u6cb9",
+      "\u6843",
+      "\u9165"
+    ],
+    "n": 4,
+    "identical": true,
+    "serial_s": 32.8,
+    "pooled_s": 7.8,
+    "speedup": 4.2
+  },
+  {
+    "pic": "cache\\proto_20260921-211050\\pic_7.jpg",
+    "prompt": [
+      "\u7ea2",
+      "\u9152",
+      "\u725b",
+      "\u9e4f"
+    ],
+    "n": 4,
+    "identical": true,
+    "serial_s": 25.18,
+    "pooled_s": 8.34,
+    "speedup": 3.02
+  },
+  {
+    "pic": "cache\\proto_20260921-211222\\pic_7.jpg",
+    "prompt": [
+      "\u6ca7",
+      "\u6d6a",
+      "\u4ead"
+    ],
+    "n": 3,
+    "identical": true,
+    "serial_s": 20.35,
+    "pooled_s": 5.79,
+    "speedup": 3.52
+  },
+  {
+    "pic": "cache\\proto_20260922-143736\\pic_7.jpg",
+    "prompt": [
+      "\u6c64",
+      "\u51b7",
+      "\u753b"
+    ],
+    "n": 3,
+    "identical": true,
+    "serial_s": 23.51,
+    "pooled_s": 5.8,
+    "speedup": 4.06
+  },
+  {
+    "pic": "cache\\proto_20260922-144032\\pic_7.jpg",
+    "prompt": [
+      "\u96ea",
+      "\u82b1",
+      "\u8c46",
+      "\u8150"
+    ],
+    "n": 4,
+    "identical": true,
+    "serial_s": 41.37,
+    "pooled_s": 8.92,
+    "speedup": 4.64
+  }
+]

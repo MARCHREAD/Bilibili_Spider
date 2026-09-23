@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bilibili 本地采集工作台</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <strong>bilibili 本地采集工作台</strong>
+    <span class="muted" id="version"></span>
+  </div>
+  <div class="session" id="session-bar">
+    <span class="muted" id="session-text">正在读取…</span>
+    <button class="btn" id="btn-verify-all">校验全部账号</button>
+    <button class="btn ghost" id="btn-add-account">+ 添加账号</button>
+  </div>
+</header>
+
+<main class="layout">
+  <aside class="sidebar">
+    <div class="side-title">账号</div>
+    <nav id="account-nav"></nav>
+    <div class="side-title">接口</div>
+    <nav id="kind-nav"></nav>
+    <div class="side-title">并发</div>
+    <div class="worker-box">
+      <label class="worker-row">
+        <span>worker 数</span>
+        <input id="workers" type="number" min="1" max="32" value="3">
+      </label>
+      <div class="hint" id="worker-hint"></div>
+      <button class="btn block" id="btn-apply-workers">应用</button>
+    </div>
+  </aside>
+
+  <section class="panel">
+    <h2 id="panel-title">选择一个接口</h2>
+    <p class="hint" id="panel-hint"></p>
+
+    <div class="target-row">
+      <input id="target" type="text" placeholder="目标（BV 号 / 链接 / UID / 关键词）">
+      <button class="btn primary" id="btn-run">运行一次</button>
+      <button class="btn" id="btn-batch">加入批量</button>
+    </div>
+
+    <details class="opts" open>
+      <summary>参数</summary>
+      <div id="fields" class="fields"></div>
+    </details>
+
+    <details class="opts">
+      <summary>批量目标与账号分配（每行一个目标，最多 2000）</summary>
+      <textarea id="targets" rows="4" placeholder="BV1BHez6cEEm&#10;BV1X9eb6tEvy"></textarea>
+      <div class="fields" style="margin-top:8px">
+        <div class="field">
+          <label for="job-account">使用账号</label>
+          <select id="job-account"></select>
+        </div>
+        <div class="field">
+          <label for="job-shard">多账号分片并行</label>
+          <select id="job-shard">
+            <option value="0">关闭（单账号串行）</option>
+            <option value="1">开启（按可用账号切分）</option>
+          </select>
+        </div>
+      </div>
+      <p class="hint" id="shard-hint"></p>
+    </details>
+
+    <div id="result" class="result"></div>
+  </section>
+</main>
+
+<section class="jobs">
+  <div class="jobs-head">
+    <h2>批量任务</h2>
+    <button class="btn ghost" id="btn-refresh-jobs">刷新</button>
+  </div>
+  <div id="job-list" class="job-list"></div>
+  <div id="job-detail" class="job-detail"></div>
+</section>
+
+<!-- 添加账号 -->
+<div class="modal hidden" id="account-modal">
+  <div class="modal-box wide">
+    <h3>添加账号</h3>
+    <div class="fields">
+      <div class="field">
+        <label for="acc-alias">别名（仅本地标识）</label>
+        <input id="acc-alias" type="text" placeholder="例如：主号 / 小号A">
+      </div>
+      <div class="field">
+        <label for="acc-method">登录方式</label>
+        <select id="acc-method">
+          <option value="qr">扫码登录（推荐，不过验证码）</option>
+          <option value="password">账号密码（自动过 GT3 验证码）</option>
+          <option value="cookie">粘贴 Cookie</option>
+        </select>
+      </div>
+    </div>
+    <div id="acc-fields" class="fields" style="margin-top:10px"></div>
+    <p class="hint" id="acc-hint"></p>
+    <div class="modal-actions">
+      <button class="btn" id="btn-acc-cancel">取消</button>
+      <button class="btn primary" id="btn-acc-create">创建</button>
+    </div>
+  </div>
+</div>
+
+<!-- 扫码 -->
+<div class="modal hidden" id="qr-modal">
+  <div class="modal-box">
+    <h3 id="qr-title">扫码登录</h3>
+    <p class="hint">二维码由本地生成，登录全程不经浏览器。</p>
+    <div id="qr-holder" class="qr-holder">正在申请二维码…</div>
+    <p id="qr-state" class="hint"></p>
+    <button class="btn" id="btn-qr-close">关闭</button>
+  </div>
+</div>
+
+<!-- 二次安全验证（密码登录返回 status=2：短信校验绑定手机号） -->
+<div class="modal hidden" id="risk-modal">
+  <div class="modal-box">
+    <h3 id="risk-title">需要二次安全验证</h3>
+    <p class="hint" id="risk-desc"></p>
+
+    <div id="risk-step-send">
+      <p class="hint">
+        验证码与账号密码都已通过，是 B 站要求再用<strong>短信校验你绑定的手机号</strong>。<br>
+        点下面的按钮：协议先过一次人机验证码（约 15~75 秒），然后把短信发到你手机。
+      </p>
+      <button class="btn primary block" id="btn-risk-send">发送短信验证码</button>
+    </div>
+
+    <div id="risk-step-code" class="hidden">
+      <div class="field">
+        <label for="risk-code">手机收到的验证码</label>
+        <input id="risk-code" type="text" inputmode="numeric" autocomplete="one-time-code"
+               placeholder="请输入短信验证码" maxlength="10">
+      </div>
+      <div class="modal-actions">
+        <button class="btn" id="btn-risk-resend">重新发送</button>
+        <button class="btn primary" id="btn-risk-submit">提交验证</button>
+      </div>
+    </div>
+
+    <p class="hint" id="risk-status"></p>
+    <div class="modal-actions">
+      <button class="btn ghost" id="btn-risk-close">关闭</button>
+    </div>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

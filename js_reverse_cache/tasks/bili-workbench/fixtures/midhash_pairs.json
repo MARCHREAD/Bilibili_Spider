@@ -1,0 +1,217 @@
+{
+  "kind": "midhash-uid-pairs",
+  "scheme": "midHash = 8-char lowercase hex of crc32(str(uid))",
+  "how": "multi-video intersection: candidate uid pool (video owners + comment authors incl. sub-comments) x danmaku midHash pool from XML list.so",
+  "note": "uid and midHash are public danmaku metadata; no cookies or tokens here.",
+  "random_collision_expectation": 0.00174736138433218,
+  "pool_size": 415,
+  "hash_pool_size": 18084,
+  "candidates_tested": [
+    "A crc32(str(mid))",
+    "B crc32(str(crc32(mid))+SALT)",
+    "C crc32(str(mid)+SALT)",
+    "D crc32(SALT+str(mid))",
+    "E crc32(str(crc32(mid)))",
+    "F md5(str(mid))[:8]",
+    "G crc32(mid bytes int)"
+  ],
+  "hits_per_candidate": {
+    "A crc32(str(mid))": 47,
+    "B crc32(str(crc32(mid))+SALT)": 0,
+    "C crc32(str(mid)+SALT)": 0,
+    "D crc32(SALT+str(mid))": 0,
+    "E crc32(str(crc32(mid)))": 0,
+    "F md5(str(mid))[:8]": 0,
+    "G crc32(mid bytes int)": 0
+  },
+  "pairs": [
+    {
+      "uid": 104924180,
+      "mid_hash": "9590c386"
+    },
+    {
+      "uid": 200670273,
+      "mid_hash": "f251828e"
+    },
+    {
+      "uid": 3494366052091972,
+      "mid_hash": "392391ea"
+    },
+    {
+      "uid": 525842508,
+      "mid_hash": "8c524d7c"
+    },
+    {
+      "uid": 361042016,
+      "mid_hash": "9b7642df"
+    },
+    {
+      "uid": 487618793,
+      "mid_hash": "45b5ec15"
+    },
+    {
+      "uid": 3493259034757442,
+      "mid_hash": "ccc89819"
+    },
+    {
+      "uid": 3546643997657411,
+      "mid_hash": "29e5329b"
+    },
+    {
+      "uid": 50111839,
+      "mid_hash": "9a8aa4c8"
+    },
+    {
+      "uid": 650519907,
+      "mid_hash": "d7f8a85d"
+    },
+    {
+      "uid": 1630012782,
+      "mid_hash": "a6c4713b"
+    },
+    {
+      "uid": 401046919,
+      "mid_hash": "297497d8"
+    },
+    {
+      "uid": 1186559402,
+      "mid_hash": "44ccb1bd"
+    },
+    {
+      "uid": 3493297152592302,
+      "mid_hash": "b41a7d2a"
+    },
+    {
+      "uid": 3706982986942918,
+      "mid_hash": "efb22113"
+    },
+    {
+      "uid": 36046290,
+      "mid_hash": "2ffa29e1"
+    },
+    {
+      "uid": 3546660437232107,
+      "mid_hash": "2f8ddadd"
+    },
+    {
+      "uid": 40864245,
+      "mid_hash": "bfb18686"
+    },
+    {
+      "uid": 284547620,
+      "mid_hash": "6a6f80cc"
+    },
+    {
+      "uid": 481123900,
+      "mid_hash": "e994d3bf"
+    },
+    {
+      "uid": 3493104447392316,
+      "mid_hash": "4fd4566f"
+    },
+    {
+      "uid": 515615300,
+      "mid_hash": "67b668a6"
+    },
+    {
+      "uid": 66119275,
+      "mid_hash": "d22cb207"
+    },
+    {
+      "uid": 496442991,
+      "mid_hash": "216d6506"
+    },
+    {
+      "uid": 30345845,
+      "mid_hash": "1058ce8f"
+    },
+    {
+      "uid": 1207413403,
+      "mid_hash": "2eb538ee"
+    },
+    {
+      "uid": 630639268,
+      "mid_hash": "2773d5e2"
+    },
+    {
+      "uid": 3461563996441284,
+      "mid_hash": "7560af10"
+    },
+    {
+      "uid": 403727069,
+      "mid_hash": "d48289c4"
+    },
+    {
+      "uid": 3546883215592194,
+      "mid_hash": "c62334f2"
+    },
+    {
+      "uid": 2144503558,
+      "mid_hash": "54f616a0"
+    },
+    {
+      "uid": 511605533,
+      "mid_hash": "18301bce"
+    },
+    {
+      "uid": 3546684806138660,
+      "mid_hash": "9e841888"
+    },
+    {
+      "uid": 3707023893990208,
+      "mid_hash": "6cde185d"
+    },
+    {
+      "uid": 509594436,
+      "mid_hash": "a5e5bc35"
+    },
+    {
+      "uid": 639762250,
+      "mid_hash": "43a09014"
+    },
+    {
+      "uid": 354663247,
+      "mid_hash": "5a10ad3e"
+    },
+    {
+      "uid": 3707019519331189,
+      "mid_hash": "8acb155c"
+    },
+    {
+      "uid": 5235582,
+      "mid_hash": "f219f3e8"
+    },
+    {
+      "uid": 3546605741411236,
+      "mid_hash": "91c919a3"
+    },
+    {
+      "uid": 1839502256,
+      "mid_hash": "223b2fc6"
+    },
+    {
+      "uid": 630541236,
+      "mid_hash": "4cbc8af1"
+    },
+    {
+      "uid": 1379070901,
+      "mid_hash": "8386b4ce"
+    },
+    {
+      "uid": 8810451,
+      "mid_hash": "522e57dc"
+    },
+    {
+      "uid": 37470187,
+      "mid_hash": "f5ee5ff4"
+    },
+    {
+      "uid": 1714422765,
+      "mid_hash": "db03c6fd"
+    },
+    {
+      "uid": 109112313,
+      "mid_hash": "31903bba"
+    }
+  ]
+}

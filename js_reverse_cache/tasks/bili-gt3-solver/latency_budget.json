@@ -1,0 +1,82 @@
+[
+  {
+    "file": "round_01.log",
+    "http_count": 17,
+    "solve_ms": 6426,
+    "last_http_t": 32.56,
+    "t_solved": 30.76,
+    "t_verdict": 32.56
+  },
+  {
+    "file": "round_02.log",
+    "http_count": 11,
+    "solve_ms": 6790,
+    "last_http_t": 14.87,
+    "t_solved": 13.07,
+    "t_verdict": 14.87
+  },
+  {
+    "file": "round_03.log",
+    "http_count": 17,
+    "solve_ms": 7429,
+    "last_http_t": 36.16,
+    "t_solved": 34.38,
+    "t_verdict": 36.16
+  },
+  {
+    "file": "round_04.log",
+    "http_count": 11,
+    "solve_ms": 7915,
+    "last_http_t": 16.3,
+    "t_solved": 14.51,
+    "t_verdict": 16.3
+  },
+  {
+    "file": "round_05.log",
+    "http_count": 11,
+    "solve_ms": 5027,
+    "last_http_t": 13.13,
+    "t_solved": 11.35,
+    "t_verdict": 13.13
+  },
+  {
+    "file": "round_06.log",
+    "http_count": 14,
+    "solve_ms": 7004,
+    "last_http_t": 24.58,
+    "t_solved": 22.8,
+    "t_verdict": 24.58
+  },
+  {
+    "file": "round_07.log",
+    "http_count": 14,
+    "solve_ms": 7314,
+    "last_http_t": 25.33,
+    "t_solved": 23.56,
+    "t_verdict": 25.33
+  },
+  {
+    "file": "round_08.log",
+    "http_count": 17,
+    "solve_ms": 7856,
+    "last_http_t": 33.65,
+    "t_solved": 31.86,
+    "t_verdict": 33.65
+  },
+  {
+    "file": "round_09.log",
+    "http_count": 11,
+    "solve_ms": 6769,
+    "last_http_t": 15.15,
+    "t_solved": 13.35,
+    "t_verdict": 15.15
+  },
+  {
+    "file": "round_10.log",
+    "http_count": 11,
+    "solve_ms": 6275,
+    "last_http_t": 14.59,
+    "t_solved": 12.79,
+    "t_verdict": 14.59
+  }
+]

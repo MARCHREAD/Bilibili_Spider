@@ -1,0 +1,203 @@
+{
+  "chunks": {
+    "10": {
+      "url": "https://s1.hdslb.com/bfs/static/2233-monorepo/passport/static/js/async/10.85831162.js",
+      "status": 200,
+      "len": 88373,
+      "hits": {
+        "/x/passport-login/": 1,
+        "risk": 2
+      },
+      "routes": [
+        "/x/passport-login/web/sns/login"
+      ],
+      "geetest_urls": []
+    },
+    "263": {
+      "url": "https://s1.hdslb.com/bfs/static/2233-monorepo/passport/static/js/async/263.9c8b9071.js",
+      "status": 200,
+      "len": 83065,
+      "hits": {
+        "/x/passport-login/": 3
+      },
+      "routes": [
+        "/x/passport-login/web/authorize",
+        "/x/passport-login/web/sns/authorize/url",
+        "/x/passport-login/web/sns/state/generate"
+      ],
+      "geetest_urls": []
+    },
+    "264": {
+      "url": "https://s1.hdslb.com/bfs/static/2233-monorepo/passport/static/js/async/264.60f4e88f.js",
+      "status": 200,
+      "len": 207108,
+      "hits": {
+        "geetest": 34,
+        "static.geetest.com": 2,
+        "geetest_challenge": 3,
+        "geetest_validate": 3,
+        "geetest_seccode": 3,
+        "gettype.php": 1,
+        "captcha": 41,
+        "/x/passport-login/": 8,
+        "fullpage": 5,
+        "slide": 5,
+        "risk": 2,
+        "challenge": 18
+      },
+      "routes": [
+        "/x/passport-login/captcha",
+        "/x/passport-login/web/country",
+        "/x/passport-login/web/key",
+        "/x/passport-login/web/login",
+        "/x/passport-login/web/login/sms",
+        "/x/passport-login/web/qrcode/generate",
+        "/x/passport-login/web/qrcode/poll",
+        "/x/passport-login/web/sms/send"
+      ],
+      "geetest_urls": [
+        "/static/js/geetest.0.0.0.js"
+      ]
+    },
+    "409": {
+      "url": "https://s1.hdslb.com/bfs/static/2233-monorepo/passport/static/js/async/409.968ce5e0.js",
+      "status": 200,
+      "len": 178899,
+      "hits": {
+        "geetest": 35,
+        "static.geetest.com": 2,
+        "geetest_challenge": 3,
+        "geetest_validate": 3,
+        "geetest_seccode": 3,
+        "gettype.php": 1,
+        "captcha": 80,
+        "/x/passport-login/": 9,
+        "fullpage": 5,
+        "slide": 5,
+        "risk": 60,
+        "challenge": 20
+      },
+      "routes": [
+        "/x/passport-login/captcha",
+        "/x/passport-login/web/country",
+        "/x/passport-login/web/exchange_cookie",
+        "/x/passport-login/web/key",
+        "/x/passport-login/web/login",
+        "/x/passport-login/web/login/sms",
+        "/x/passport-login/web/qrcode/generate",
+        "/x/passport-login/web/qrcode/poll",
+        "/x/passport-login/web/sms/send",
+        "/x/safecenter/acc_del/cancel",
+        "/x/safecenter/acc_del/info",
+        "/x/safecenter/captcha/pre",
+        "/x/safecenter/common/email/send",
+        "/x/safecenter/common/email/verify",
+        "/x/safecenter/common/sms/send",
+        "/x/safecenter/login/tel/bind",
+        "/x/safecenter/login/tel/verify",
+        "/x/safecenter/sec/verify",
+        "/x/safecenter/user/info",
+        "/x/safecenter/user_device/verify"
+      ],
+      "geetest_urls": [
+        "/static/js/geetest.0.0.0.js"
+      ]
+    },
+    "600": {
+      "url": "https://s1.hdslb.com/bfs/static/2233-monorepo/passport/static/js/async/600.5812ee4e.js",
+      "status": 200,
+      "len": 162564,
+      "hits": {
+        "geetest": 33,
+        "static.geetest.com": 2,
+        "geetest_challenge": 3,
+        "geetest_validate": 3,
+        "geetest_seccode": 3,
+        "gettype.php": 1,
+        "captcha": 38,
+        "fullpage": 5,
+        "slide": 5,
+        "risk": 15,
+        "challenge": 16
+      },
+      "routes": [
+        "/x/passport-user/web/captcha/pre",
+        "/x/passport-user/web/key",
+        "/x/passport-user/web/reset/check/user",
+        "/x/passport-user/web/reset/msg/send",
+        "/x/passport-user/web/reset/pwd"
+      ],
+      "geetest_urls": [
+        "/static/js/geetest.0.0.0.js"
+      ]
+    },
+    "832": {
+      "url": "https://s1.hdslb.com/bfs/static/2233-monorepo/passport/static/js/async/832.5b9896d7.js",
+      "status": 200,
+      "len": 1932,
+      "hits": {},
+      "routes": [],
+      "geetest_urls": []
+    },
+    "838": {
+      "url": "https://s1.hdslb.com/bfs/static/2233-monorepo/passport/static/js/async/838.b9d2ec25.js",
+      "status": 200,
+      "len": 205369,
+      "hits": {
+        "geetest": 32,
+        "static.geetest.com": 2,
+        "geetest_challenge": 3,
+        "geetest_validate": 3,
+        "geetest_seccode": 3,
+        "gettype.php": 1,
+        "captcha": 40,
+        "/x/passport-login/": 11,
+        "fullpage": 5,
+        "slide": 5,
+        "risk": 2,
+        "challenge": 18
+      },
+      "routes": [
+        "/x/passport-login/captcha",
+        "/x/passport-login/web/authorize",
+        "/x/passport-login/web/country",
+        "/x/passport-login/web/key",
+        "/x/passport-login/web/login",
+        "/x/passport-login/web/login/sms",
+        "/x/passport-login/web/qrcode/generate",
+        "/x/passport-login/web/qrcode/poll",
+        "/x/passport-login/web/sms/send",
+        "/x/passport-login/web/sns/authorize/url",
+        "/x/passport-login/web/sns/state/generate"
+      ],
+      "geetest_urls": [
+        "/static/js/geetest.0.0.0.js"
+      ]
+    },
+    "86": {
+      "url": "https://s1.hdslb.com/bfs/static/2233-monorepo/passport/static/js/async/86.7f85abb2.js",
+      "status": 200,
+      "len": 87656,
+      "hits": {
+        "captcha": 1,
+        "/x/passport-login/": 1,
+        "risk": 2
+      },
+      "routes": [
+        "/x/passport-login/web/exchange_cookie",
+        "/x/safecenter/acc_del/cancel",
+        "/x/safecenter/acc_del/info",
+        "/x/safecenter/captcha/pre",
+        "/x/safecenter/common/email/send",
+        "/x/safecenter/common/email/verify",
+        "/x/safecenter/common/sms/send",
+        "/x/safecenter/login/tel/bind",
+        "/x/safecenter/login/tel/verify",
+        "/x/safecenter/sec/verify",
+        "/x/safecenter/user/info",
+        "/x/safecenter/user_device/verify"
+      ],
+      "geetest_urls": []
+    }
+  }
+}

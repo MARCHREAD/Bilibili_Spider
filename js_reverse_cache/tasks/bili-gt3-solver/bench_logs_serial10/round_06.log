@@ -1,0 +1,64 @@
+{"gt": "ac597a4506fee079629df5d8b66dd4fe", "challenge": "c6dabb1b5062c9f34613692d0e021318", "requests": [{"kind": "script", "path": "https://api.geetest.com/gettype.php", "params": ["callback", "gt"]}, {"kind": "script", "path": "https://static.geetest.com/static/js/fullpage.9.2.0-guwyxh.js", "params": []}, {"kind": "script", "path": "https://api.geetest.com/get.php", "params": ["callback", "challenge", "client_type", "gt", "lang", "pt", "w"]}, {"kind": "link", "path": "https://static.geetest.com/static/wind/style_https.1.5.8.css", "params": []}, {"kind": "script", "path": "https://api.geetest.com/ajax.php", "params": ["callback", "challenge", "client_type", "gt", "lang", "pt", "w"]}, {"kind": "script", "path": "https://static.geetest.com/static/js/click.3.1.2.js", "params": []}, {"kind": "script", "path": "https://api.geetest.com/get.php", "params": ["api_server", "autoReset", "callback", "challenge", "gt", "https", "isPC", "is_next", "lang", "offline", "product", "protocol", "type", "width"]}, {"kind": "script", "path": "https://static.geetest.com/static/js/gct.b71a9027509bc6bcfef9fc6a196424f5.js", "params": []}, {"kind": "link", "path": "https://static.geetest.com/static/silver/style_https.1.5.4.css", "params": []}, {"kind": "script", "path": "https://monitor.geetest.com/monitor/send", "params": ["captcha_id", "challenge", "error_code", "exception_url", "msg", "pt", "time"]}, {"kind": "script", "path": "https://api.geetest.com/ajax.php", "params": ["callback", "challenge", "client_type", "gt", "lang", "pt", "w"]}, {"kind": "script", "path": "https://api.geetest.com/refresh.php", "params": ["callback", "challenge", "gt", "lang", "type"]}, {"kind": "script", "path": "https://api.geetest.com/ajax.php", "params": ["callback", "challenge", "client_type", "gt", "lang", "pt", "w"]}], "w_lengths": [1452, 704, 664, 684], "http_used": 14, "outdir": "A:\\agent\\work\\bilibili\\js_reverse_cache\\tasks\\bili-gt3-solver\\cache\\proto_20260922-150645"}
+
+[t+  1.06s] [http 1] 200     224B  https://passport.bilibili.com/x/passport-login/captcha
+[t+  1.06s] [round] gt=ac597a4506fee079629df5d8b66dd4fe challenge=c6dabb1b5062c9f34613692d0e021318 token=fd7a3a5042df4c8894824032a93a74dd
+[t+  1.12s] [helper] ready assets=['gt_loader_from_bili.js'] load=['ok:gt_loader_from_bili.js'] diag=['loaded:bom/navigator.js', 'loaded:bom/location.js', 'loaded:dom/document.js']
+[t+  1.12s] [helper:req 1] script https://api.geetest.com/gettype.php params=['callback', 'gt'] w_len=0
+[t+  1.72s] [http 2] 200     465B  https://api.geetest.com/gettype.php
+[t+  1.72s] [helper:after-response] {"type": "after-response", "id": 1, "after": "{\"core\":false,\"timers\":1,\"delays\":[0],\"instKeys\":-1}"}
+[t+  1.73s] [helper:req 2] script https://static.geetest.com/static/js/fullpage.9.2.0-guwyxh.js params=[] w_len=0
+[t+  1.73s]            -> served local asset fullpage.9.2.0-guwyxh.js (304311B)
+[t+  1.74s] [helper:after-response] {"type": "after-response", "id": 2, "after": "{\"core\":false,\"timers\":1,\"delays\":[0],\"instKeys\":-1}"}
+[t+  1.79s] [helper:req 3] script https://api.geetest.com/get.php params=['callback', 'challenge', 'client_type', 'gt', 'lang', 'pt', 'w'] w_len=1452
+[t+  2.34s] [http 3] 200    1233B  https://api.geetest.com/get.php
+[t+  2.35s] [helper:after-response] {"type": "after-response", "id": 3, "after": "{\"core\":true,\"timers\":5,\"delays\":[0,2000,30000,30000,540000],\"instKeys\":2}"}
+[t+  2.35s] [helper:req 4] link https://static.geetest.com/static/wind/style_https.1.5.8.css params=[] w_len=0
+[t+  3.01s] [http 4] 200   40702B  https://static.geetest.com/static/wind/style_https.1.5.8.css
+[t+  3.08s] [helper:verify] {"type": "verify", "result": "ok:object"}
+[t+  3.49s] [helper:req 5] script https://api.geetest.com/ajax.php params=['callback', 'challenge', 'client_type', 'gt', 'lang', 'pt', 'w'] w_len=704
+[t+  4.04s] [http 5] 200      73B  https://api.geetest.com/ajax.php
+[t+  4.04s] [verdict] https://api.geetest.com/ajax.php -> {"status": "success", "data": {"result": "click"}}
+[t+  4.04s] [helper:after-response] {"type": "after-response", "id": 5, "after": "{\"core\":true,\"timers\":6,\"delays\":[0,27990,27990,29990,30000,537990],\"instKeys\":2}"}
+[t+  4.06s] [helper:req 6] script https://static.geetest.com/static/js/click.3.1.2.js params=[] w_len=0
+[t+  4.06s]            -> served local asset click.3.1.2.js (227171B)
+[t+  4.07s] [helper:after-response] {"type": "after-response", "id": 6, "after": "{\"core\":true,\"timers\":6,\"delays\":[0,27990,27990,29990,30000,537990],\"instKeys\":2}"}
+[t+  4.07s] [helper:req 7] script https://api.geetest.com/get.php params=['api_server', 'autoReset', 'callback', 'challenge', 'gt', 'https', 'isPC', 'is_next', 'lang', 'offline', 'product', 'protocol', 'type', 'width'] w_len=0
+[t+  4.63s] [http 6] 200    1647B  https://api.geetest.com/get.php
+[t+  4.63s] [round data] {"status": null, "result": null, "num": 0, "pic_type": "word", "spec": "1*1", "sign": "", "type": null, "c": [12, 58, 98, 36, 43, 95, 62, 15, 12], "gct": null}
+[t+  5.09s] [http 7] 200   60611B  IMAGE pic -> pic_7.jpg
+[t+  5.09s] [helper:after-response] {"type": "after-response", "id": 7, "after": "{\"core\":true,\"timers\":11,\"delays\":[0,2000,27990,27990,29990,30000,30000,30000,30000,537990,540000],\"instKeys\":2}"}
+[t+  5.10s] [helper:req 8] script https://static.geetest.com/static/js/gct.b71a9027509bc6bcfef9fc6a196424f5.js params=[] w_len=0
+[t+  5.65s] [http 8] 200   21163B  https://static.geetest.com/static/js/gct.b71a9027509bc6bcfef9fc6a196424f5.js
+[t+  5.65s] [helper:after-response] {"type": "after-response", "id": 8, "after": "{\"core\":true,\"timers\":12,\"delays\":[0,2490,25480,25480,27480,27490,27490,27490,27490,29490,535480,537490],\"instKeys\":2}"}
+[t+  5.65s] [helper:req 9] link https://static.geetest.com/static/silver/style_https.1.5.4.css params=[] w_len=0
+[t+  6.21s] [http 9] 200   31327B  https://static.geetest.com/static/silver/style_https.1.5.4.css
+[t+  6.21s] [helper:req 10] script https://monitor.geetest.com/monitor/send params=['captcha_id', 'challenge', 'error_code', 'exception_url', 'msg', 'pt', 'time'] w_len=0
+[t+  6.84s] [http 10] 200       2B  https://monitor.geetest.com/monitor/send
+[t+  6.84s] [helper:after-response] {"type": "after-response", "id": 10, "after": "{\"core\":true,\"timers\":12,\"delays\":[0,2490,25480,25480,27480,27490,27490,27490,27490,29490,535480,537490],\"instKeys\":2}"}
+[t+ 12.96s] [solver] pic_7.jpg -> points=[[292, 126], [42, 274], [217, 72]] ranked=None
+[t+ 12.96s] [solve] {"pic": "pic_7.jpg", "solver": "v11", "solve_ms": 6113, "prompt": ["\u6851", "\u8a89", "\u7ca5"], "candidates": [{"\u6851": 10, "\u7387": 10}, {"\u8a89": 8, "\u7cd5": 8, "\u6f84": 2, "\u9c9e": 2}, {"\u7ca5": 20}], "readings": ["\u6851\u8a89\u7ca5", "\u6851\u8a89\u7ca5", "\u6851\u8a89\u7ca5", "\u6851\u8a89\u7ca5", "\u7387\u7cd5\u7ca5", "\u7387\u7cd5\u7ca5", "\u7387\u7cd5\u7ca5", "\u7387\u7cd5\u7ca5"], "n": 3, "points": [[292, 126], [42, 274], [217, 72]], "field_boxes": [[183, 38, 69, 69], [105, 87, 67, 66], [260, 93, 65, 66], [10, 241, 65, 67]], "matches": [{"prompt_index": 0, "prompt_char": "\u6851", "best_char": "\u6851", "field_index": 2, "score": 14.0, "fallback": false, "x": 292, "y": 126}, {"prompt_index": 1, "prompt_char": "\u8a89", "best_char": "\u8a89", "field_index": 3, "score": 0.0, "fallback": true, "x": 42, "y": 274}, {"prompt_index": 2, "prompt_char": "\u7ca5", "best_char": "\u7ca5", "field_index": 0, "score": 20.0, "fallback": false, "x": 217, "y": 72}], "size": [344, 384]}
+[t+ 12.96s] [answer] pct=8488_3663,1221_7965,6308_2093 (img 344x384, click square=344)
+[t+ 12.99s] [helper:call-widget] {"type": "call-widget", "name": "$_BJJQ", "points": "8488_3663,1221_7965,6308_2093", "format": "str", "result": "sync:undefined|answer=\"8488_3663,1221_7965,6308_2093\"|passtime=3200|PLAIN={\"lang\":\"zh-cn\",\"passtime\":3200,\"a\":\"8488_3663,1221_7965,6308_2093\",\"pic\":\"/captcha_v3/batch/v3/154135/2026-09-22T14/word/e9eaf3e9587a47dd9fdab00e045371c4.jpg\",\"tt\":\"vMO(*E((12((M((\",\"ep\":{\"ca\":[],\"v\":\"3.1.2\",\"$_FG\":false,\"me\":false,\"tm\":-1},\"h9s9\":\"1816378497\",\"rp\":\"30b984d7434f2ae531e41f6f910ff1b2\"}"}
+[t+ 14.20s] [helper:req 11] script https://api.geetest.com/ajax.php params=['callback', 'challenge', 'client_type', 'gt', 'lang', 'pt', 'w'] w_len=664
+[t+ 14.76s] [http 11] 200      83B  https://api.geetest.com/ajax.php
+[t+ 14.76s] [verdict] https://api.geetest.com/ajax.php -> {"status": "success", "data": {"result": "fail", "msg": []}}
+[t+ 14.76s] [helper:after-response] {"type": "after-response", "id": 11, "after": "{\"core\":true,\"timers\":16,\"delays\":[0,400,400,1500,2490,25480,25480,27480,27490,27490,27490,27490,29490,30000,535480,537490],\"instKeys\":2}"}
+[t+ 14.76s] [helper:req 12] script https://api.geetest.com/refresh.php params=['callback', 'challenge', 'gt', 'lang', 'type'] w_len=0
+[t+ 15.32s] [http 12] 200     273B  https://api.geetest.com/refresh.php
+[t+ 15.32s] [round data] {"status": null, "result": null, "num": 0, "pic_type": "word", "spec": "1*1", "sign": "", "type": null, "c": null, "gct": null}
+[t+ 15.78s] [http 13] 200   55862B  IMAGE pic -> pic_12.jpg
+[t+ 15.78s] [helper:after-response] {"type": "after-response", "id": 12, "after": "{\"core\":true,\"timers\":14,\"delays\":[0,22990,22990,24990,25000,25000,25000,25000,27000,27510,29610,30000,532990,539610],\"instKeys\":2}"}
+[t+ 22.80s] [solver] pic_12.jpg -> points=[[35, 241], [43, 115], [151, 51], [161, 118]] ranked=None
+[t+ 22.80s] [solve] {"pic": "pic_12.jpg", "solver": "v11", "solve_ms": 7004, "prompt": ["\u6d46", "\u5507", "\u4e4b", "\u65c5"], "candidates": [{"\u6d46": 10, "\u7f8e": 8, "\u7c7b": 2}, {"\u5507": 10, "\u98df": 10}, {"\u4e4b": 18, "\u4e59": 2}, {"\u65c5": 20}], "readings": ["\u6d46\u5507\u4e4b\u65c5", "\u6d46\u5507\u4e4b\u65c5", "\u6d46\u5507\u4e4b\u65c5", "\u6d46\u5507\u4e4b\u65c5", "\u7f8e\u98df\u4e4b\u65c5", "\u7f8e\u98df\u4e4b\u65c5", "\u7f8e\u98df\u4e4b\u65c5", "\u7f8e\u98df\u4e4b\u65c5"], "n": 4, "points": [[35, 241], [43, 115], [151, 51], [161, 118]], "field_boxes": [[117, 16, 69, 70], [9, 80, 69, 70], [127, 83, 69, 70], [1, 206, 69, 70], [111, 234, 71, 70]], "matches": [{"prompt_index": 0, "prompt_char": "\u6d46", "best_char": "\u7f8e", "field_index": 3, "score": 8.0, "fallback": false, "x": 35, "y": 241}, {"prompt_index": 1, "prompt_char": "\u5507", "best_char": "\u98df", "field_index": 1, "score": 10.0, "fallback": false, "x": 43, "y": 115}, {"prompt_index": 2, "prompt_char": "\u4e4b", "best_char": "\u4e4b", "field_index": 0, "score": 18.0, "fallback": false, "x": 151, "y": 51}, {"prompt_index": 3, "prompt_char": "\u65c5", "best_char": "\u65c5", "field_index": 2, "score": 20.0, "fallback": false, "x": 161, "y": 118}], "size": [344, 384]}
+[t+ 22.80s] [answer] pct=1017_7006,1250_3343,4390_1483,4680_3430 (img 344x384, click square=344)
+[t+ 22.82s] [helper:call-widget] {"type": "call-widget", "name": "$_BJJQ", "points": "1017_7006,1250_3343,4390_1483,4680_3430", "format": "str", "result": "sync:undefined|answer=\"1017_7006,1250_3343,4390_1483,4680_3430\"|passtime=3200|PLAIN={\"lang\":\"zh-cn\",\"passtime\":3200,\"a\":\"1017_7006,1250_3343,4390_1483,4680_3430\",\"pic\":\"/captcha_v3/batch/v3/154135/2026-09-22T14/word/cb3e8508762649ed98ed9fe5cf9c8542.jpg\",\"tt\":\"vMO(*E((12((M((\",\"ep\":{\"ca\":[],\"v\":\"3.1.2\",\"$_FG\":false,\"me\":false,\"tm\":-1},\"h9s9\":\"1816378497\",\"rp\":\"30b984d7434f2ae531e41f6f910ff1b2\"}"}
+[t+ 24.03s] [helper:req 13] script https://api.geetest.com/ajax.php params=['callback', 'challenge', 'client_type', 'gt', 'lang', 'pt', 'w'] w_len=684
+[t+ 24.58s] [http 14] 200     149B  https://api.geetest.com/ajax.php
+[t+ 24.58s] [verdict] https://api.geetest.com/ajax.php -> {"status": "success", "data": {"result": "success", "validate": "e6db8b8e76d093bf3e91972b3d905c8f", "score": "14", "msg": []}}
+[t+ 24.58s] === SUCCESS validate=e6db8b8e76d093bf3e91972b3d905c8f score=14 ===
+[t+ 24.59s] === w values captured ===
+[t+ 24.59s]   id=3 key=w path=https://api.geetest.com/get.php len=1452 head=HsXLS1tgb5Fg8aAbmzuQvj6CwuWRm)XmjyVKFnLs
+[t+ 24.59s]   id=5 key=w path=https://api.geetest.com/ajax.php len=704 head=EVt04Y83rwyY5w4JlN1cVVbcmLK)FD0XTfMP3MBz
+[t+ 24.59s]   id=11 key=w path=https://api.geetest.com/ajax.php len=664 head=aqxGkuvMNvauCi6dlJsEO6lFoI8nPQFdzy2zZUep
+[t+ 24.59s]   id=13 key=w path=https://api.geetest.com/ajax.php len=684 head=aqxGkuvMNvauCi6dlJsEO6lFoI8nPQFdzy2zZUep
+[t+ 24.59s] === http used: 14 ===

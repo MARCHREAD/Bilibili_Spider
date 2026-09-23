@@ -1,0 +1,44 @@
+{
+  "kind": "wbi-fixed-vectors",
+  "source": "chrome-devtools page-world capture (initScript XHR hook) on https://www.bilibili.com/video/BV1BHez6cEEm/",
+  "note": "URLs are exactly what the live page emitted. No cookie values are stored here.",
+  "captured_wts": 1790068866,
+  "candidate_keys": {
+    "page_default_wbi_key": {
+      "img_key": "2590160e9f5142d4a501feda0490f3bd",
+      "sub_key": "34ba9c5c4a824b368e9c053be34016bd",
+      "origin": "window.__INITIAL_STATE__.defaultWbiKey"
+    },
+    "nav_wbi_img": {
+      "img_key": "7cd084941338484aae1ad9425b84077c",
+      "sub_key": "4932caff0ff746eab6f01bf08b70ac45",
+      "origin": "GET /x/web-interface/nav data.wbi_img (same session)"
+    }
+  },
+  "vectors": [
+    {
+      "name": "player_wbi_v2",
+      "url": "https://api.bilibili.com/x/player/wbi/v2?aid=117303375104693&cid=42057075469&isGaiaAvoided=false&web_location=1315873&dm_img_list=[]&dm_img_str=V2ViR0wgMS4wIChPcGVuR0wgRVMgMi4wIENocm9taXVtKQ&dm_cover_img_str=QU5HTEUgKE5WSURJQSwgTlZJRElBIEdlRm9yY2UgUlRYIDQwNjAgTGFwdG9wIEdQVSAoMHgwMDAwMjhFMCkgRGlyZWN0M0QxMSB2c181XzAgcHNfNV8wLCBEM0QxMSlHb29nbGUgSW5jLiAoTlZJRElBKQ&dm_img_inter=%7B%22ds%22:[],%22wh%22:[4601,4297,79],%22of%22:[93,186,93]%7D&x-bili-device-req-json=%7B%22platform%22:%22web%22,%22device%22:%22pc%22,%22mobi_app%22:%22web_cn%22%7D&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%22%7D,%22always_translate%22:false%7D&w_rid=c67299d398839b1b6ed1be66c871196d&wts=1790068866"
+    },
+    {
+      "name": "dm_web_view",
+      "url": "https://api.bilibili.com/x/v2/dm/web/view?type=1&oid=42057075469&pid=117303375104693&duration=854&without_subtitle=true&web_location=1315873&x-bili-device-req-json=%7B%22platform%22:%22web%22,%22device%22:%22pc%22,%22mobi_app%22:%22web_cn%22%7D&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%22%7D,%22always_translate%22:false%7D&w_rid=8c7be68745652d8a60a897c9a1ca14b0&wts=1790068866"
+    },
+    {
+      "name": "subtitle_web_view",
+      "url": "https://api.bilibili.com/x/v2/subtitle/web/view?oid=42057075469&pid=117303375104693&context_ext=%7B%22video_type%22:1%7D&type=1&cur_production_type=0&playlist_switch=0&web_location=1315873&x-bili-device-req-json=%7B%22platform%22:%22web%22,%22device%22:%22pc%22,%22mobi_app%22:%22web_cn%22%7D&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%22%7D,%22always_translate%22:false%7D&w_rid=71dbc7ba591862e541b03bc171a3f76e&wts=1790068866"
+    },
+    {
+      "name": "dm_seg_so",
+      "url": "https://api.bilibili.com/x/v2/dm/wbi/web/seg.so?type=1&oid=42057075469&pid=117303375104693&segment_index=1&pull_mode=1&ps=0&pe=120000&web_location=1315873&x-bili-device-req-json=%7B%22platform%22:%22web%22,%22device%22:%22pc%22,%22mobi_app%22:%22web_cn%22%7D&x-bili-locale-json=%7B%22c_locale%22:%7B%22language%22:%22zh%22,%22script%22:%22Hans%22%7D,%22always_translate%22:false%7D&w_rid=d261c99f98ed7dac0ae17097ee049922&wts=1790068867"
+    },
+    {
+      "name": "click_heartbeat",
+      "url": "https://api.bilibili.com/x/click-interface/web/heartbeat?w_start_ts=1790068866&w_aid=117303375104693&w_dt=2&w_realtime=0&w_played_time=0&w_real_played_time=0&w_video_duration=854&w_last_play_progress_time=0&web_location=1315873&w_rid=efe0beedeb106fe369ebb90761d318ab&wts=1790068867"
+    },
+    {
+      "name": "click_h5",
+      "url": "https://api.bilibili.com/x/click-interface/click/web/h5?w_aid=117303375104693&w_part=1&w_ftime=1790068866&w_stime=1790068866&w_type=3&web_location=1315873&w_rid=2c09dfe7dfcdddc279f4ddb92b34460b&wts=1790068867"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "captcha_init_legacy_samples": [
+    {
+      "file": "captcha_init.json",
+      "type": "geetest",
+      "token": "4e7a80b18bce4182b92dcf98e26991d0",
+      "geetest": {
+        "gt": "ac597a4506fee079629df5d8b66dd4fe",
+        "challenge": "93b3f49adcbd1a065550f55124cf592f"
+      }
+    },
+    {
+      "file": "captcha_init_blog.json",
+      "type": "geetest",
+      "token": "760e7a791e8f4ceb8a3671915b00f2c7",
+      "geetest": {
+        "gt": "ac597a4506fee079629df5d8b66dd4fe",
+        "challenge": "221ff4fb23e076075fd162571d4b6fc7"
+      }
+    },
+    {
+      "file": "captcha_init_main-fe-header.json",
+      "type": "geetest",
+      "token": "d04a52d1c0ed41a2aeecd43299fc8755",
+      "geetest": {
+        "gt": "ac597a4506fee079629df5d8b66dd4fe",
+        "challenge": "c7f568b790d1b5ab9f5d7931b7cd1339"
+      }
+    }
+  ],
+  "captcha_init_contract": {
+    "type": "geetest",
+    "token": "server-issued per round",
+    "geetest": {
+      "gt": "server-fixed",
+      "challenge": "server-issued per round"
+    }
+  },
+  "loader_constants": {
+    "api_server": "api.geetest.com",
+    "typePath": "/gettype.php",
+    "fallback_config": {
+      "slide": {
+        "type": "slide",
+        "slide": "/static/js/geetest.0.0.0.js"
+      },
+      "fullpage": {
+        "type": "fullpage",
+        "fullpage": "/static/js/fullpage.0.0.0.js"
+      }
+    },
+    "static_servers": [
+      "static.geetest.com",
+      "static.geevisit.com"
+    ]
+  },
+  "live_gettype": {
+    "type": "fullpage",
+    "static_servers": [
+      "static.geetest.com/",
+      "static.geevisit.com/"
+    ],
+    "click": "/static/js/click.3.1.2.js",
+    "beeline": "/static/js/beeline.1.0.1.js",
+    "voice": "/static/js/voice.1.2.6.js",
+    "fullpage": "/static/js/fullpage.9.2.0-guwyxh.js",
+    "slide": "/static/js/slide.7.9.3.js",
+    "geetest": "/static/js/geetest.6.0.9.js",
+    "aspect_radio": {
+      "slide": 103,
+      "click": 128,
+      "voice": 128,
+      "beeline": 50
+    }
+  },
+  "live_get": {
+    "theme": "wind",
+    "static_servers": [
+      "static.geetest.com",
+      "static.geevisit.com"
+    ],
+    "api_server": "api.geetest.com",
+    "c": [
+      12,
+      58,
+      98,
+      36,
+      43,
+      95,
+      62,
+      15,
+      12
+    ],
+    "s": "62614956"
+  },
+  "login_payload_examples": {
+    "geetest": [
+      "challenge",
+      "csrf_state",
+      "go_url",
+      "password",
+      "seccode",
+      "sns_openid",
+      "sns_platform",
+      "source",
+      "token",
+      "username",
+      "validate"
+    ],
+    "img": [
+      "captcha",
+      "csrf_state",
+      "go_url",
+      "password",
+      "sns_openid",
+      "sns_platform",
+      "source",
+      "token",
+      "username"
+    ]
+  },
+  "endpoints": {
+    "captcha_prefetch": "GET https://passport.bilibili.com/x/passport-login/captcha?source=main-fe",
+    "captcha_image": "GET https://api.bilibili.com/x/recaptcha/img?_=<rand>&token=<token>",
+    "password_login": "POST https://passport.bilibili.com/x/passport-login/web/login (form-urlencoded)",
+    "sms_code_login": "POST https://passport.bilibili.com/x/passport-login/web/login/sms",
+    "sms_send": "GET/POST https://passport.bilibili.com/x/passport-login/web/sms/send",
+    "rsa_key": "GET https://passport.bilibili.com/x/passport-login/web/key?_=<ms>",
+    "gt3_gettype": "https://api.geetest.com/gettype.php?gt=<gt>&callback=<jsonp>",
+    "gt3_get": "https://api.geetest.com/get.php?gt=<gt>&challenge=<c>&lang=zh-cn&pt=0&client_type=web&callback=<jsonp>"
+  },
+  "unproven_routes": [
+    "POST /x/passport-login/web/login was never submitted (no account use) -> server-side captcha verdict unproven",
+    "gt3 ajax.php /validate completion was not driven (no slider answer submitted)"
+  ]
+}

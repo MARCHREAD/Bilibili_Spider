@@ -1,0 +1,1138 @@
+{
+  "rounds": 20,
+  "jobs": 4,
+  "successes": 20,
+  "accuracy": 1.0,
+  "wall_seconds": 190.8,
+  "per_round_seconds": {
+    "n": 20,
+    "min": 23.8,
+    "median": 33.26,
+    "mean": 36.64,
+    "max": 62.34
+  },
+  "solver_ms": {
+    "n": 20,
+    "min": 7947,
+    "median": 15946.0,
+    "mean": 15156.9,
+    "max": 25811
+  },
+  "submit_s": {
+    "n": 20,
+    "min": 1.78,
+    "median": 1.99,
+    "mean": 2.06,
+    "max": 2.72
+  },
+  "sdk_setup_s": {
+    "n": 20,
+    "min": 0.05,
+    "median": 0.97,
+    "mean": 1.02,
+    "max": 3.03
+  },
+  "http_used": {
+    "n": 20,
+    "min": 11,
+    "median": 11.0,
+    "mean": 12.05,
+    "max": 17
+  },
+  "scores": [
+    "14"
+  ],
+  "validate_unique": true,
+  "validates": [
+    "86ec06d4294a1778d3fa85b0a7445f25",
+    "2b5b2f39b3418602da65448ae23730fe",
+    "d9724a41071e20639ba78c12d83e019b",
+    "b1dd6bd207f24b9304a31b532fa2d66d",
+    "908354c597c555374941552d62afbd5d",
+    "de68248497adf62d807a7724ba3b95ab",
+    "4aecb8a9751a8bbe5e945146a04e7918",
+    "2f9000f7e0fa5e6bf6120c84af159af6",
+    "7f42a6dd75f165990e8c4bb4610371f8",
+    "5dacfbf7431b3727fd4710ba1afecb18",
+    "c47995ed09bc51aae8a1716edb5ff49c",
+    "1fbf78fe966249e40b94521687419c33",
+    "c2733a8656fbcd47f9baf35eb9685385",
+    "95559fe12ff8323ca3b4288a734cb15f",
+    "33f492265f440a63a9c7d44f27f8960f",
+    "4ccaaeac2865db6e2f6f0fb0aea48d20",
+    "a782cff931dadd83011be9b67e3a5e2a",
+    "2b9b2a91891800480faf77bff040e312",
+    "189d85ff07c06a575cfa4cd684275512",
+    "931d0d3436469b0bd5ff84c0c0b71f35"
+  ],
+  "prompts": [
+    [
+      "\u96c5",
+      "\u8bd7",
+      "\u8f69"
+    ],
+    [
+      "\u6cd5",
+      "\u9910"
+    ],
+    [
+      "\u70e7",
+      "\u8513",
+      "\u4eba"
+    ],
+    [
+      "\u8089",
+      "\u8d5e"
+    ],
+    [
+      "\u82b1",
+      "\u751f",
+      "\u8863",
+      "\u7ea2"
+    ],
+    [
+      "\u7ee7",
+      "\u897f",
+      "\u8c46",
+      "\u8150"
+    ],
+    [
+      "\u7092",
+      "\u7c73",
+      "\u7c89"
+    ],
+    [
+      "\u4eca",
+      "\u671d",
+      "\u7f18"
+    ],
+    [
+      "\u78b4",
+      "\u9178",
+      "\u9499"
+    ],
+    [
+      "\u716e",
+      "\u8c08"
+    ],
+    [
+      "\u6d47",
+      "\u7f29",
+      "\u5965",
+      "\u9171"
+    ],
+    [
+      "\u8349",
+      "\u6175",
+      "\u997c"
+    ],
+    [
+      "\u5357",
+      "\u90bb",
+      "\u8089"
+    ],
+    [
+      "\u5357",
+      "\u90bb",
+      "\u8089"
+    ],
+    [
+      "\u6d47",
+      "\u7f29",
+      "\u5965",
+      "\u9171"
+    ],
+    [
+      "\u7ea2",
+      "\u52d2",
+      "\u7c89",
+      "\u6851"
+    ],
+    [
+      "\u767e",
+      "\u9875"
+    ],
+    [
+      "\u572a",
+      "\u5768"
+    ],
+    [
+      "\u6c5f",
+      "\u5357",
+      "\u4e38"
+    ],
+    [
+      "\u91d1",
+      "\u94f6",
+      "\u9e3d",
+      "\u8089"
+    ]
+  ],
+  "results": [
+    {
+      "round": 1,
+      "ok": true,
+      "validate": "86ec06d4294a1778d3fa85b0a7445f25",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "86ec06d4294a1778d3fa85b0a7445f25",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 17,
+      "seconds": 62.34,
+      "returncode": 0,
+      "solve_ms": 9781,
+      "prompt": [
+        "\u96c5",
+        "\u8bd7",
+        "\u8f69"
+      ],
+      "n_clicks": 3,
+      "points": [
+        [
+          174,
+          90
+        ],
+        [
+          263,
+          194
+        ],
+        [
+          262,
+          37
+        ]
+      ],
+      "pic": "pic_14.jpg",
+      "phases": {
+        "t_challenge": 0.95,
+        "t_sdk_ready": 1.01,
+        "t_verdict": 61.22,
+        "t_solved": 58.5
+      },
+      "sdk_setup_s": 0.06,
+      "submit_s": 2.72
+    },
+    {
+      "round": 2,
+      "ok": true,
+      "validate": "2b5b2f39b3418602da65448ae23730fe",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "2b5b2f39b3418602da65448ae23730fe",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 14,
+      "seconds": 47.61,
+      "returncode": 0,
+      "solve_ms": 8669,
+      "prompt": [
+        "\u6cd5",
+        "\u9910"
+      ],
+      "n_clicks": 2,
+      "points": [
+        [
+          214,
+          181
+        ],
+        [
+          104,
+          268
+        ]
+      ],
+      "pic": "pic_12.jpg",
+      "phases": {
+        "t_challenge": 1.0,
+        "t_sdk_ready": 1.05,
+        "t_verdict": 47.06,
+        "t_solved": 45.23
+      },
+      "sdk_setup_s": 0.05,
+      "submit_s": 1.83
+    },
+    {
+      "round": 3,
+      "ok": true,
+      "validate": "d9724a41071e20639ba78c12d83e019b",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "d9724a41071e20639ba78c12d83e019b",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 14,
+      "seconds": 38.94,
+      "returncode": 0,
+      "solve_ms": 18437,
+      "prompt": [
+        "\u70e7",
+        "\u8513",
+        "\u4eba"
+      ],
+      "n_clicks": 3,
+      "points": [
+        [
+          68,
+          89
+        ],
+        [
+          264,
+          76
+        ],
+        [
+          183,
+          121
+        ]
+      ],
+      "pic": "pic_12.jpg",
+      "phases": {
+        "t_challenge": 0.68,
+        "t_sdk_ready": 0.74,
+        "t_verdict": 37.75,
+        "t_solved": 35.77
+      },
+      "sdk_setup_s": 0.06,
+      "submit_s": 1.98
+    },
+    {
+      "round": 4,
+      "ok": true,
+      "validate": "b1dd6bd207f24b9304a31b532fa2d66d",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "b1dd6bd207f24b9304a31b532fa2d66d",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 11,
+      "seconds": 35.65,
+      "returncode": 0,
+      "solve_ms": 25811,
+      "prompt": [
+        "\u8089",
+        "\u8d5e"
+      ],
+      "n_clicks": 2,
+      "points": [
+        [
+          138,
+          163
+        ],
+        [
+          86,
+          277
+        ]
+      ],
+      "pic": "pic_7.jpg",
+      "phases": {
+        "t_challenge": 0.97,
+        "t_sdk_ready": 1.03,
+        "t_verdict": 34.99,
+        "t_solved": 32.55
+      },
+      "sdk_setup_s": 0.06,
+      "submit_s": 2.44
+    },
+    {
+      "round": 5,
+      "ok": true,
+      "validate": "908354c597c555374941552d62afbd5d",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "908354c597c555374941552d62afbd5d",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 14,
+      "seconds": 51.0,
+      "returncode": 0,
+      "solve_ms": 10579,
+      "prompt": [
+        "\u82b1",
+        "\u751f",
+        "\u8863",
+        "\u7ea2"
+      ],
+      "n_clicks": 4,
+      "points": [
+        [
+          149,
+          84
+        ],
+        [
+          220,
+          243
+        ],
+        [
+          234,
+          89
+        ],
+        [
+          91,
+          209
+        ]
+      ],
+      "pic": "pic_12.jpg",
+      "phases": {
+        "t_challenge": 1.0,
+        "t_sdk_ready": 4.03,
+        "t_verdict": 49.79,
+        "t_solved": 47.87
+      },
+      "sdk_setup_s": 3.03,
+      "submit_s": 1.92
+    },
+    {
+      "round": 6,
+      "ok": true,
+      "validate": "de68248497adf62d807a7724ba3b95ab",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "de68248497adf62d807a7724ba3b95ab",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 11,
+      "seconds": 40.67,
+      "returncode": 0,
+      "solve_ms": 23597,
+      "prompt": [
+        "\u7ee7",
+        "\u897f",
+        "\u8c46",
+        "\u8150"
+      ],
+      "n_clicks": 4,
+      "points": [
+        [
+          209,
+          112
+        ],
+        [
+          171,
+          184
+        ],
+        [
+          261,
+          179
+        ],
+        [
+          84,
+          93
+        ]
+      ],
+      "pic": "pic_7.jpg",
+      "phases": {
+        "t_challenge": 0.81,
+        "t_sdk_ready": 1.12,
+        "t_verdict": 34.2,
+        "t_solved": 31.8
+      },
+      "sdk_setup_s": 0.31,
+      "submit_s": 2.4
+    },
+    {
+      "round": 7,
+      "ok": true,
+      "validate": "4aecb8a9751a8bbe5e945146a04e7918",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "4aecb8a9751a8bbe5e945146a04e7918",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 11,
+      "seconds": 33.59,
+      "returncode": 0,
+      "solve_ms": 20648,
+      "prompt": [
+        "\u7092",
+        "\u7c73",
+        "\u7c89"
+      ],
+      "n_clicks": 3,
+      "points": [
+        [
+          250,
+          132
+        ],
+        [
+          71,
+          96
+        ],
+        [
+          77,
+          225
+        ]
+      ],
+      "pic": "pic_7.jpg",
+      "phases": {
+        "t_challenge": 0.6,
+        "t_sdk_ready": 0.66,
+        "t_verdict": 32.84,
+        "t_solved": 30.93
+      },
+      "sdk_setup_s": 0.06,
+      "submit_s": 1.91
+    },
+    {
+      "round": 8,
+      "ok": true,
+      "validate": "2f9000f7e0fa5e6bf6120c84af159af6",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "2f9000f7e0fa5e6bf6120c84af159af6",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 11,
+      "seconds": 29.42,
+      "returncode": 0,
+      "solve_ms": 9026,
+      "prompt": [
+        "\u4eca",
+        "\u671d",
+        "\u7f18"
+      ],
+      "n_clicks": 3,
+      "points": [
+        [
+          44,
+          55
+        ],
+        [
+          171,
+          88
+        ],
+        [
+          283,
+          116
+        ]
+      ],
+      "pic": "pic_7.jpg",
+      "phases": {
+        "t_challenge": 0.85,
+        "t_sdk_ready": 2.56,
+        "t_verdict": 23.58,
+        "t_solved": 21.73
+      },
+      "sdk_setup_s": 1.71,
+      "submit_s": 1.85
+    },
+    {
+      "round": 9,
+      "ok": true,
+      "validate": "7f42a6dd75f165990e8c4bb4610371f8",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "7f42a6dd75f165990e8c4bb4610371f8",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 11,
+      "seconds": 23.8,
+      "returncode": 0,
+      "solve_ms": 8956,
+      "prompt": [
+        "\u78b4",
+        "\u9178",
+        "\u9499"
+      ],
+      "n_clicks": 3,
+      "points": [
+        [
+          186,
+          285
+        ],
+        [
+          173,
+          95
+        ],
+        [
+          265,
+          30
+        ]
+      ],
+      "pic": "pic_7.jpg",
+      "phases": {
+        "t_challenge": 0.77,
+        "t_sdk_ready": 2.2,
+        "t_verdict": 20.66,
+        "t_solved": 18.64
+      },
+      "sdk_setup_s": 1.43,
+      "submit_s": 2.02
+    },
+    {
+      "round": 10,
+      "ok": true,
+      "validate": "5dacfbf7431b3727fd4710ba1afecb18",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "5dacfbf7431b3727fd4710ba1afecb18",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 11,
+      "seconds": 25.61,
+      "returncode": 0,
+      "solve_ms": 11608,
+      "prompt": [
+        "\u716e",
+        "\u8c08"
+      ],
+      "n_clicks": 2,
+      "points": [
+        [
+          104,
+          234
+        ],
+        [
+          185,
+          126
+        ]
+      ],
+      "pic": "pic_7.jpg",
+      "phases": {
+        "t_challenge": 1.07,
+        "t_sdk_ready": 2.07,
+        "t_verdict": 23.47,
+        "t_solved": 21.47
+      },
+      "sdk_setup_s": 1.0,
+      "submit_s": 2.0
+    },
+    {
+      "round": 11,
+      "ok": true,
+      "validate": "c47995ed09bc51aae8a1716edb5ff49c",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "c47995ed09bc51aae8a1716edb5ff49c",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 11,
+      "seconds": 32.55,
+      "returncode": 0,
+      "solve_ms": 18424,
+      "prompt": [
+        "\u6d47",
+        "\u7f29",
+        "\u5965",
+        "\u9171"
+      ],
+      "n_clicks": 4,
+      "points": [
+        [
+          271,
+          164
+        ],
+        [
+          123,
+          214
+        ],
+        [
+          265,
+          249
+        ],
+        [
+          85,
+          121
+        ]
+      ],
+      "pic": "pic_7.jpg",
+      "phases": {
+        "t_challenge": 0.94,
+        "t_sdk_ready": 1.01,
+        "t_verdict": 29.4,
+        "t_solved": 27.39
+      },
+      "sdk_setup_s": 0.07,
+      "submit_s": 2.01
+    },
+    {
+      "round": 12,
+      "ok": true,
+      "validate": "1fbf78fe966249e40b94521687419c33",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "1fbf78fe966249e40b94521687419c33",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 11,
+      "seconds": 28.88,
+      "returncode": 0,
+      "solve_ms": 15623,
+      "prompt": [
+        "\u8349",
+        "\u6175",
+        "\u997c"
+      ],
+      "n_clicks": 3,
+      "points": [
+        [
+          174,
+          285
+        ],
+        [
+          253,
+          186
+        ],
+        [
+          96,
+          137
+        ]
+      ],
+      "pic": "pic_7.jpg",
+      "phases": {
+        "t_challenge": 0.79,
+        "t_sdk_ready": 1.95,
+        "t_verdict": 28.36,
+        "t_solved": 26.58
+      },
+      "sdk_setup_s": 1.16,
+      "submit_s": 1.78
+    },
+    {
+      "round": 13,
+      "ok": true,
+      "validate": "c2733a8656fbcd47f9baf35eb9685385",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "c2733a8656fbcd47f9baf35eb9685385",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 11,
+      "seconds": 28.85,
+      "returncode": 0,
+      "solve_ms": 9575,
+      "prompt": [
+        "\u5357",
+        "\u90bb",
+        "\u8089"
+      ],
+      "n_clicks": 3,
+      "points": [
+        [
+          182,
+          180
+        ],
+        [
+          144,
+          270
+        ],
+        [
+          74,
+          261
+        ]
+      ],
+      "pic": "pic_7.jpg",
+      "phases": {
+        "t_challenge": 0.89,
+        "t_sdk_ready": 3.86,
+        "t_verdict": 24.52,
+        "t_solved": 22.45
+      },
+      "sdk_setup_s": 2.97,
+      "submit_s": 2.07
+    },
+    {
+      "round": 14,
+      "ok": true,
+      "validate": "95559fe12ff8323ca3b4288a734cb15f",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "95559fe12ff8323ca3b4288a734cb15f",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 11,
+      "seconds": 35.87,
+      "returncode": 0,
+      "solve_ms": 16269,
+      "prompt": [
+        "\u5357",
+        "\u90bb",
+        "\u8089"
+      ],
+      "n_clicks": 3,
+      "points": [
+        [
+          182,
+          180
+        ],
+        [
+          144,
+          270
+        ],
+        [
+          74,
+          261
+        ]
+      ],
+      "pic": "pic_7.jpg",
+      "phases": {
+        "t_challenge": 0.9,
+        "t_sdk_ready": 3.81,
+        "t_verdict": 29.12,
+        "t_solved": 26.97
+      },
+      "sdk_setup_s": 2.91,
+      "submit_s": 2.15
+    },
+    {
+      "round": 15,
+      "ok": true,
+      "validate": "33f492265f440a63a9c7d44f27f8960f",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "33f492265f440a63a9c7d44f27f8960f",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 11,
+      "seconds": 31.92,
+      "returncode": 0,
+      "solve_ms": 18872,
+      "prompt": [
+        "\u6d47",
+        "\u7f29",
+        "\u5965",
+        "\u9171"
+      ],
+      "n_clicks": 4,
+      "points": [
+        [
+          271,
+          164
+        ],
+        [
+          123,
+          214
+        ],
+        [
+          265,
+          249
+        ],
+        [
+          85,
+          121
+        ]
+      ],
+      "pic": "pic_7.jpg",
+      "phases": {
+        "t_challenge": 0.99,
+        "t_sdk_ready": 1.5,
+        "t_verdict": 31.13,
+        "t_solved": 29.15
+      },
+      "sdk_setup_s": 0.51,
+      "submit_s": 1.98
+    },
+    {
+      "round": 16,
+      "ok": true,
+      "validate": "4ccaaeac2865db6e2f6f0fb0aea48d20",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "4ccaaeac2865db6e2f6f0fb0aea48d20",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 11,
+      "seconds": 32.92,
+      "returncode": 0,
+      "solve_ms": 17544,
+      "prompt": [
+        "\u7ea2",
+        "\u52d2",
+        "\u7c89",
+        "\u6851"
+      ],
+      "n_clicks": 4,
+      "points": [
+        [
+          68,
+          289
+        ],
+        [
+          246,
+          245
+        ],
+        [
+          215,
+          167
+        ],
+        [
+          75,
+          182
+        ]
+      ],
+      "pic": "pic_7.jpg",
+      "phases": {
+        "t_challenge": 1.13,
+        "t_sdk_ready": 2.16,
+        "t_verdict": 30.32,
+        "t_solved": 28.44
+      },
+      "sdk_setup_s": 1.03,
+      "submit_s": 1.88
+    },
+    {
+      "round": 17,
+      "ok": true,
+      "validate": "a782cff931dadd83011be9b67e3a5e2a",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "a782cff931dadd83011be9b67e3a5e2a",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 17,
+      "seconds": 57.5,
+      "returncode": 0,
+      "solve_ms": 10321,
+      "prompt": [
+        "\u767e",
+        "\u9875"
+      ],
+      "n_clicks": 2,
+      "points": [
+        [
+          190,
+          242
+        ],
+        [
+          288,
+          146
+        ]
+      ],
+      "pic": "pic_14.jpg",
+      "phases": {
+        "t_challenge": 1.3,
+        "t_sdk_ready": 2.85,
+        "t_verdict": 51.67,
+        "t_solved": 49.73
+      },
+      "sdk_setup_s": 1.55,
+      "submit_s": 1.94
+    },
+    {
+      "round": 18,
+      "ok": true,
+      "validate": "2b9b2a91891800480faf77bff040e312",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "2b9b2a91891800480faf77bff040e312",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 11,
+      "seconds": 25.93,
+      "returncode": 0,
+      "solve_ms": 7947,
+      "prompt": [
+        "\u572a",
+        "\u5768"
+      ],
+      "n_clicks": 2,
+      "points": [
+        [
+          164,
+          53
+        ],
+        [
+          91,
+          166
+        ]
+      ],
+      "pic": "pic_7.jpg",
+      "phases": {
+        "t_challenge": 1.03,
+        "t_sdk_ready": 1.98,
+        "t_verdict": 18.97,
+        "t_solved": 16.91
+      },
+      "sdk_setup_s": 0.95,
+      "submit_s": 2.06
+    },
+    {
+      "round": 19,
+      "ok": true,
+      "validate": "189d85ff07c06a575cfa4cd684275512",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "189d85ff07c06a575cfa4cd684275512",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 11,
+      "seconds": 32.54,
+      "returncode": 0,
+      "solve_ms": 19398,
+      "prompt": [
+        "\u6c5f",
+        "\u5357",
+        "\u4e38"
+      ],
+      "n_clicks": 3,
+      "points": [
+        [
+          122,
+          102
+        ],
+        [
+          166,
+          209
+        ],
+        [
+          56,
+          165
+        ]
+      ],
+      "pic": "pic_7.jpg",
+      "phases": {
+        "t_challenge": 0.76,
+        "t_sdk_ready": 2.09,
+        "t_verdict": 31.02,
+        "t_solved": 28.54
+      },
+      "sdk_setup_s": 1.33,
+      "submit_s": 2.48
+    },
+    {
+      "round": 20,
+      "ok": true,
+      "validate": "931d0d3436469b0bd5ff84c0c0b71f35",
+      "score": "14",
+      "verdict": {
+        "status": "success",
+        "data": {
+          "result": "success",
+          "validate": "931d0d3436469b0bd5ff84c0c0b71f35",
+          "score": "14",
+          "msg": []
+        }
+      },
+      "http_used": 11,
+      "seconds": 37.28,
+      "returncode": 0,
+      "solve_ms": 22053,
+      "prompt": [
+        "\u91d1",
+        "\u94f6",
+        "\u9e3d",
+        "\u8089"
+      ],
+      "n_clicks": 4,
+      "points": [
+        [
+          233,
+          43
+        ],
+        [
+          56,
+          252
+        ],
+        [
+          165,
+          76
+        ],
+        [
+          254,
+          265
+        ]
+      ],
+      "pic": "pic_7.jpg",
+      "phases": {
+        "t_challenge": 0.62,
+        "t_sdk_ready": 0.69,
+        "t_verdict": 33.15,
+        "t_solved": 31.32
+      },
+      "sdk_setup_s": 0.07,
+      "submit_s": 1.83
+    }
+  ]
+}

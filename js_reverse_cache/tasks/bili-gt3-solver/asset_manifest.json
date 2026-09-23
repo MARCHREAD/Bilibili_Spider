@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://static.geetest.com/static/js/fullpage.9.2.0-guwyxh.js",
+    "file": "fullpage.9.2.0-guwyxh.js",
+    "status": 200,
+    "bytes": 304290,
+    "sha256": "923a147d20ec0a941a44ab815991034fee5af16d5bb59fa23dcc86eb1a8734e1",
+    "content_type": "application/javascript"
+  },
+  {
+    "url": "https://static.geetest.com/static/js/slide.7.9.3.js",
+    "file": "slide.7.9.3.js",
+    "status": 200,
+    "bytes": 240155,
+    "sha256": "e40de5ecf7dcc1740fb899985dc0c2b09f22ce7a3d20d93f12cfc82a6d8f538d",
+    "content_type": "application/javascript"
+  },
+  {
+    "url": "https://static.geetest.com/static/js/geetest.6.0.9.js",
+    "file": "geetest.6.0.9.js",
+    "status": 200,
+    "bytes": 208020,
+    "sha256": "f691552edf8e8344d684cc126df86885614d40aed1234815ecbd479f6dc5ef9e",
+    "content_type": "application/javascript"
+  }
+]

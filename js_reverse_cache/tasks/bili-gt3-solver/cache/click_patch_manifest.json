@@ -1,0 +1,13 @@
+{
+  "raw": "click.3.1.2.js",
+  "raw_sha256": "47c921354309c192bb20d27b6f9514ad529f660e74ba27288fe75273977b3aad",
+  "patched": "click.patched-widget.js",
+  "patched_sha256": "eca1e260ce4a4094251cd6b0d8ec0896adf7fe5cc30dccd1a8cfed6651f9ad41",
+  "requester_inject_at": 50790,
+  "literal_candidates": 6,
+  "literal_start": 166932,
+  "literal_len": 16921,
+  "methods_injected": 19,
+  "size_delta": 575,
+  "plain_inject_at": 179520
+}

@@ -1,0 +1,39 @@
+{
+  "account": 1,
+  "report": {
+    "A_no_gaia": {
+      "soft_risk": 5,
+      "n": 10,
+      "rate": 0.5,
+      "verdicts": [
+        "SOFT-RISK",
+        "SOFT-RISK",
+        "SOFT-RISK",
+        "SOFT-RISK",
+        "OK result=30",
+        "OK result=30",
+        "SOFT-RISK",
+        "OK result=30",
+        "OK result=30",
+        "OK result=30"
+      ]
+    },
+    "B_with_gaia": {
+      "soft_risk": 4,
+      "n": 10,
+      "rate": 0.4,
+      "verdicts": [
+        "SOFT-RISK",
+        "SOFT-RISK",
+        "SOFT-RISK",
+        "SOFT-RISK",
+        "OK result=30",
+        "OK result=20",
+        "OK result=30",
+        "OK result=20",
+        "OK result=30",
+        "OK result=30"
+      ]
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "gt": "ac597a4506fee079629df5d8b66dd4fe",
+  "base_challenge": "804ea9bb5eb4cf517f0a2ae6a8d339f9",
+  "token": "02d12d567c67421aaf3780a287633810",
+  "requests": [
+    {
+      "id": 1,
+      "kind": "script",
+      "path": "https://api.geetest.com/gettype.php",
+      "params": {
+        "gt": "ac597a4506fee079629df5d8b66dd4fe",
+        "callback": "geetest_1789987244620"
+      }
+    },
+    {
+      "id": 2,
+      "kind": "script",
+      "path": "https://static.geetest.com/static/js/fullpage.9.2.0-guwyxh.js",
+      "params": {}
+    },
+    {
+      "id": 3,
+      "kind": "script",
+      "path": "https://api.geetest.com/get.php",
+      "params": {
+        "gt": "ac597a4506fee079629df5d8b66dd4fe",
+        "challenge": "804ea9bb5eb4cf517f0a2ae6a8d339f9",
+        "lang": "zh-cn",
+        "pt": "0",
+        "client_type": "web",
+        "w": "[len=1452]",
+        "callback": "geetest_1789987247049"
+      }
+    },
+    {
+      "id": 4,
+      "kind": "script",
+      "path": "https://monitor.geetest.com/monitor/send",
+      "params": {
+        "time": "2026-09-21 18:40:45",
+        "captcha_id": "ac597a4506fee079629df5d8b66dd4fe",
+        "challenge": "804ea9bb5eb4cf517f0a2ae6a8d339f9",
+        "pt": "0",
+        "exception_url": "https://api.geetest.com/get.php",
+        "error_code": "408",
+        "msg": ""
+      }
+    }
+  ],
+  "http": [
+    {
+      "url": "https://passport.bilibili.com/x/passport-login/captcha",
+      "status": 200,
+      "len": 224
+    },
+    {
+      "url": "https://api.geetest.com/gettype.php",
+      "status": 200,
+      "len": 465
+    },
+    {
+      "url": "https://api.geetest.com/get.php",
+      "status": 200,
+      "len": 1233
+    },
+    {
+      "url": "https://monitor.geetest.com/monitor/send",
+      "status": 200,
+      "len": 2
+    }
+  ],
+  "helper_ready": {
+    "type": "ready",
+    "assets": [
+      "gt_loader_from_bili.js"
+    ],
+    "loadLog": [
+      "ok:gt_loader_from_bili.js"
+    ],
+    "diag": [
+      "loaded:bom/navigator.js",
+      "loaded:bom/location.js",
+      "loaded:dom/document.js"
+    ],
+    "gt": "ac597a4506fee079629df5d8b66dd4fe",
+    "challenge": "804ea9bb5eb4cf517f0a2ae6a8d339f9"
+  },
+  "helper_done": {
+    "type": "done",
+    "requests": [],
+    "pending": [
+      {
+        "kind": "script",
+        "url": "https://api.geetest.com/gettype.php?gt=ac597a4506fee079629df5d8b66dd4fe&callback=geetest_1789987244620"
+      },
+      {
+        "kind": "script",
+        "url": "https://static.geetest.com/static/js/fullpage.9.2.0-guwyxh.js"
+      },
+      {
+        "kind": "script",
+        "url": "https://api.geetest.com/get.php?gt=ac597a4506fee079629df5d8b66dd4fe&challenge=804ea9bb5eb4cf517f0a2ae6a8d339f9&lang=zh-cn&pt=0&client_type=web&w=7Kh0u3rcnKPkfNFVD1eumdm1me9bKSdfH2wm4hfORIP(iikRPfB(QDGYeAAPJKTt4beTpK(Fcm)OwT37MqkZKSjSGQsfriGXx9xto12LfkzsTgW9JtpSBiqN2RXAzvtObmwI)B0tJ(II7li8pNyuEmMxqa(3REdy0lmrBwqIdicrwA5wpI8fyTYf2thPxeM8FCrSDWUuAUaVpmlq)7ZX06fWAAr7yvPn3Vn7o(cLi9etcTk9Q6igg08ZEjTBLHCgDmNsdvaRXM1nZoqF2qleKdk28VnJkSVh8CMqR0PvFhMi9ESUsCe)rE8xIAFIBLzRWEOHsct0qUtpMaaXqId4ojjt7tiOfe6sIfJO3xIYHwrBLAcho)qmhiIaEiq8ZUz5ork9hBxCMCua2doErExcS0dBw(4gJe)XEOXKEw)q1mL8I3bzIum34Vmz46hV)L6xGu7QECt11D7nOKKoZLm2pXgMBqiavsy2gCplJ(2q0qJYENvJ0vNMTr)iaEeON2XMSXapLRHnjonexZa2IGimbJHvZcpQZf15J7ZAalcfOj)w864Aq6rE4KECYPlKwUvPcME4T(Pp2JfiKJxkFB5ZcatduJWZiwTHgUbYqqbWQfypFTSfmh17py426RKWL0f)3kBtJW0O56QpAovOf4bc6gqcYcu8b78R6ruIukZWAm)2JZZFcmwCvHnl4VhItobTL0X4i5QMfJxyRoLDnR1bma7ToOz4qq7m2NsiS(yaWdr1H7UDSeFzx1)6hbXZz9DPYsU1mZzd5haJ5XQ7d99c)USJnVNQw4k(qcnsHFVg8xHX2D7hNhukMVxi94SeGC)p)Fk0LGhtKAlhUl7tIyfmQGfesSLTYH)(ROLbxl1UFRBelA0Ln3F1IxVIB4dIq7qv15g4PdzonI(smrTmGer2UzoIC8mf1hqroKDbJPmCALFh3ZqltDnJ8PcCwbOmLHWnMJg6ubJqcZ9CAqpm4rkHo2S83JX)kmc5T4fvhh0HTd0KbjBUBq)GXS)4Kgje338P)Srq(RiL5hjld6gytRZgl0nLHCjiwTjvxudWTDPu)GbuAsnBFYg)YouJV7OpRJl5MM4BvGGr1UdNn)VPUt7GOmOu5kt5TDxcV1SS7zskJrfXLxwkvTxdwS7huIBlUnJrU73nbxvS(Ggmp5NoplexpzqQZHRqg()ek9PgkzPqEiE.8eec43ff4b5f9d54b72b79437d54a7683a2e09e5fedf87532bec77e062455f6e5c27f131fba3be647500aca1ba87bd1993d8b50610e66c509b3fa1a57e616b1eeb90072f9d1f18d03acbc65ce98af5baac103142579d9a198f3b279bb85d4a482edf259718c6618573bffc70a5d8636e3c130071d482f02510972b8b0da9836e&callback=geetest_1789987247049"
+      },
+      {
+        "kind": "script",
+        "url": "https://monitor.geetest.com/monitor/send?time=2026-09-21%2018%3A40%3A45&captcha_id=ac597a4506fee079629df5d8b66dd4fe&challenge=804ea9bb5eb4cf517f0a2ae6a8d339f9&pt=0&exception_url=https%3A%2F%2Fapi.geetest.com%2Fget.php&error_code=408&msg="
+      }
+    ],
+    "log": [
+      "initGeetest-callback",
+      "appendTo"
+    ],
+    "errors": [
+      "onError:error_104"
+    ],
+    "pendingTimers": 0,
+    "output": [
+      [
+        "log",
+        "[String len=24]"
+      ],
+      [
+        "error",
+        "[Object]"
+      ]
+    ]
+  },
+  "transcripts": [
+    {
+      "id": 1,
+      "url": "https://api.geetest.com/gettype.php?gt=ac597a4506fee079629df5d8b66dd4fe&callback=geetest_1789987244620",
+      "status": 200,
+      "body": "geetest_1789987244620({\"status\": \"success\", \"data\": {\"type\": \"fullpage\", \"static_servers\": [\"static.geetest.com/\", \"static.geevisit.com/\"], \"click\": \"/static/js/click.3.1.2.js\", \"beeline\": \"/static/js/beeline.1.0.1.js\", \"voice\": \"/static/js/voice.1.2.6.js\", \"fullpage\": \"/static/js/fullpage.9.2.0-guwyxh.js\", \"slide\": \"/static/js/slide.7.9.3.js\", \"geetest\": \"/static/js/geetest.6.0.9.js\", \"aspect_radio\": {\"slide\": 103, \"click\": 128, \"voice\": 128, \"beeline\": 50}}})"
+    },
+    {
+      "id": 3,
+      "url": "https://api.geetest.com/get.php?gt=ac597a4506fee079629df5d8b66dd4fe&challenge=804ea9bb5eb4cf517f0a2ae6a8d339f9&lang=zh-cn&pt=0&client_type=web&w=7Kh0u3rcnKPkfNFVD1eumdm1me9bKSdfH2wm4hfORIP(iikRPfB(QDGYeAAPJKTt4beTpK(Fcm)OwT37MqkZKSjSGQsfriGXx9xto12LfkzsTgW9JtpSBiqN2RXAzvtObmwI)B0tJ(II7li8pNyuEmMxqa(3REdy0lmrBwqIdicrwA5wpI8fyTYf2thPxeM8FCrSDWUuAUaVpmlq)7ZX06fWAAr7yvPn3Vn7o(cLi9etcTk9Q6igg08ZEjTBLHCgDmNsdvaRXM1nZoqF2qleKdk28VnJkSVh8CMqR0PvFhMi9ESUsCe)rE8xIAFIBLzRWEOHsct0qUtpMaaXqId4ojjt7tiOfe6sIfJO3xIYHwrBLAcho)qmhiIaEiq8ZUz5ork9hBxCMCua2doErExcS0dBw(4gJe)XEOXKEw)q1mL8I3bzIum34Vmz46hV)L6xGu7QECt11D7nOKKoZLm2pXgMBqiavsy2gCplJ(2q0qJYENvJ0vNMTr)iaEeON2XMSXapLRHnjonexZa2IGimbJHvZcpQZf15J7ZAalcfOj)w864Aq6rE4KECYPlKwUvPcME4T(Pp2JfiKJxkFB5ZcatduJWZiwTHgUbYqqbWQfypFTSfmh17py426RKWL0f)3kBtJW0O56QpAovOf4bc6gqcYcu8b78R6ruIukZWAm)2JZZFcmwCvHnl4VhItobTL0X4i5QMfJxyRoLDnR1bma7ToOz4qq7m2NsiS(yaWdr1H7UDSeFzx1)6hbXZz9DPYsU1mZzd5haJ5XQ7d99c)USJnVNQw4k(qcnsHFVg8xHX2D7hNhukMVxi94SeGC)p)Fk0LGhtKAlhUl7tIyfmQGfesSLTYH)(ROLbxl1UFRBelA0Ln3F1IxVIB4dIq7qv15g4PdzonI(smrTmGer2UzoIC8mf1hqroKDbJPmCALFh3ZqltDnJ8PcCwbOmLHWnMJg6ubJqcZ9CAqpm4rkHo2S83JX)kmc5T4fvhh0HTd0KbjBUBq)GXS)4Kgje338P)Srq(RiL5hjld6gytRZgl0nLHCjiwTjvxudWTDPu)GbuAsnBFYg)YouJV7OpRJl5MM4BvGGr1UdNn)VPUt7GOmOu5kt5TDxcV1SS7zskJrfXLxwkvTxdwS7huIBlUnJrU73nbxvS(Ggmp5NoplexpzqQZHRqg()ek9PgkzPqEiE.8eec43ff4b5f9d54b72b79437d54a7683a2e09e5fedf87532bec77e062455f6e5c27f131fba3be647500aca1ba87bd1993d8b50610e66c509b3fa1a57e616b1eeb90072f9d1f18d03acbc65ce98af5baac103142579d9a198f3b279bb85d4a482edf259718c6618573bffc70a5d8636e3c130071d482f02510972b8b0da9836e&callback=geetest_1789987247049",
+      "status": 200,
+      "body": "geetest_1789987247049({\"status\": \"success\", \"data\": {\"theme\": \"wind\", \"theme_version\": \"1.5.8\", \"static_servers\": [\"static.geetest.com\", \"static.geevisit.com\"], \"api_server\": \"api.geetest.com\", \"logo\": false, \"feedback\": \"\", \"c\": [12, 58, 98, 36, 43, 95, 62, 15, 12], \"s\": \"45745058\", \"i18n_labels\": {\"copyright\": \"\\u7531\\u6781\\u9a8c\\u63d0\\u4f9b\\u6280\\u672f\\u652f\\u6301\", \"error\": \"\\u7f51\\u7edc\\u4e0d\\u7ed9\\u529b\", \"error_content\": \"\\u8bf7\\u70b9\\u51fb\\u6b64\\u5904\\u91cd\\u8bd5\", \"error_title\": \"\\u7f51\\u7edc\\u8d85\\u65f6\", \"fullpage\": \"\\u667a\\u80fd\\u68c0\\u6d4b\\u4e2d\", \"goto_cancel\": \"\\u53d6\\u6d88\", \"goto_confirm\": \"\\u524d\\u5f80\", \"goto_homepage\": \"\\u662f\\u5426\\u524d\\u5f80\\u9a8c\\u8bc1\\u670d\\u52a1Geetest\\u5b98\\u7f51\", \"loading_content\": \"\\u667a\\u80fd\\u9a8c\\u8bc1\\u68c0\\u6d4b\\u4e2d\", \"next\": \"\\u6b63\\u5728\\u52a0\\u8f7d\\u9a8c\\u8bc1\", \"next_ready\": \"\\u8bf7\\u5b8c\\u6210\\u9a8c\\u8bc1\", \"read_reversed\": false, \"ready\": \"\\u70b9\\u51fb\\u6309\\u94ae\\u8fdb\\u884c\\u9a8c\\u8bc1\", \"refresh_page\": \"\\u9875\\u9762\\u51fa\\u73b0\\u9519\\u8bef\\u5566\\uff01\\u8981\\u7ee7\\u7eed\\u64cd\\u4f5c\\uff0c\\u8bf7\\u5237\\u65b0\\u6b64\\u9875\\u9762\", \"reset\": \"\\u8bf7\\u70b9\\u51fb\\u91cd\\u8bd5\", \"success\": \"\\u9a8c\\u8bc1\\u6210\\u529f\", \"success_title\": \"\\u901a\\u8fc7\\u9a8c\\u8bc1\"}}})"
+    },
+    {
+      "id": 4,
+      "url": "https://monitor.geetest.com/monitor/send?time=2026-09-21%2018%3A40%3A45&captcha_id=ac597a4506fee079629df5d8b66dd4fe&challenge=804ea9bb5eb4cf517f0a2ae6a8d339f9&pt=0&exception_url=https%3A%2F%2Fapi.geetest.com%2Fget.php&error_code=408&msg=",
+      "status": 200,
+      "body": "{}"
+    }
+  ],
+  "w_values": [
+    {
+      "id": 3,
+      "key": "w",
+      "value": "[len=1452]",
+      "path": "https://api.geetest.com/get.php"
+    }
+  ],
+  "http_used": 4
+}

@@ -1,0 +1,28 @@
+{
+  "same_dummy": {
+    "code": -105,
+    "message": "验证码错误",
+    "sent": [
+      "csrf",
+      "go_url",
+      "password",
+      "sns_openid",
+      "sns_platform",
+      "source",
+      "username"
+    ]
+  },
+  "fresh_dummy": {
+    "code": -105,
+    "message": "验证码错误",
+    "sent": [
+      "csrf",
+      "go_url",
+      "password",
+      "sns_openid",
+      "sns_platform",
+      "source",
+      "username"
+    ]
+  }
+}

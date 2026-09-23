@@ -1,0 +1,48 @@
+{
+  "gt": "ac597a4506fee079629df5d8b66dd4fe",
+  "base_challenge": "5dcb898f2960a9a67f51475a29e29a23",
+  "token": "a8d6509b13dc4568ae3701dc54d3f1ce",
+  "requests": [],
+  "http": [
+    {
+      "url": "https://passport.bilibili.com/x/passport-login/captcha",
+      "status": 200,
+      "len": 224
+    }
+  ],
+  "helper_ready": {
+    "type": "ready",
+    "assets": [
+      "gt_loader_from_bili.js"
+    ],
+    "loadLog": [
+      "ok:gt_loader_from_bili.js"
+    ],
+    "diag": [
+      "loaded:bom/navigator.js",
+      "loaded:bom/location.js",
+      "loaded:dom/document.js"
+    ],
+    "gt": "ac597a4506fee079629df5d8b66dd4fe",
+    "challenge": "5dcb898f2960a9a67f51475a29e29a23"
+  },
+  "helper_done": {
+    "type": "done",
+    "requests": [],
+    "pending": [],
+    "log": [],
+    "errors": [
+      "init:ReferenceError:o is not defined"
+    ],
+    "pendingTimers": 0,
+    "output": [
+      [
+        "log",
+        "[String len=24]"
+      ]
+    ]
+  },
+  "transcripts": [],
+  "w_values": [],
+  "http_used": 1
+}

@@ -1,0 +1,30 @@
+{
+  "all_js_strings": [
+    ".js"
+  ],
+  "static_js_paths": [
+    "static/js/async/"
+  ],
+  "hash_maps": [
+    "{10:\"85831162\",263:\"9c8b9071\",264:\"60f4e88f\",409:\"968ce5e0\",600:\"5812ee4e\",832:\"5b9896d7\",838:\"b9d2ec25\",86:\"7f85abb2\"}",
+    "{10:\"f49bc93d\",263:\"70b5f423\",264:\"b18dde5c\",409:\"cb67d79e\",600:\"6fb8b158\",832:\"8a1f3864\",838:\"a3c4e2d0\",86:\"134257dc\"}"
+  ],
+  "u_fn": [
+    "@1038284 ...unction s(e){var t=a[e];if(void 0!==t)return t.exports;var n=a[e]={id:e,loaded:!1,exports:{}};return o[e].call(n.exports,n,n.exports,s),n.loaded=!0,n.exports}if(s.m=o,s.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return s.d(t,{a:t}),t},s.d=(e,t)=>{for(var n in t)s.o(t,n)&&!s.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:t[n]})},s.f={},s.e=e=>Promise.all(Object.keys(s.f).reduce((t,n)=>(s.f[n](e,t),t),[])),s.u=e=>\"static/js/async/\"+e+\".\"+({10:\"85831162\",263:\"9c8b9071\",264:\"60f4e88f\",409:\"968ce5e0\",600:\"5812ee4e\",832:\"5b9896d7\",838:\"b9d2ec25\",86:\"7f85abb2\"})[e]+\".js\",s.miniCssF=e=>\"static/css/async/\"+e+\".\"+({10:\"f49bc93d\",263:\"70b5f423\",264:\"b18dde5c\",409:\"cb67d79e\",600:\"6fb8b158\",832:\"8a1f3864\",838:\"a3c4e2d0\",86:\"134257dc\"})[e]+\".css\",s.g=(()=>{if(\"object\"==typeof globalThis)return globalThis;try{return this||Function(\"return..."
+  ],
+  "api_paths": [],
+  "passport_words": [
+    "PassportPage",
+    "passport",
+    "passport-app",
+    "passport/"
+  ],
+  "home_geetest": [
+    "@3598 ...ent)       if (isBilibili && !isSpider) {         class MirrorErrorFilterPlugin {           static get errorFilterList() {             return ['extension', 'log-reporter', 'static.geetest.com']           }           static get rejectionFilterList() {             return ['extension', 'aborted', 'failed', 'timeout', 'network', 'log-reporter']           }           st...",
+    "@6815 ...          config: {             isAutoInit: true,             whiteScreen: {               maxLoop: 10,               checkDom: ['#app', '.bili-feed4-layout', '.bili-mini-mask', '.geetest_panel_ghost', '#bewly', '.bewly-design', '.home-redesign-base', '.bilibili-helper-dark-mode', '.bili-wrapper'],               callback: status => {                 console.log('白屏..."
+  ],
+  "home_login_scripts": [
+    "https://www.bilibili.com/gentleman/polyfill.js"
+  ],
+  "home_risk_words": 0
+}

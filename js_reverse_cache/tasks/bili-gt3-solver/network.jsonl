@@ -1,0 +1,9 @@
+{"probe": "asset_fullpage.9.2.0-guwyxh.js", "url": "https://static.geetest.com/static/js/fullpage.9.2.0-guwyxh.js", "status": 200, "len": 304290}
+{"probe": "asset_slide.7.9.3.js", "url": "https://static.geetest.com/static/js/slide.7.9.3.js", "status": 200, "len": 240155}
+{"probe": "asset_geetest.6.0.9.js", "url": "https://static.geetest.com/static/js/geetest.6.0.9.js", "status": 200, "len": 208020}
+{"probe": "00_bili_captcha.json", "url": "https://passport.bilibili.com/x/passport-login/captcha?source=main-fe", "status": 200, "len": 224}
+{"probe": "01_gettype.txt", "url": "https://api.geetest.com/gettype.php?gt=ac597a4506fee079629df5d8b66dd4fe&callback=geetest_1789986822244", "status": 200, "len": 465}
+{"probe": "02_get_initial.txt", "url": "https://api.geetest.com/get.php?gt=ac597a4506fee079629df5d8b66dd4fe&challenge=8f633bd9cfea2fb78504e41d34edbb53&lang=zh-cn&pt=0&client_type=web&callback=geetest_1789986823184", "status": 200, "len": 1233}
+{"probe": "03_ajax_pre.txt", "url": "https://api.geetest.com/ajax.php?gt=ac597a4506fee079629df5d8b66dd4fe&challenge=8f633bd9cfea2fb78504e41d34edbb53&lang=zh-cn&pt=0&client_type=web&w=&callback=geetest_1789986823839", "status": 200, "len": 73}
+{"probe": "04_get_slide.txt", "url": "https://api.geetest.com/get.php?is_next=true&type=slide3&gt=ac597a4506fee079629df5d8b66dd4fe&challenge=8f633bd9cfea2fb78504e41d34edbb53&lang=zh-cn&pt=0&client_type=web&callback=geetest_1789986824496", "status": 200, "len": 1647}
+{"probe": "05_ajax_final_empty_w.txt", "url": "https://api.geetest.com/ajax.php?gt=ac597a4506fee079629df5d8b66dd4fe&challenge=8f633bd9cfea2fb78504e41d34edbb53&lang=zh-cn&$_BCm=0&client_type=web&w=&callback=geetest_1789986825161", "status": 200, "len": 102}

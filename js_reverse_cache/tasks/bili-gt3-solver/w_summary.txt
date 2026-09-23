@@ -1,0 +1,33 @@
+﻿round proto_20260921-194855 http_used=12
+
+=== requests ===
+  id= 1 script  gettype.php                                  ['callback', 'gt']
+  id= 2 script  fullpage.9.2.0-guwyxh.js                     []
+  id= 3 script  get.php                                      ['callback', 'challenge', 'client_type', 'gt', 'lang', 'pt']
+  id= 4 link    style_https.1.5.8.css                        []
+  id= 5 script  ajax.php                                     ['callback', 'challenge', 'client_type', 'gt', 'lang', 'pt']
+  id= 6 script  click.3.1.2.js                               []
+  id= 7 script  get.php                                      ['api_server', 'autoReset', 'callback', 'challenge', 'gt', 'https']
+  id= 8 script  gct.b71a9027509bc6bcfef9fc6a196424f5.js      []
+  id= 9 link    style_https.1.5.4.css                        []
+  id=10 script  send                                         ['captcha_id', 'challenge', 'error_code', 'exception_url', 'msg', 'pt']
+  id=11 script  ajax.php                                     ['callback', 'challenge', 'client_type', 'gt', 'lang', 'pt']
+  id=12 script  send                                         ['captcha_id', 'challenge', 'error_code', 'exception_url', 'msg', 'pt']
+
+=== w shapes ===
+  id= 3 get.php     len= 1452 dotAt= 1195 tailLen= 256 tailHex=True
+  id= 5 ajax.php    len=  704 dotAt=   -1 tailLen=   0 tailHex=False
+  id=11 ajax.php    len=  664 dotAt=  407 tailLen= 256 tailHex=True
+
+=== verdicts ===
+  gettype.php  geetest_1789991343185({"status": "success", "data": {"type": "fullpage", "static_servers": ["static.geetest.com/", "static.geevisit.com/"], "click": "
+  get.php      geetest_1789991337169({"status": "success", "data": {"theme": "wind", "theme_version": "1.5.8", "static_servers": ["static.geetest.com", "static.geevi
+  ajax.php     geetest_1789991344838({"status": "success", "data": {"result": "click"}})
+  get.php      geetest_1789991339028({"status": "success", "data": {"theme": "silver", "theme_version": "1.5.4", "static_servers": ["static.geetest.com/", "static.ge
+  send         {}
+  ajax.php     geetest_1789991348196({"status": "error", "error": "runtime error", "error_code": "error_00", "user_error": "\u7f51\u7edc\u4e0d\u7ed9\u529b"})
+  send         {}
+
+=== helper ===
+  pendingTimers: 13
+  errors: []

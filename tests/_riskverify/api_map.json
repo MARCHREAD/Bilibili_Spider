@@ -1,0 +1,474 @@
+{
+  "paths": {
+    "/x/passport-login/web/sns/login": [
+      "10.85831162.js"
+    ],
+    "/x/passport-login/web/sns/state/generate": [
+      "263.9c8b9071.js",
+      "838.b9d2ec25.js"
+    ],
+    "/x/passport-login/web/sns/authorize/url": [
+      "263.9c8b9071.js",
+      "838.b9d2ec25.js"
+    ],
+    "/x/passport-login/web/authorize": [
+      "263.9c8b9071.js",
+      "838.b9d2ec25.js"
+    ],
+    "/x/passport-login/web/country": [
+      "264.60f4e88f.js",
+      "409.968ce5e0.js",
+      "838.b9d2ec25.js"
+    ],
+    "/x/passport-login/captcha": [
+      "264.60f4e88f.js",
+      "409.968ce5e0.js",
+      "838.b9d2ec25.js"
+    ],
+    "/x/passport-login/web/qrcode/generate": [
+      "264.60f4e88f.js",
+      "409.968ce5e0.js",
+      "838.b9d2ec25.js"
+    ],
+    "/x/passport-login/web/qrcode/poll": [
+      "264.60f4e88f.js",
+      "409.968ce5e0.js",
+      "838.b9d2ec25.js"
+    ],
+    "/x/passport-login/web/sms/send": [
+      "264.60f4e88f.js",
+      "409.968ce5e0.js",
+      "838.b9d2ec25.js"
+    ],
+    "/x/passport-login/web/login/sms": [
+      "264.60f4e88f.js",
+      "409.968ce5e0.js",
+      "838.b9d2ec25.js"
+    ],
+    "/x/passport-login/web/login": [
+      "264.60f4e88f.js",
+      "409.968ce5e0.js",
+      "838.b9d2ec25.js"
+    ],
+    "/x/passport-login/web/key": [
+      "264.60f4e88f.js",
+      "409.968ce5e0.js",
+      "838.b9d2ec25.js"
+    ],
+    "/x/safecenter/user/info": [
+      "409.968ce5e0.js",
+      "86.7f85abb2.js"
+    ],
+    "/x/safecenter/captcha/pre": [
+      "409.968ce5e0.js",
+      "86.7f85abb2.js"
+    ],
+    "/x/safecenter/common/email/send": [
+      "409.968ce5e0.js",
+      "86.7f85abb2.js"
+    ],
+    "/x/safecenter/common/email/verify": [
+      "409.968ce5e0.js",
+      "86.7f85abb2.js"
+    ],
+    "/x/safecenter/common/sms/send": [
+      "409.968ce5e0.js",
+      "86.7f85abb2.js"
+    ],
+    "/x/safecenter/login/tel/bind": [
+      "409.968ce5e0.js",
+      "86.7f85abb2.js"
+    ],
+    "/x/passport-login/web/exchange_cookie": [
+      "409.968ce5e0.js",
+      "86.7f85abb2.js"
+    ],
+    "/x/safecenter/login/tel/verify": [
+      "409.968ce5e0.js",
+      "86.7f85abb2.js"
+    ],
+    "/x/safecenter/user_device/verify": [
+      "409.968ce5e0.js",
+      "86.7f85abb2.js"
+    ],
+    "/x/safecenter/sec/verify": [
+      "409.968ce5e0.js",
+      "86.7f85abb2.js"
+    ],
+    "/x/safecenter/acc_del/info": [
+      "409.968ce5e0.js",
+      "86.7f85abb2.js"
+    ],
+    "/x/safecenter/acc_del/cancel": [
+      "409.968ce5e0.js",
+      "86.7f85abb2.js"
+    ],
+    "/x/passport-user/web/captcha/pre": [
+      "600.5812ee4e.js"
+    ],
+    "/x/passport-user/web/key": [
+      "600.5812ee4e.js"
+    ],
+    "/x/passport-user/web/reset/check/user": [
+      "600.5812ee4e.js"
+    ],
+    "/x/passport-user/web/reset/pwd": [
+      "600.5812ee4e.js"
+    ],
+    "/x/passport-user/web/reset/msg/send": [
+      "600.5812ee4e.js"
+    ]
+  },
+  "bindings": [
+    {
+      "file": "264.60f4e88f.js",
+      "name": "a",
+      "path": "/x/passport-login/web/country"
+    },
+    {
+      "file": "264.60f4e88f.js",
+      "name": "u",
+      "path": "/x/passport-login/captcha"
+    },
+    {
+      "file": "264.60f4e88f.js",
+      "name": "c",
+      "path": "/x/passport-login/web/qrcode/generate"
+    },
+    {
+      "file": "264.60f4e88f.js",
+      "name": "l",
+      "path": "/x/passport-login/web/qrcode/poll"
+    },
+    {
+      "file": "264.60f4e88f.js",
+      "name": "h",
+      "path": "/x/passport-login/web/sms/send"
+    },
+    {
+      "file": "264.60f4e88f.js",
+      "name": "f",
+      "path": "/x/passport-login/web/login/sms"
+    },
+    {
+      "file": "264.60f4e88f.js",
+      "name": "d",
+      "path": "/x/passport-login/web/login"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "o",
+      "path": "/x/safecenter/user/info"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "a",
+      "path": "/x/safecenter/common/email/send"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "u",
+      "path": "/x/safecenter/common/email/verify"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "c",
+      "path": "/x/safecenter/common/sms/send"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "l",
+      "path": "/x/safecenter/login/tel/bind"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "h",
+      "path": "/x/passport-login/web/exchange_cookie"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "f",
+      "path": "/x/safecenter/login/tel/verify"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "p",
+      "path": "/x/safecenter/user_device/verify"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "d",
+      "path": "/x/safecenter/sec/verify"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "g",
+      "path": "/x/safecenter/acc_del/info"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "v",
+      "path": "/x/safecenter/acc_del/cancel"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "a",
+      "path": "/x/passport-login/web/country"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "u",
+      "path": "/x/passport-login/captcha"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "c",
+      "path": "/x/passport-login/web/qrcode/generate"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "l",
+      "path": "/x/passport-login/web/qrcode/poll"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "h",
+      "path": "/x/passport-login/web/sms/send"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "f",
+      "path": "/x/passport-login/web/login/sms"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "p",
+      "path": "/x/passport-login/web/login"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "i",
+      "path": "/x/passport-login/web/sns/state/generate"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "o",
+      "path": "/x/passport-login/web/sns/authorize/url"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "a",
+      "path": "/x/passport-login/web/authorize"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "a",
+      "path": "/x/passport-login/web/country"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "u",
+      "path": "/x/passport-login/captcha"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "c",
+      "path": "/x/passport-login/web/qrcode/generate"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "l",
+      "path": "/x/passport-login/web/qrcode/poll"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "h",
+      "path": "/x/passport-login/web/sms/send"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "f",
+      "path": "/x/passport-login/web/login/sms"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "p",
+      "path": "/x/passport-login/web/login"
+    },
+    {
+      "file": "264.60f4e88f.js",
+      "name": "a",
+      "path": "/x/passport-login/web/country"
+    },
+    {
+      "file": "264.60f4e88f.js",
+      "name": "u",
+      "path": "/x/passport-login/captcha"
+    },
+    {
+      "file": "264.60f4e88f.js",
+      "name": "c",
+      "path": "/x/passport-login/web/qrcode/generate"
+    },
+    {
+      "file": "264.60f4e88f.js",
+      "name": "l",
+      "path": "/x/passport-login/web/qrcode/poll"
+    },
+    {
+      "file": "264.60f4e88f.js",
+      "name": "h",
+      "path": "/x/passport-login/web/sms/send"
+    },
+    {
+      "file": "264.60f4e88f.js",
+      "name": "f",
+      "path": "/x/passport-login/web/login/sms"
+    },
+    {
+      "file": "264.60f4e88f.js",
+      "name": "d",
+      "path": "/x/passport-login/web/login"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "o",
+      "path": "/x/safecenter/user/info"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "a",
+      "path": "/x/safecenter/common/email/send"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "u",
+      "path": "/x/safecenter/common/email/verify"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "c",
+      "path": "/x/safecenter/common/sms/send"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "l",
+      "path": "/x/safecenter/login/tel/bind"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "h",
+      "path": "/x/passport-login/web/exchange_cookie"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "f",
+      "path": "/x/safecenter/login/tel/verify"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "p",
+      "path": "/x/safecenter/user_device/verify"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "d",
+      "path": "/x/safecenter/sec/verify"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "g",
+      "path": "/x/safecenter/acc_del/info"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "v",
+      "path": "/x/safecenter/acc_del/cancel"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "a",
+      "path": "/x/passport-login/web/country"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "u",
+      "path": "/x/passport-login/captcha"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "c",
+      "path": "/x/passport-login/web/qrcode/generate"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "l",
+      "path": "/x/passport-login/web/qrcode/poll"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "h",
+      "path": "/x/passport-login/web/sms/send"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "f",
+      "path": "/x/passport-login/web/login/sms"
+    },
+    {
+      "file": "409.968ce5e0.js",
+      "name": "p",
+      "path": "/x/passport-login/web/login"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "i",
+      "path": "/x/passport-login/web/sns/state/generate"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "o",
+      "path": "/x/passport-login/web/sns/authorize/url"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "a",
+      "path": "/x/passport-login/web/authorize"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "a",
+      "path": "/x/passport-login/web/country"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "u",
+      "path": "/x/passport-login/captcha"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "c",
+      "path": "/x/passport-login/web/qrcode/generate"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "l",
+      "path": "/x/passport-login/web/qrcode/poll"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "h",
+      "path": "/x/passport-login/web/sms/send"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "f",
+      "path": "/x/passport-login/web/login/sms"
+    },
+    {
+      "file": "838.b9d2ec25.js",
+      "name": "p",
+      "path": "/x/passport-login/web/login"
+    }
+  ]
+}

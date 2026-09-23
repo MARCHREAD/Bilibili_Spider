@@ -1,0 +1,47 @@
+{
+  "task_id": "bili-login-captcha",
+  "intake": "live-target",
+  "shape": "evidence+local-proof",
+  "route": "transport+static-ast",
+  "gateFamily": "verifier-gated",
+  "secondaryGateTags": ["transport-gated", "signer-gated"],
+  "scope": {
+    "scheme": "https",
+    "hosts": [
+      "www.bilibili.com",
+      "passport.bilibili.com",
+      "api.geetest.com",
+      "static.geetest.com",
+      "s1.hdslb.com"
+    ],
+    "port": 443,
+    "routePrefix": "/x/passport-login, /login, /gettype.php, /get.php"
+  },
+  "permissions": {
+    "browserRecon": false,
+    "liveReplay": true,
+    "accountOrSessionUse": "none",
+    "targetCodeExecution": "blocked",
+    "dependencyInstall": "blocked",
+    "writeMode": "task-local"
+  },
+  "budget": {
+    "requestsRemaining": 24,
+    "retriesRemaining": 4,
+    "websocketFramesRemaining": 0,
+    "minDelayMs": 400,
+    "concurrency": 1
+  },
+  "capabilitySnapshot": {
+    "browserMode": "unavailable",
+    "fingerprint_baseline_gap": true,
+    "debugger_trace_gap": true,
+    "silent_backend": "absent",
+    "curl_cffi_max_chrome": "chrome146",
+    "iv8": "missing",
+    "note": "no chrome-devtools / js-reverse / silent-value-capture family in the agent tool registry; evidence is wire + static-bundle only"
+  },
+  "inputs": ["https://www.bilibili.com/?spm_id_from=333.1007.0.0"],
+  "allowedPaths": ["A:\\agent\\work\\bilibili\\js_reverse_cache\\tasks\\bili-login-captcha"],
+  "acceptanceTest": "one live captcha-init response plus its front-end consumer, with the dynamic fields and their writers named"
+}

@@ -1,0 +1,96 @@
+{
+  "impersonate": "chrome146",
+  "probes": [
+    {
+      "probe": "home",
+      "url": "https://www.bilibili.com/?spm_id_from=333.1007.0.0",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "len": 165465,
+      "sent_cookie_header": "",
+      "set_cookie_names": [
+        "buvid3",
+        "b_nut"
+      ],
+      "saved": "A:\\agent\\work\\bilibili\\js_reverse_cache\\tasks\\bili-login-captcha\\raw\\home.html"
+    },
+    {
+      "probe": "captcha_init",
+      "url": "https://passport.bilibili.com/x/passport-login/captcha?source=main-fe-header",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "len": 224,
+      "sent_cookie_header": "",
+      "set_cookie_names": [],
+      "saved": "A:\\agent\\work\\bilibili\\js_reverse_cache\\tasks\\bili-login-captcha\\raw\\captcha_init.json"
+    },
+    {
+      "probe": "captcha_init_src_main-fe-header",
+      "url": "https://passport.bilibili.com/x/passport-login/captcha?source=main-fe-header",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "len": 224,
+      "sent_cookie_header": "",
+      "set_cookie_names": [],
+      "saved": "A:\\agent\\work\\bilibili\\js_reverse_cache\\tasks\\bili-login-captcha\\raw\\captcha_init_main-fe-header.json"
+    },
+    {
+      "probe": "captcha_init_src_blog",
+      "url": "https://passport.bilibili.com/x/passport-login/captcha?source=blog",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "len": 224,
+      "sent_cookie_header": "",
+      "set_cookie_names": [],
+      "saved": "A:\\agent\\work\\bilibili\\js_reverse_cache\\tasks\\bili-login-captcha\\raw\\captcha_init_blog.json"
+    },
+    {
+      "probe": "login_page",
+      "url": "https://passport.bilibili.com/login",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "len": 948,
+      "sent_cookie_header": "",
+      "set_cookie_names": [],
+      "saved": "A:\\agent\\work\\bilibili\\js_reverse_cache\\tasks\\bili-login-captcha\\raw\\login_page.html"
+    },
+    {
+      "probe": "gt3_gettype",
+      "url": "https://api.geetest.com/gettype.php?gt=ac597a4506fee079629df5d8b66dd4fe&callback=geetest_1789985348358",
+      "status": 200,
+      "content_type": "text/javascript;charset=UTF-8",
+      "len": 465,
+      "sent_cookie_header": "",
+      "set_cookie_names": [
+        "GeeTestUser"
+      ],
+      "saved": "A:\\agent\\work\\bilibili\\js_reverse_cache\\tasks\\bili-login-captcha\\raw\\gt3_gettype.txt"
+    }
+  ],
+  "home_markers": {
+    "geetest": 2,
+    "captcha": 0,
+    "gt\\.js": 0,
+    "passport": 0
+  },
+  "captcha_init": {
+    "code": 0,
+    "message": "OK",
+    "ttl": 1,
+    "data": {
+      "type": "geetest",
+      "token": "4e7a80b18bce4182b92dcf98e26991d0",
+      "geetest": {
+        "challenge": "93b3f49adcbd1a065550f55124cf592f",
+        "gt": "ac597a4506fee079629df5d8b66dd4fe"
+      },
+      "tencent": {
+        "appid": ""
+      }
+    }
+  },
+  "login_scripts": [
+    "https://s1.hdslb.com/bfs/seed/jinkela/short/b-mirror/biliMirror.umd.mini.js",
+    "//s1.hdslb.com/bfs/static/2233-monorepo/passport/static/js/index.ed509056.js"
+  ]
+}

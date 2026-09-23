@@ -1,0 +1,1252 @@
+[
+  {
+    "file": "round_01.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 6426,
+        "n": 3,
+        "prompt": [
+          "\u9165",
+          "\u534a",
+          "\u8089"
+        ],
+        "n_boxes": 4,
+        "fallback": 1,
+        "scores": [
+          0.0,
+          3.0,
+          20.0
+        ],
+        "min_score": 0,
+        "mean_score": 7.666666666666667,
+        "points": [
+          [
+            172,
+            49
+          ],
+          [
+            226,
+            195
+          ],
+          [
+            111,
+            266
+          ]
+        ],
+        "verdict": "fail"
+      },
+      {
+        "pic": "pic_12.jpg",
+        "ms": 6125,
+        "n": 3,
+        "prompt": [
+          "\u6f6e",
+          "\u534a",
+          "\u7f51"
+        ],
+        "n_boxes": 4,
+        "fallback": 0,
+        "scores": [
+          4.0,
+          1.0,
+          2.0
+        ],
+        "min_score": 1.0,
+        "mean_score": 2.3333333333333335,
+        "points": [
+          [
+            285,
+            62
+          ],
+          [
+            98,
+            65
+          ],
+          [
+            215,
+            135
+          ]
+        ],
+        "verdict": "fail"
+      },
+      {
+        "pic": "pic_14.jpg",
+        "ms": 6282,
+        "n": 3,
+        "prompt": [
+          "\u9178",
+          "\u72d7",
+          "\u7b1b"
+        ],
+        "n_boxes": 4,
+        "fallback": 1,
+        "scores": [
+          18.0,
+          0.0,
+          8.0
+        ],
+        "min_score": 0,
+        "mean_score": 8.666666666666666,
+        "points": [
+          [
+            45,
+            255
+          ],
+          [
+            161,
+            283
+          ],
+          [
+            224,
+            249
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_02.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 6790,
+        "n": 3,
+        "prompt": [
+          "\u5408",
+          "\u6cb9",
+          "\u9165"
+        ],
+        "n_boxes": 4,
+        "fallback": 0,
+        "scores": [
+          20.0,
+          2.0,
+          2.0
+        ],
+        "min_score": 2.0,
+        "mean_score": 8.0,
+        "points": [
+          [
+            165,
+            116
+          ],
+          [
+            160,
+            274
+          ],
+          [
+            85,
+            219
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_03.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 7429,
+        "n": 4,
+        "prompt": [
+          "\u7ecd",
+          "\u4e49",
+          "\u9ebb",
+          "\u9e2d"
+        ],
+        "n_boxes": 5,
+        "fallback": 1,
+        "scores": [
+          0.0,
+          8.0,
+          20.0,
+          4.0
+        ],
+        "min_score": 0,
+        "mean_score": 8.0,
+        "points": [
+          [
+            156,
+            275
+          ],
+          [
+            50,
+            192
+          ],
+          [
+            280,
+            40
+          ],
+          [
+            224,
+            153
+          ]
+        ],
+        "verdict": "fail"
+      },
+      {
+        "pic": "pic_12.jpg",
+        "ms": 6939,
+        "n": 4,
+        "prompt": [
+          "\u51c9",
+          "\u745c",
+          "\u8c46",
+          "\u7c89"
+        ],
+        "n_boxes": 5,
+        "fallback": 2,
+        "scores": [
+          20.0,
+          0.0,
+          0.0,
+          20.0
+        ],
+        "min_score": 0,
+        "mean_score": 10.0,
+        "points": [
+          [
+            83,
+            50
+          ],
+          [
+            44,
+            180
+          ],
+          [
+            289,
+            118
+          ],
+          [
+            144,
+            187
+          ]
+        ],
+        "verdict": "fail"
+      },
+      {
+        "pic": "pic_14.jpg",
+        "ms": 7106,
+        "n": 4,
+        "prompt": [
+          "\u5b9c",
+          "\u5bbe",
+          "\u71c3",
+          "\u9762"
+        ],
+        "n_boxes": 5,
+        "fallback": 0,
+        "scores": [
+          20.0,
+          20.0,
+          17.0,
+          20.0
+        ],
+        "min_score": 17.0,
+        "mean_score": 19.25,
+        "points": [
+          [
+            45,
+            183
+          ],
+          [
+            147,
+            212
+          ],
+          [
+            269,
+            152
+          ],
+          [
+            89,
+            98
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_04.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 7915,
+        "n": 4,
+        "prompt": [
+          "\u63d0",
+          "\u4e1d",
+          "\u53d1",
+          "\u7cd5"
+        ],
+        "n_boxes": 5,
+        "fallback": 0,
+        "scores": [
+          10.0,
+          20.0,
+          20.0,
+          18.0
+        ],
+        "min_score": 10.0,
+        "mean_score": 17.0,
+        "points": [
+          [
+            135,
+            204
+          ],
+          [
+            255,
+            152
+          ],
+          [
+            140,
+            282
+          ],
+          [
+            173,
+            106
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_05.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 5027,
+        "n": 2,
+        "prompt": [
+          "\u8377",
+          "\u6708"
+        ],
+        "n_boxes": 3,
+        "fallback": 0,
+        "scores": [
+          18.0,
+          20.0
+        ],
+        "min_score": 18.0,
+        "mean_score": 19.0,
+        "points": [
+          [
+            162,
+            111
+          ],
+          [
+            268,
+            266
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_06.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 6113,
+        "n": 3,
+        "prompt": [
+          "\u6851",
+          "\u8a89",
+          "\u7ca5"
+        ],
+        "n_boxes": 4,
+        "fallback": 1,
+        "scores": [
+          14.0,
+          0.0,
+          20.0
+        ],
+        "min_score": 0,
+        "mean_score": 11.333333333333334,
+        "points": [
+          [
+            292,
+            126
+          ],
+          [
+            42,
+            274
+          ],
+          [
+            217,
+            72
+          ]
+        ],
+        "verdict": "fail"
+      },
+      {
+        "pic": "pic_12.jpg",
+        "ms": 7004,
+        "n": 4,
+        "prompt": [
+          "\u6d46",
+          "\u5507",
+          "\u4e4b",
+          "\u65c5"
+        ],
+        "n_boxes": 5,
+        "fallback": 0,
+        "scores": [
+          8.0,
+          10.0,
+          18.0,
+          20.0
+        ],
+        "min_score": 8.0,
+        "mean_score": 14.0,
+        "points": [
+          [
+            35,
+            241
+          ],
+          [
+            43,
+            115
+          ],
+          [
+            151,
+            51
+          ],
+          [
+            161,
+            118
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_07.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 7034,
+        "n": 4,
+        "prompt": [
+          "\u8000",
+          "\u9732",
+          "\u8377",
+          "\u85d5"
+        ],
+        "n_boxes": 4,
+        "fallback": 2,
+        "scores": [
+          2.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        "min_score": 0,
+        "mean_score": 1.0,
+        "points": [
+          [
+            134,
+            141
+          ],
+          [
+            266,
+            224
+          ],
+          [
+            194,
+            42
+          ],
+          [
+            120,
+            68
+          ]
+        ],
+        "verdict": "fail"
+      },
+      {
+        "pic": "pic_12.jpg",
+        "ms": 7314,
+        "n": 4,
+        "prompt": [
+          "\u9e21",
+          "\u4ee5",
+          "\u94f6",
+          "\u8033"
+        ],
+        "n_boxes": 5,
+        "fallback": 0,
+        "scores": [
+          20.0,
+          1.0,
+          8.0,
+          20.0
+        ],
+        "min_score": 1.0,
+        "mean_score": 12.25,
+        "points": [
+          [
+            247,
+            44
+          ],
+          [
+            59,
+            277
+          ],
+          [
+            67,
+            90
+          ],
+          [
+            259,
+            256
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_08.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 7856,
+        "n": 4,
+        "prompt": [
+          "\u5146",
+          "\u83dc",
+          "\u7092",
+          "\u8089"
+        ],
+        "n_boxes": 5,
+        "fallback": 2,
+        "scores": [
+          0.0,
+          20.0,
+          0.0,
+          20.0
+        ],
+        "min_score": 0,
+        "mean_score": 10.0,
+        "points": [
+          [
+            178,
+            177
+          ],
+          [
+            160,
+            44
+          ],
+          [
+            239,
+            224
+          ],
+          [
+            267,
+            54
+          ]
+        ],
+        "verdict": "fail"
+      },
+      {
+        "pic": "pic_12.jpg",
+        "ms": 5804,
+        "n": 2,
+        "prompt": [
+          "\u85e4",
+          "\u6ede"
+        ],
+        "n_boxes": 4,
+        "fallback": 1,
+        "scores": [
+          0.0,
+          4.0
+        ],
+        "min_score": 0,
+        "mean_score": 2.0,
+        "points": [
+          [
+            153,
+            182
+          ],
+          [
+            119,
+            90
+          ]
+        ],
+        "verdict": "fail"
+      },
+      {
+        "pic": "pic_14.jpg",
+        "ms": 6126,
+        "n": 3,
+        "prompt": [
+          "\u6851",
+          "\u82bd",
+          "\u8336"
+        ],
+        "n_boxes": 4,
+        "fallback": 0,
+        "scores": [
+          20.0,
+          20.0,
+          20.0
+        ],
+        "min_score": 20.0,
+        "mean_score": 20.0,
+        "points": [
+          [
+            263,
+            86
+          ],
+          [
+            140,
+            267
+          ],
+          [
+            55,
+            33
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_09.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 6769,
+        "n": 3,
+        "prompt": [
+          "\u54c8",
+          "\u5bc6",
+          "\u74dc"
+        ],
+        "n_boxes": 4,
+        "fallback": 1,
+        "scores": [
+          0.0,
+          6.0,
+          8.0
+        ],
+        "min_score": 0,
+        "mean_score": 4.666666666666667,
+        "points": [
+          [
+            47,
+            56
+          ],
+          [
+            118,
+            147
+          ],
+          [
+            197,
+            70
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_10.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 6275,
+        "n": 3,
+        "prompt": [
+          "\u767e",
+          "\u82b1",
+          "\u71d5"
+        ],
+        "n_boxes": 4,
+        "fallback": 1,
+        "scores": [
+          20.0,
+          20.0,
+          0.0
+        ],
+        "min_score": 0,
+        "mean_score": 13.333333333333334,
+        "points": [
+          [
+            180,
+            62
+          ],
+          [
+            215,
+            182
+          ],
+          [
+            87,
+            63
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_01.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 14818,
+        "n": 3,
+        "prompt": [
+          "\u8c46",
+          "\u6469",
+          "\u9762"
+        ],
+        "n_boxes": 4,
+        "fallback": 0,
+        "scores": [
+          20.0,
+          14.0,
+          20.0
+        ],
+        "min_score": 14.0,
+        "mean_score": 18.0,
+        "points": [
+          [
+            156,
+            49
+          ],
+          [
+            86,
+            98
+          ],
+          [
+            267,
+            46
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_02.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 14970,
+        "n": 3,
+        "prompt": [
+          "\u8c46",
+          "\u6469",
+          "\u9762"
+        ],
+        "n_boxes": 4,
+        "fallback": 0,
+        "scores": [
+          20.0,
+          14.0,
+          20.0
+        ],
+        "min_score": 14.0,
+        "mean_score": 18.0,
+        "points": [
+          [
+            156,
+            49
+          ],
+          [
+            86,
+            98
+          ],
+          [
+            267,
+            46
+          ]
+        ],
+        "verdict": "fail"
+      },
+      {
+        "pic": "pic_12.jpg",
+        "ms": 5988,
+        "n": 3,
+        "prompt": [
+          "\u6bdb",
+          "\u8c46",
+          "\u7ed3"
+        ],
+        "n_boxes": 4,
+        "fallback": 1,
+        "scores": [
+          0.0,
+          20.0,
+          20.0
+        ],
+        "min_score": 0,
+        "mean_score": 13.333333333333334,
+        "points": [
+          [
+            224,
+            194
+          ],
+          [
+            101,
+            194
+          ],
+          [
+            122,
+            85
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_03.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 11334,
+        "n": 3,
+        "prompt": [
+          "\u7ea2",
+          "\u98a4",
+          "\u836f"
+        ],
+        "n_boxes": 9,
+        "fallback": 3,
+        "scores": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "min_score": 0,
+        "mean_score": 0.0,
+        "points": [
+          [
+            94,
+            72
+          ],
+          [
+            78,
+            260
+          ],
+          [
+            192,
+            212
+          ]
+        ],
+        "verdict": "fail"
+      },
+      {
+        "pic": "pic_12.jpg",
+        "ms": 9935,
+        "n": 4,
+        "prompt": [
+          "\u767d",
+          "\u679c",
+          "\u70e7",
+          "\u9e21"
+        ],
+        "n_boxes": 5,
+        "fallback": 2,
+        "scores": [
+          16.0,
+          0.0,
+          0.0,
+          20.0
+        ],
+        "min_score": 0,
+        "mean_score": 9.0,
+        "points": [
+          [
+            105,
+            183
+          ],
+          [
+            239,
+            115
+          ],
+          [
+            154,
+            57
+          ],
+          [
+            75,
+            96
+          ]
+        ],
+        "verdict": "fail"
+      },
+      {
+        "pic": "pic_14.jpg",
+        "ms": 4881,
+        "n": 2,
+        "prompt": [
+          "\u6000",
+          "\u7c89"
+        ],
+        "n_boxes": 3,
+        "fallback": 1,
+        "scores": [
+          0.0,
+          20.0
+        ],
+        "min_score": 0,
+        "mean_score": 10.0,
+        "points": [
+          [
+            264,
+            45
+          ],
+          [
+            91,
+            79
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_04.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 12335,
+        "n": 3,
+        "prompt": [
+          "\u4e4c",
+          "\u53d1",
+          "\u6c64"
+        ],
+        "n_boxes": 4,
+        "fallback": 0,
+        "scores": [
+          20.0,
+          12.0,
+          20.0
+        ],
+        "min_score": 12.0,
+        "mean_score": 17.333333333333332,
+        "points": [
+          [
+            215,
+            287
+          ],
+          [
+            91,
+            33
+          ],
+          [
+            56,
+            230
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_05.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 6312,
+        "n": 3,
+        "prompt": [
+          "\u534a",
+          "\u8089",
+          "\u677e"
+        ],
+        "n_boxes": 4,
+        "fallback": 2,
+        "scores": [
+          0.0,
+          20.0,
+          0.0
+        ],
+        "min_score": 0,
+        "mean_score": 6.666666666666667,
+        "points": [
+          [
+            120,
+            171
+          ],
+          [
+            131,
+            53
+          ],
+          [
+            198,
+            239
+          ]
+        ],
+        "verdict": "fail"
+      },
+      {
+        "pic": "pic_12.jpg",
+        "ms": 5963,
+        "n": 3,
+        "prompt": [
+          "\u9762",
+          "\u4ed3",
+          "\u9165"
+        ],
+        "n_boxes": 4,
+        "fallback": 1,
+        "scores": [
+          20.0,
+          8.0,
+          0.0
+        ],
+        "min_score": 0,
+        "mean_score": 9.333333333333334,
+        "points": [
+          [
+            263,
+            196
+          ],
+          [
+            153,
+            215
+          ],
+          [
+            279,
+            90
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_06.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 9909,
+        "n": 3,
+        "prompt": [
+          "\u805a",
+          "\u4e59",
+          "\u8783"
+        ],
+        "n_boxes": 5,
+        "fallback": 0,
+        "scores": [
+          6.0,
+          2.0,
+          1.0
+        ],
+        "min_score": 1.0,
+        "mean_score": 3.0,
+        "points": [
+          [
+            284,
+            289
+          ],
+          [
+            123,
+            190
+          ],
+          [
+            36,
+            158
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_07.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 7952,
+        "n": 4,
+        "prompt": [
+          "\u8131",
+          "\u6c22",
+          "\u4e59",
+          "\u9178"
+        ],
+        "n_boxes": 5,
+        "fallback": 0,
+        "scores": [
+          20.0,
+          12.0,
+          14.0,
+          20.0
+        ],
+        "min_score": 12.0,
+        "mean_score": 16.5,
+        "points": [
+          [
+            167,
+            245
+          ],
+          [
+            276,
+            284
+          ],
+          [
+            51,
+            98
+          ],
+          [
+            218,
+            175
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_08.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 8082,
+        "n": 3,
+        "prompt": [
+          "\u539a",
+          "\u5fb7",
+          "\u798f"
+        ],
+        "n_boxes": 4,
+        "fallback": 0,
+        "scores": [
+          8.0,
+          20.0,
+          13.0
+        ],
+        "min_score": 8.0,
+        "mean_score": 13.666666666666666,
+        "points": [
+          [
+            186,
+            251
+          ],
+          [
+            170,
+            181
+          ],
+          [
+            34,
+            197
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_09.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 5251,
+        "n": 2,
+        "prompt": [
+          "\u60f0",
+          "\u6c64"
+        ],
+        "n_boxes": 3,
+        "fallback": 1,
+        "scores": [
+          10.0,
+          0.0
+        ],
+        "min_score": 0,
+        "mean_score": 5.0,
+        "points": [
+          [
+            49,
+            47
+          ],
+          [
+            203,
+            212
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  },
+  {
+    "file": "round_10.log",
+    "attempts": [
+      {
+        "pic": "pic_7.jpg",
+        "ms": 8776,
+        "n": 4,
+        "prompt": [
+          "\u7eff",
+          "\u8336",
+          "\u7cd5",
+          "\u70b9"
+        ],
+        "n_boxes": 5,
+        "fallback": 0,
+        "scores": [
+          12.0,
+          2.0,
+          7.0,
+          20.0
+        ],
+        "min_score": 2.0,
+        "mean_score": 10.25,
+        "points": [
+          [
+            227,
+            74
+          ],
+          [
+            134,
+            288
+          ],
+          [
+            101,
+            110
+          ],
+          [
+            127,
+            181
+          ]
+        ],
+        "verdict": "success"
+      }
+    ],
+    "final_ok": true
+  }
+]

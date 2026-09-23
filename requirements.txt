@@ -1,0 +1,14 @@
+# bilibili 本地采集工作台 —— 运行依赖
+#
+# 说明：本工作台是**纯 Python** 协议采集，运行路径不含浏览器 / Playwright /
+# Selenium / CDP 页面驱动 / 浏览器 profile。
+
+# 带 TLS 指纹模拟的 HTTP 客户端（传输身份锁定 curl_cffi 自带的 chrome 大版本）
+curl_cffi>=0.15.0
+
+# 本地控制台（只服务 127.0.0.1，不参与任何目标请求）
+fastapi>=0.110
+uvicorn>=0.27
+
+# 扫码登录二维码渲染（纯 Python，无 C 依赖）
+segno>=1.6

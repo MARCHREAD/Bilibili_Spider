@@ -1,0 +1,284 @@
+{
+  "kind": "pinned-comment-with-goods-card",
+  "source": "GET https://api.bilibili.com/x/v2/reply/wbi/main oid=117162832298619 (BV=BV1Pg8Z62E3C)",
+  "note": "真实响应裁剪：只保留判定所需字段。所有内容均为公开评论数据，不含 cookie / token。",
+  "structure_facts": {
+    "data.top": "容器 {admin, upper, vote}，不是评论对象本身",
+    "data.top.upper": "UP 主置顶评论（完整对象）",
+    "data.top_replies": "置顶评论的引用/副本列表",
+    "member.mid": "字符串（如 '542316830'）",
+    "owner.mid": "整数（如 542316830）—— 必须归一化后比较",
+    "link_source": "content.jump_url 是链接权威来源，正文可能只有文字"
+  },
+  "up_mid": 542316830,
+  "top_container": {
+    "upper": {
+      "rpid": 315741109936,
+      "oid": 117162832298619,
+      "mid": 542316830,
+      "root": 0,
+      "ctime": 1788030222,
+      "like": 5,
+      "rcount": 1,
+      "member": {
+        "mid": "542316830",
+        "uname": "茄子小布丁",
+        "sex": "男",
+        "sign": "没有天赋那就重复 国一卡萨丁励志赚100万退休 \n粉丝q群287992597\nv:peng1727810437(本人)备注来意\n\n",
+        "level_info": {
+          "current_level": 6,
+          "current_min": 0,
+          "current_exp": 0,
+          "next_exp": 0
+        },
+        "vip": {
+          "vipType": 0,
+          "vipDueDate": 0,
+          "dueRemark": "",
+          "accessStatus": 0,
+          "vipStatus": 0,
+          "vipStatusWarn": "",
+          "themeType": 0,
+          "label": {
+            "path": "",
+            "text": "",
+            "label_theme": "",
+            "text_color": "",
+            "bg_style": 0,
+            "bg_color": "",
+            "border_color": "",
+            "use_img_label": true,
+            "img_label_uri_hans": "",
+            "img_label_uri_hant": "",
+            "img_label_uri_hans_static": "https://i0.hdslb.com/bfs/vip/d7b702ef65a976b20ed854cbd04cb9e27341bb79.png",
+            "img_label_uri_hant_static": "https://i0.hdslb.com/bfs/activity-plat/static/20220614/e369244d0b14644f5e1a06431e22a4d5/KJunwh19T5.png",
+            "label_id": 0,
+            "label_goto": null,
+            "img_label_uri_i18n": "",
+            "img_label_uri_i18n_static": "",
+            "label_type": 0
+          },
+          "avatar_subscript": 0,
+          "nickname_color": ""
+        },
+        "official_verify": {
+          "type": -1,
+          "desc": ""
+        }
+      },
+      "content": {
+        "message": "虽然有些突然，但现在有一件事情是现在可以确认的---那就是你一定会喜欢上右边这个东西 https://b23.tv/mall-ahVNe-m5P7",
+        "members": [],
+        "jump_url": {
+          "https://b23.tv/mall-ahVNe-m5P7": {
+            "title": "立即购买｜「瑞的慢烤」牛脆脆澳洲和牛M9雪焰牛脆片即食牛肉干牛薄脆办公室健身休闲零食",
+            "state": 0,
+            "prefix_icon": "https://i0.hdslb.com/bfs/activity-plat/static/20230612/33208db4c24eef2890df876c57cc4123/qcTFC3aooI.png",
+            "app_url_schema": "",
+            "app_name": "",
+            "app_package_name": "",
+            "click_report": "",
+            "is_half_screen": false,
+            "exposure_report": "",
+            "extra": {
+              "goods_item_id": 11460521,
+              "goods_prefetched_cache": "{\"source_id\":0,\"resource_id\":0,\"is_ad_loc\":true,\"server_type\":1,\"ad_content\":{\"creative_id\":1196650964874997760,\"creative_type\":1,\"creative_content\":{\"title\":\"立即购买｜「瑞的慢烤」牛脆脆澳洲和牛M9雪焰牛脆片即食牛肉干牛薄脆办公室健身休闲零食\",\"image_url\":\"https://i0.hdslb.com/bfs/mall/mall/e7/13/0feddfb9fd706ab211bf5d5d34d71cf2.png\",\"url\":\"https://mall.bilibili.com/neul-next/detailuniversal/detail.html?page=detailuniversal_detail&itemsId=11460521&loadingShow=1&noTitleBar=1&track_id=__BGMT__&from=&from_spmid=__SPMID__&msource=cps_comments_542316830_cont-1-117162832298619_auto-1#noReffer=true\",\"click_url\":\"\",\"show_url\":\"\",\"video_id\":117162832298619,\"story_advertise_type\":0,\"advertise_up_mid\":0,\"live_room_id\":0,\"course\":false,\"is_course\":false,\"enable_tag_move_up\":0},\"ad_cb\":\"CAAQABiA4IKM5vbWzRAgADCb+S84oStCHjE3OTAwNzIxOTIwMDNxMTBhODlhMzFhOThxNzc5OEiF+PfEjDSAAQyyASDACIdaLrdXx0stUdbQxzkUD5HL6gdyVnNC9PXCNDudULoB/wFodHRwczovL21hbGwuYmlsaWJpbGkuY29tL25ldWwtbmV4dC9kZXRhaWx1bml2ZXJzYWwvZGV0YWlsLmh0bWw/cGFnZT1kZXRhaWx1bml2ZXJzYWxfZGV0YWlsJml0ZW1zSWQ9MTE0NjA1MjEmbG9hZGluZ1Nob3c9MSZub1RpdGxlQmFyPTEmdHJhY2tfaWQ9X19CR01UX18mZnJvbT0mZnJvbV9zcG1pZD1fX1NQTUlEX18mbXNvdXJjZT1jcHNfY29tbWVudHNfNTQyMzE2ODMwX2NvbnQtMS0xMTcxNjI4MzIyOTg2MTlfYXV0by0xI25vUmVmZmVyPXRydWXwAfuEgMjx0RqIAp6yzIIC4gSFAjU2LnsicHNJZCI6MTUzNzIyLCJ2MiI6IkpUcEtETG03WHI0SlhXRFJtU0NfdlYwVjhETktOXzhEOFZoWXRhcWJLZE0tblgwN05RNDN5OFhQY1pGTkhjdDdPUkh2eDBVNGhZVFhNZTJ4VjJ3MWwxbl9XSm5UcWR5WUNWZ1ppaDZEZ3p1VG4yc0d6TEVmeHd5Y2RVUGhrMjNmNEROc0N6MmluOWR1RjBwZWI2aG5NRlFRNk5FUnNMZm9vOTBCMG1fU2FPZzdRRHY2SnE4WEU4M0tPVEtYdkxaNUhkMkswTThvcVN6NiJ9OzYzLnsicHNJZCI6MTUzNjk4LCJ2MiI6IkEyVmYifQ==\",\"card_type\":22,\"extra\":{\"use_ad_web_v2\":false,\"open_whitelist\":[],\"card\":{\"card_type\":22,\"title\":\"立即购买｜「瑞的慢烤」牛脆脆澳洲和牛M9雪焰牛脆片即食牛肉干牛薄脆办公室健身休闲零食\",\"covers\":[{\"url\":\"https://i0.hdslb.com/bfs/mall/mall/e7/13/0feddfb9fd706ab211bf5d5d34d71cf2.png\",\"loop\":0,\"image_height\":0,\"image_width\":0,\"gif_tag_show\":false}],\"jump_url\":\"https://mall.bilibili.com/neul-next/detailuniversal/detail.html?page=detailuniversal_detail&itemsId=11460521&loadingShow=1&noTitleBar=1&track_id=__BGMT__&from=&from_spmid=__SPMID__&msource=cps_comments_542316830_cont-1-117162832298619_auto-1#noReffer=true\",\"button\":{\"type\":1,\"text\":\"前往工房\",\"jump_url\":\"https://mall.bilibili.com/neul-next/detailuniversal/detail.html?page=detailuniversal_detail&itemsId=11460521&loadingShow=1&noTitleBar=1&track_id=__BGMT__&from=&from_spmid=__SPMID__&msource=cps_comments_542316830_cont-1-117162832298619_auto-1#noReffer=true\",\"btn_delay_time\":0,\"story_arrow\":false,\"show_game_custom_text\":false},\"callup_url\":\"\",\"cur_price\":3690,\"short_title\":\"立即购买｜「瑞的慢烤」牛脆脆澳洲和牛M9雪焰牛脆片即食牛肉干牛薄脆办公室健身休闲零食\",\"price_desc\":\"\",\"goods_ori_price\":\"¥36.9\",\"price_symbol\":\"¥\",\"adver\":{\"adver_id\":785563,\"adver_type\":3},\"extreme_team_status\":false,\"support_transition\":false,\"under_player_interaction_style\":0,\"grade_denominator\":0,\"star_level\":0,\"live_booking_population_threshold\":0,\"ori_mark_hidden\":0,\"use_multi_cover\":false,\"yellow_cart_pannel_pullup\":0,\"yellow_cart_pannel_version\":0,\"goods_item_id\":11460521,\"download_area\":0,\"goods_pannel_show\":0,\"goods_panel_show\":0,\"show_pop_window\":0,\"comment_interaction_style\":0,\"search_show_adbutton\":0,\"jump_interaction_style\":0,\"live_page_type\":0,\"fold_time\":0,\"live_room_popularity\":0,\"live_tag_show\":false,\"dynamic_text\":\"立即购买｜「瑞的慢烤」牛脆脆澳洲和牛M9雪焰牛脆片即食牛肉干牛薄脆办公室健身休闲零食\",\"grade_level\":0,\"anim_in_enable\":0,\"extra_params\":\"{\\\"take_goods\\\":true,\\\"request_id\\\":\\\"1790072192003q10a89a31a98q7798\\\",\\\"is_from_natural\\\":0,\\\"is_attribution\\\":0,\\\"item_id\\\":11460521,\\\"item_source\\\":8,\\\"url\\\":\\\"https://mall.bilibili.com/neul-next/detailuniversal/detail.html?page=detailuniversal_detail&itemsId=11460521&loadingShow=1&noTitleBar=1&track_id=__BGMT__&from=&from_spmid=__SPMID__&msource=cps_comments_542316830_cont-1-117162832298619_auto-1#noReffer=true\\\",\\\"comment_id\\\":315741109936,\\\"avid\\\":117162832298619,\\\"flow_type\\\":0,\\\"spmid\\\":\\\"\\\",\\\"from_spmid\\\":\\\"\\\",\\\"is_recycled\\\":0,\\\"strategy_id\\\":0,\\\"is_replaced\\\":0,\\\"mixin_banner\\\":false}\",\"underframe_card_style\":0,\"playpage_card_style\":0,\"live_auto_play\":false,\"original_style_level\":0,\"live_card_show\":false,\"enable_tag_move_up\":0,\"search_card_style\":0,\"item_source\":0,\"closed_loop_item\":0,\"desc_type\":0,\"comment_use_game_page\":0,\"story_takeoff_interaction_style\":0,\"underframe_icon_type\":0,\"live_card_type\":0,\"use_engine_author\":false,\"related_interaction_style\":0,\"has_anti_sniping_price\":false,\"is_simplify_mode\":0},\"report_time\":0,\"sales_type\":34,\"special_industry\":false,\"preload_landingpage\":0,\"share_info\":{},\"upzone_entrance_type\":0,\"upzone_entrance_report_id\":0,\"click_area\":0,\"shop_id\":0,\"up_mid\":542316830,\"track_id\":\"pbaes.2Q7j-cMTbeIhFBc8LYVwDBCBpEEO0jdODVpmwax96lxaXiwaAk7H1IG2Cy_x9Mxyd2g3N9TAO3wcAgjs3JDciGvr6kOHeyxuYA92OW46Re2mpasaTXNPwaSaxyrqO35EeXrLlwkzrCUR9-pU9VFtMQ==\",\"enable_store_direct_launch\":0,\"enable_double_jump\":false,\"store_callup_card\":false,\"enable_h5_alert\":false,\"special_industry_style\":0,\"macro_replace_priority\":0,\"feedback_panel_style\":0,\"ad_content_type\":0,\"enable_h5_pre_load\":0,\"hot_activity_id\":0,\"middle_show_urls\":[],\"middle_click_urls\":[],\"product_id\":0,\"landingpage_download_style\":0,\"download_url_type\":0,\"enable_auto_callup\":0,\"top_live_stay_time_seconds\":0,\"vipshop_fast_framework\":0,\"lottery_id\":0,\"enable_openapk_dialog\":true,\"user_cancel_jump_type\":0,\"comment_toast_open\":0,\"comment_biz_type\":0,\"jump_target\":0},\"creative_style\":1,\"live_booking_id\":0,\"cm_mark\":3,\"is_ad\":true,\"top_view_id\":0,\"up_mid\":542316830,\"promotion_purpose_type\":0,\"adver_mid\":0,\"ad_content_type\":0,\"global_card_type\":1,\"ad_avid\":0,\"copyright_ad\":0,\"live_room_id\":0,\"pp_ecpm\":0.0,\"ecpm_value\":0.0,\"brand_rtb\":false,\"nature_ad\":0,\"dynamic_id\":0,\"content_fast_access\":0,\"first_business_category_id\":0,\"second_business_category_id\":0}}",
+              "goods_show_type": 0,
+              "is_word_search": false,
+              "goods_cm_control": 1,
+              "goods_click_report": "{\"spmid\":\"\",\"item_id\":11460521,\"comment_trail\":\"73.{\\\"psId\\\":99976,\\\"v2\\\":\\\"BQ\\\"}\",\"is_attribution\":0,\"request_id\":\"1790072192003q10a89a31a98q7798\",\"from_spmid\":\"\",\"is_from_natural\":0}",
+              "goods_exposure_report": "{\"spmid\":\"\",\"item_id\":11460521,\"comment_trail\":\"73.{\\\"psId\\\":99976,\\\"v2\\\":\\\"BQ\\\"}\",\"is_attribution\":0,\"request_id\":\"1790072192003q10a89a31a98q7798\",\"from_spmid\":\"\",\"is_from_natural\":0}"
+            },
+            "underline": false,
+            "match_once": false,
+            "pc_url": "https://mall.bilibili.com/neul-next/detailuniversal/detail.html?page=detailuniversal_detail&itemsId=11460521&loadingShow=1&noTitleBar=1&track_id=__BGMT__&from=&from_spmid=__SPMID__&msource=cps_comments_542316830_cont-1-117162832298619_auto-1#noReffer=true",
+            "icon_position": 0
+          }
+        },
+        "max_line": 6
+      },
+      "up_action": {
+        "like": false,
+        "reply": false
+      }
+    },
+    "admin": null,
+    "vote": null
+  },
+  "top_replies": [
+    {
+      "rpid": 315741109936,
+      "oid": 117162832298619,
+      "mid": 542316830,
+      "root": 0,
+      "ctime": 1788030222,
+      "like": 5,
+      "rcount": 1,
+      "member": {
+        "mid": "542316830",
+        "uname": "茄子小布丁",
+        "sex": "男",
+        "sign": "没有天赋那就重复 国一卡萨丁励志赚100万退休 \n粉丝q群287992597\nv:peng1727810437(本人)备注来意\n\n",
+        "level_info": {
+          "current_level": 6,
+          "current_min": 0,
+          "current_exp": 0,
+          "next_exp": 0
+        },
+        "vip": {
+          "vipType": 0,
+          "vipDueDate": 0,
+          "dueRemark": "",
+          "accessStatus": 0,
+          "vipStatus": 0,
+          "vipStatusWarn": "",
+          "themeType": 0,
+          "label": {
+            "path": "",
+            "text": "",
+            "label_theme": "",
+            "text_color": "",
+            "bg_style": 0,
+            "bg_color": "",
+            "border_color": "",
+            "use_img_label": true,
+            "img_label_uri_hans": "",
+            "img_label_uri_hant": "",
+            "img_label_uri_hans_static": "https://i0.hdslb.com/bfs/vip/d7b702ef65a976b20ed854cbd04cb9e27341bb79.png",
+            "img_label_uri_hant_static": "https://i0.hdslb.com/bfs/activity-plat/static/20220614/e369244d0b14644f5e1a06431e22a4d5/KJunwh19T5.png",
+            "label_id": 0,
+            "label_goto": null,
+            "img_label_uri_i18n": "",
+            "img_label_uri_i18n_static": "",
+            "label_type": 0
+          },
+          "avatar_subscript": 0,
+          "nickname_color": ""
+        },
+        "official_verify": {
+          "type": -1,
+          "desc": ""
+        }
+      },
+      "content": {
+        "message": "虽然有些突然，但现在有一件事情是现在可以确认的---那就是你一定会喜欢上右边这个东西 https://b23.tv/mall-ahVNe-m5P7",
+        "members": [],
+        "jump_url": {
+          "https://b23.tv/mall-ahVNe-m5P7": {
+            "title": "立即购买｜「瑞的慢烤」牛脆脆澳洲和牛M9雪焰牛脆片即食牛肉干牛薄脆办公室健身休闲零食",
+            "state": 0,
+            "prefix_icon": "https://i0.hdslb.com/bfs/activity-plat/static/20230612/33208db4c24eef2890df876c57cc4123/qcTFC3aooI.png",
+            "app_url_schema": "",
+            "app_name": "",
+            "app_package_name": "",
+            "click_report": "",
+            "is_half_screen": false,
+            "exposure_report": "",
+            "extra": {
+              "goods_item_id": 11460521,
+              "goods_prefetched_cache": "{\"source_id\":0,\"resource_id\":0,\"is_ad_loc\":true,\"server_type\":1,\"ad_content\":{\"creative_id\":1196650964874997760,\"creative_type\":1,\"creative_content\":{\"title\":\"立即购买｜「瑞的慢烤」牛脆脆澳洲和牛M9雪焰牛脆片即食牛肉干牛薄脆办公室健身休闲零食\",\"image_url\":\"https://i0.hdslb.com/bfs/mall/mall/e7/13/0feddfb9fd706ab211bf5d5d34d71cf2.png\",\"url\":\"https://mall.bilibili.com/neul-next/detailuniversal/detail.html?page=detailuniversal_detail&itemsId=11460521&loadingShow=1&noTitleBar=1&track_id=__BGMT__&from=&from_spmid=__SPMID__&msource=cps_comments_542316830_cont-1-117162832298619_auto-1#noReffer=true\",\"click_url\":\"\",\"show_url\":\"\",\"video_id\":117162832298619,\"story_advertise_type\":0,\"advertise_up_mid\":0,\"live_room_id\":0,\"course\":false,\"is_course\":false,\"enable_tag_move_up\":0},\"ad_cb\":\"CAAQABiA4IKM5vbWzRAgADCb+S84oStCHjE3OTAwNzIxOTIwMDNxMTBhODlhMzFhOThxNzc5OEiF+PfEjDSAAQyyASDACIdaLrdXx0stUdbQxzkUD5HL6gdyVnNC9PXCNDudULoB/wFodHRwczovL21hbGwuYmlsaWJpbGkuY29tL25ldWwtbmV4dC9kZXRhaWx1bml2ZXJzYWwvZGV0YWlsLmh0bWw/cGFnZT1kZXRhaWx1bml2ZXJzYWxfZGV0YWlsJml0ZW1zSWQ9MTE0NjA1MjEmbG9hZGluZ1Nob3c9MSZub1RpdGxlQmFyPTEmdHJhY2tfaWQ9X19CR01UX18mZnJvbT0mZnJvbV9zcG1pZD1fX1NQTUlEX18mbXNvdXJjZT1jcHNfY29tbWVudHNfNTQyMzE2ODMwX2NvbnQtMS0xMTcxNjI4MzIyOTg2MTlfYXV0by0xI25vUmVmZmVyPXRydWXwAfuEgMjx0RqIAp6yzIIC4gSFAjU2LnsicHNJZCI6MTUzNzIyLCJ2MiI6IkpUcEtETG03WHI0SlhXRFJtU0NfdlYwVjhETktOXzhEOFZoWXRhcWJLZE0tblgwN05RNDN5OFhQY1pGTkhjdDdPUkh2eDBVNGhZVFhNZTJ4VjJ3MWwxbl9XSm5UcWR5WUNWZ1ppaDZEZ3p1VG4yc0d6TEVmeHd5Y2RVUGhrMjNmNEROc0N6MmluOWR1RjBwZWI2aG5NRlFRNk5FUnNMZm9vOTBCMG1fU2FPZzdRRHY2SnE4WEU4M0tPVEtYdkxaNUhkMkswTThvcVN6NiJ9OzYzLnsicHNJZCI6MTUzNjk4LCJ2MiI6IkEyVmYifQ==\",\"card_type\":22,\"extra\":{\"use_ad_web_v2\":false,\"open_whitelist\":[],\"card\":{\"card_type\":22,\"title\":\"立即购买｜「瑞的慢烤」牛脆脆澳洲和牛M9雪焰牛脆片即食牛肉干牛薄脆办公室健身休闲零食\",\"covers\":[{\"url\":\"https://i0.hdslb.com/bfs/mall/mall/e7/13/0feddfb9fd706ab211bf5d5d34d71cf2.png\",\"loop\":0,\"image_height\":0,\"image_width\":0,\"gif_tag_show\":false}],\"jump_url\":\"https://mall.bilibili.com/neul-next/detailuniversal/detail.html?page=detailuniversal_detail&itemsId=11460521&loadingShow=1&noTitleBar=1&track_id=__BGMT__&from=&from_spmid=__SPMID__&msource=cps_comments_542316830_cont-1-117162832298619_auto-1#noReffer=true\",\"button\":{\"type\":1,\"text\":\"前往工房\",\"jump_url\":\"https://mall.bilibili.com/neul-next/detailuniversal/detail.html?page=detailuniversal_detail&itemsId=11460521&loadingShow=1&noTitleBar=1&track_id=__BGMT__&from=&from_spmid=__SPMID__&msource=cps_comments_542316830_cont-1-117162832298619_auto-1#noReffer=true\",\"btn_delay_time\":0,\"story_arrow\":false,\"show_game_custom_text\":false},\"callup_url\":\"\",\"cur_price\":3690,\"short_title\":\"立即购买｜「瑞的慢烤」牛脆脆澳洲和牛M9雪焰牛脆片即食牛肉干牛薄脆办公室健身休闲零食\",\"price_desc\":\"\",\"goods_ori_price\":\"¥36.9\",\"price_symbol\":\"¥\",\"adver\":{\"adver_id\":785563,\"adver_type\":3},\"extreme_team_status\":false,\"support_transition\":false,\"under_player_interaction_style\":0,\"grade_denominator\":0,\"star_level\":0,\"live_booking_population_threshold\":0,\"ori_mark_hidden\":0,\"use_multi_cover\":false,\"yellow_cart_pannel_pullup\":0,\"yellow_cart_pannel_version\":0,\"goods_item_id\":11460521,\"download_area\":0,\"goods_pannel_show\":0,\"goods_panel_show\":0,\"show_pop_window\":0,\"comment_interaction_style\":0,\"search_show_adbutton\":0,\"jump_interaction_style\":0,\"live_page_type\":0,\"fold_time\":0,\"live_room_popularity\":0,\"live_tag_show\":false,\"dynamic_text\":\"立即购买｜「瑞的慢烤」牛脆脆澳洲和牛M9雪焰牛脆片即食牛肉干牛薄脆办公室健身休闲零食\",\"grade_level\":0,\"anim_in_enable\":0,\"extra_params\":\"{\\\"take_goods\\\":true,\\\"request_id\\\":\\\"1790072192003q10a89a31a98q7798\\\",\\\"is_from_natural\\\":0,\\\"is_attribution\\\":0,\\\"item_id\\\":11460521,\\\"item_source\\\":8,\\\"url\\\":\\\"https://mall.bilibili.com/neul-next/detailuniversal/detail.html?page=detailuniversal_detail&itemsId=11460521&loadingShow=1&noTitleBar=1&track_id=__BGMT__&from=&from_spmid=__SPMID__&msource=cps_comments_542316830_cont-1-117162832298619_auto-1#noReffer=true\\\",\\\"comment_id\\\":315741109936,\\\"avid\\\":117162832298619,\\\"flow_type\\\":0,\\\"spmid\\\":\\\"\\\",\\\"from_spmid\\\":\\\"\\\",\\\"is_recycled\\\":0,\\\"strategy_id\\\":0,\\\"is_replaced\\\":0,\\\"mixin_banner\\\":false}\",\"underframe_card_style\":0,\"playpage_card_style\":0,\"live_auto_play\":false,\"original_style_level\":0,\"live_card_show\":false,\"enable_tag_move_up\":0,\"search_card_style\":0,\"item_source\":0,\"closed_loop_item\":0,\"desc_type\":0,\"comment_use_game_page\":0,\"story_takeoff_interaction_style\":0,\"underframe_icon_type\":0,\"live_card_type\":0,\"use_engine_author\":false,\"related_interaction_style\":0,\"has_anti_sniping_price\":false,\"is_simplify_mode\":0},\"report_time\":0,\"sales_type\":34,\"special_industry\":false,\"preload_landingpage\":0,\"share_info\":{},\"upzone_entrance_type\":0,\"upzone_entrance_report_id\":0,\"click_area\":0,\"shop_id\":0,\"up_mid\":542316830,\"track_id\":\"pbaes.2Q7j-cMTbeIhFBc8LYVwDBCBpEEO0jdODVpmwax96lxaXiwaAk7H1IG2Cy_x9Mxyd2g3N9TAO3wcAgjs3JDciGvr6kOHeyxuYA92OW46Re2mpasaTXNPwaSaxyrqO35EeXrLlwkzrCUR9-pU9VFtMQ==\",\"enable_store_direct_launch\":0,\"enable_double_jump\":false,\"store_callup_card\":false,\"enable_h5_alert\":false,\"special_industry_style\":0,\"macro_replace_priority\":0,\"feedback_panel_style\":0,\"ad_content_type\":0,\"enable_h5_pre_load\":0,\"hot_activity_id\":0,\"middle_show_urls\":[],\"middle_click_urls\":[],\"product_id\":0,\"landingpage_download_style\":0,\"download_url_type\":0,\"enable_auto_callup\":0,\"top_live_stay_time_seconds\":0,\"vipshop_fast_framework\":0,\"lottery_id\":0,\"enable_openapk_dialog\":true,\"user_cancel_jump_type\":0,\"comment_toast_open\":0,\"comment_biz_type\":0,\"jump_target\":0},\"creative_style\":1,\"live_booking_id\":0,\"cm_mark\":3,\"is_ad\":true,\"top_view_id\":0,\"up_mid\":542316830,\"promotion_purpose_type\":0,\"adver_mid\":0,\"ad_content_type\":0,\"global_card_type\":1,\"ad_avid\":0,\"copyright_ad\":0,\"live_room_id\":0,\"pp_ecpm\":0.0,\"ecpm_value\":0.0,\"brand_rtb\":false,\"nature_ad\":0,\"dynamic_id\":0,\"content_fast_access\":0,\"first_business_category_id\":0,\"second_business_category_id\":0}}",
+              "goods_show_type": 0,
+              "is_word_search": false,
+              "goods_cm_control": 1,
+              "goods_click_report": "{\"spmid\":\"\",\"item_id\":11460521,\"comment_trail\":\"73.{\\\"psId\\\":99976,\\\"v2\\\":\\\"BQ\\\"}\",\"is_attribution\":0,\"request_id\":\"1790072192003q10a89a31a98q7798\",\"from_spmid\":\"\",\"is_from_natural\":0}",
+              "goods_exposure_report": "{\"spmid\":\"\",\"item_id\":11460521,\"comment_trail\":\"73.{\\\"psId\\\":99976,\\\"v2\\\":\\\"BQ\\\"}\",\"is_attribution\":0,\"request_id\":\"1790072192003q10a89a31a98q7798\",\"from_spmid\":\"\",\"is_from_natural\":0}"
+            },
+            "underline": false,
+            "match_once": false,
+            "pc_url": "https://mall.bilibili.com/neul-next/detailuniversal/detail.html?page=detailuniversal_detail&itemsId=11460521&loadingShow=1&noTitleBar=1&track_id=__BGMT__&from=&from_spmid=__SPMID__&msource=cps_comments_542316830_cont-1-117162832298619_auto-1#noReffer=true",
+            "icon_position": 0
+          }
+        },
+        "max_line": 6
+      },
+      "up_action": {
+        "like": false,
+        "reply": false
+      }
+    }
+  ],
+  "plain_reply": {
+    "rpid": 315313964976,
+    "oid": 117162832298619,
+    "mid": 542316830,
+    "root": 0,
+    "ctime": 1787768131,
+    "like": 284,
+    "rcount": 24,
+    "member": {
+      "mid": "542316830",
+      "uname": "茄子小布丁",
+      "sex": "男",
+      "sign": "没有天赋那就重复 国一卡萨丁励志赚100万退休 \n粉丝q群287992597\nv:peng1727810437(本人)备注来意\n\n",
+      "level_info": {
+        "current_level": 6,
+        "current_min": 0,
+        "current_exp": 0,
+        "next_exp": 0
+      },
+      "vip": {
+        "vipType": 0,
+        "vipDueDate": 0,
+        "dueRemark": "",
+        "accessStatus": 0,
+        "vipStatus": 0,
+        "vipStatusWarn": "",
+        "themeType": 0,
+        "label": {
+          "path": "",
+          "text": "",
+          "label_theme": "",
+          "text_color": "",
+          "bg_style": 0,
+          "bg_color": "",
+          "border_color": "",
+          "use_img_label": true,
+          "img_label_uri_hans": "",
+          "img_label_uri_hant": "",
+          "img_label_uri_hans_static": "https://i0.hdslb.com/bfs/vip/d7b702ef65a976b20ed854cbd04cb9e27341bb79.png",
+          "img_label_uri_hant_static": "https://i0.hdslb.com/bfs/activity-plat/static/20220614/e369244d0b14644f5e1a06431e22a4d5/KJunwh19T5.png",
+          "label_id": 0,
+          "label_goto": null,
+          "img_label_uri_i18n": "",
+          "img_label_uri_i18n_static": "",
+          "label_type": 0
+        },
+        "avatar_subscript": 0,
+        "nickname_color": ""
+      },
+      "official_verify": {
+        "type": -1,
+        "desc": ""
+      }
+    },
+    "content": {
+      "message": "我没有天赋所以只能重复\n全网唯一一个目标用卡萨丁赚100万退休的男人，打单几年目前已存31.2万，视频目标发10万把卡萨丁视频目前第475把，哪怕一个视频只有1元收益我也可以赚10万，我什么都没有但我有一颗专一的心！有志者事竟成！[打call][打call]",
+      "members": [],
+      "emote": {
+        "[打call]": {
+          "id": 510,
+          "package_id": 1,
+          "state": 0,
+          "type": 1,
+          "attr": 0,
+          "text": "[打call]",
+          "url": "https://i0.hdslb.com/bfs/emote/431432c43da3ee5aab5b0e4f8931953e649e9975.png",
+          "meta": {
+            "size": 1,
+            "suggest": [
+              ""
+            ]
+          },
+          "mtime": 1668688325,
+          "jump_title": "打call"
+        }
+      },
+      "jump_url": {},
+      "max_line": 6
+    },
+    "up_action": {
+      "like": false,
+      "reply": true
+    }
+  }
+}

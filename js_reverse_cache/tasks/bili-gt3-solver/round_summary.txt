@@ -1,0 +1,35 @@
+﻿round: proto_20260921-192956  http_used=7
+
+=== captured w values ===
+  id= 3 get.php      len= 1452 head=cBhkA(Gx2vbMArJ7YTTWba15UtM2M2
+  id= 4 ajax.php     len=  704 head=wyLr54B1itV0LUGs5Rsi2HAqOmzQ)9
+
+=== requests ===
+  id= 1 gettype.php  params=['callback', 'gt']
+  id= 2 fullpage.9.2.0-guwyxh.js params=[]
+  id= 3 get.php      params=['callback', 'challenge', 'client_type', 'gt', 'lang', 'pt', 'w']
+  id= 4 ajax.php     params=['callback', 'challenge', 'client_type', 'gt', 'lang', 'pt', 'w']
+  id= 5 click.3.1.2.js params=[]
+  id= 6 get.php      params=['api_server', 'autoReset', 'callback', 'challenge', 'gt', 'https', 'isPC', 'is_next', 'lang', 'offline', 'product', 'protocol', 'type', 'width']
+  id= 7 gct.b71a9027509bc6bcfef9fc6a196424f5.js params=[]
+
+=== server verdicts ===
+  gettype.php  geetest_1789990196750({"status": "success", "data": {"type": "fullpage", "static_servers": ["static.geetest.com/", "static.geevisit.com/"], "click": "/static/js/click.3.1.2.js", "beeline": "/static/js
+  get.php      geetest_1789990202693({"status": "success", "data": {"theme": "wind", "theme_version": "1.5.8", "static_servers": ["static.geetest.com", "static.geevisit.com"], "api_server": "api.geetest.com", "logo"
+  ajax.php     geetest_1789990200176({"status": "success", "data": {"result": "click"}})
+  get.php      geetest_1789990206319({"status": "success", "data": {"theme": "silver", "theme_version": "1.5.4", "static_servers": ["static.geetest.com/", "static.geevisit.com/"], "api_server": "https://api.geetest.
+
+=== round payload shape ===
+  gettype.php  status=success data_keys=['aspect_radio', 'beeline', 'click', 'fullpage', 'geetest', 'slide', 'static_servers', 'type', 'voice']
+               {"type": "fullpage"}
+  get.php      status=success data_keys=['api_server', 'c', 'feedback', 'i18n_labels', 'logo', 's', 'static_servers', 'theme', 'theme_version']
+               {"theme": "wind"}
+  ajax.php     status=success data_keys=['result']
+               {"result": "click"}
+  get.php      status=success data_keys=['api_server', 'c', 'feedback', 'gct_path', 'i18n_labels', 'image_servers', 'logo', 'num', 'pic', 'pic_type', 'resource_servers', 's', 'sign', 'spec']
+               {"pic_type": "word", "num": 0, "spec": "1*1", "sign": "", "gct_path": "/static/js/gct.b71a9027509bc6bcfef9fc6a196424f5.js", "theme": "silver"}
+
+=== helper ===
+  log: ['jsonp-diag:{"cbName":"geetest_1789990196750","isFn":"function","globals":1,"ret":"undefined:undefined","instKeys":-1}', 'initGeetest-callback', 'appendTo', 'jsonp-diag:{"cbName":"geetest_1789990202693","isFn":"function","globals":1,"ret":"undefined:undefined","instKeys":2}', 'jsonp-diag:{"cbName":"geetest_1789990200176","isFn":"function","globals":1,"ret":"undefined:undefined","instKeys":2}', 'jsonp-diag:{"cbName":"geetest_1789990206319","isFn":"function","globals":1,"ret":"undefined:undefined","instKeys":2}']
+  errors: []
+  diag: ['loaded:bom/navigator.js', 'loaded:bom/location.js', 'loaded:dom/document.js']

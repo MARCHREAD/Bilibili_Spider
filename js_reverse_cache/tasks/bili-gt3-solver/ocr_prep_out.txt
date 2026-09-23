@@ -1,0 +1,7 @@
+field boxes: [(50, 19, 71, 71), (4, 149, 66, 67), (53, 218, 66, 67), (223, 255, 58, 47)]
+  glyph0 box=(50,19,71,71) raw='居'  gray='居'  prep='居'
+  glyph1 box=(4,149,66,67) raw='蟒'  gray='蟒'  prep='综'
+  glyph2 box=(53,218,66,67) raw='厉'  gray='厉'  prep=''
+  glyph3 box=(223,255,58,47) raw='t'  gray='t'  prep='tt'
+card raw : '绿园居'
+card prep: '困'

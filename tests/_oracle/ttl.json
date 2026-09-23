@@ -1,0 +1,50 @@
+[
+  {
+    "delay": 100,
+    "prefetch": {
+      "type": "geetest",
+      "token": "6429378a2ab74d22a770950c8d71215e",
+      "gt": "ac597a4506fee079629df5d8b66dd4fe",
+      "challenge": "5bb5e4618e3721a9cab3e8fe858dbac1",
+      "ttl": 1
+    },
+    "solve": {
+      "ok": true,
+      "validate": "5d4265d0d936cbbeca81494e24be511a",
+      "score": "14",
+      "seconds": 13.0,
+      "error": null,
+      "verdict": "{\"status\": \"success\", \"data\": {\"result\": \"success\", \"validate\": \"5d4265d0d936cbbeca81494e24be511a\", \"score\": \"14\", \"msg\": []}}"
+    },
+    "submit": {
+      "code": -629,
+      "message": "用户名或密码错误",
+      "captcha_accepted": true
+    },
+    "token_age_at_submit": 116.2
+  },
+  {
+    "delay": 130,
+    "prefetch": {
+      "type": "geetest",
+      "token": "69032a20d4664789987c92cbb4311b0f",
+      "gt": "ac597a4506fee079629df5d8b66dd4fe",
+      "challenge": "481521ee7d85a5a997f66f8910ead9e7",
+      "ttl": 1
+    },
+    "solve": {
+      "ok": true,
+      "validate": "5ba6d6dda1958218935cdf01f3e08df4",
+      "score": "14",
+      "seconds": 27.0,
+      "error": null,
+      "verdict": "{\"status\": \"success\", \"data\": {\"result\": \"success\", \"validate\": \"5ba6d6dda1958218935cdf01f3e08df4\", \"score\": \"14\", \"msg\": []}}"
+    },
+    "submit": {
+      "code": -105,
+      "message": "验证码错误",
+      "captcha_accepted": false
+    },
+    "token_age_at_submit": 160.2
+  }
+]

@@ -1,0 +1,136 @@
+{
+  "pic": "A:\\agent\\work\\bilibili\\js_reverse_cache\\tasks\\bili-gt3-solver\\cache\\proto_20260921-185330\\pic_6.jpg",
+  "size": [
+    344,
+    384
+  ],
+  "prompt_box": [
+    0,
+    343,
+    150,
+    41
+  ],
+  "prompt_boxes": [
+    [
+      0,
+      0,
+      30,
+      37
+    ],
+    [
+      23,
+      1,
+      35,
+      36
+    ],
+    [
+      50,
+      1,
+      36,
+      36
+    ]
+  ],
+  "field_boxes": [
+    [
+      50,
+      19,
+      71,
+      71
+    ],
+    [
+      4,
+      149,
+      66,
+      67
+    ],
+    [
+      53,
+      218,
+      66,
+      67
+    ],
+    [
+      223,
+      255,
+      58,
+      47
+    ]
+  ],
+  "prompt_chars": [
+    "\u7eff",
+    "\u56ed",
+    "\u5c51"
+  ],
+  "field_chars": [
+    "\u5c45",
+    "\u7efc",
+    "\u5389",
+    "t"
+  ],
+  "score_matrix": [
+    [
+      0.3174,
+      0.265,
+      0.3547,
+      0.3671
+    ],
+    [
+      0.344,
+      0.3196,
+      0.3766,
+      0.4192
+    ],
+    [
+      0.326,
+      0.3453,
+      0.3262,
+      0.3865
+    ]
+  ],
+  "matches": [
+    {
+      "prompt_index": 0,
+      "prompt_char": "\u7eff",
+      "field_index": 3,
+      "field_char": "t",
+      "x": 252,
+      "y": 278,
+      "score": 0.3671,
+      "angle": 270
+    },
+    {
+      "prompt_index": 1,
+      "prompt_char": "\u56ed",
+      "field_index": 2,
+      "field_char": "\u5389",
+      "x": 86,
+      "y": 251,
+      "score": 0.3766,
+      "angle": 270
+    },
+    {
+      "prompt_index": 2,
+      "prompt_char": "\u5c51",
+      "field_index": 1,
+      "field_char": "\u7efc",
+      "x": 37,
+      "y": 182,
+      "score": 0.3453,
+      "angle": 270
+    }
+  ],
+  "click_points": [
+    [
+      252,
+      278
+    ],
+    [
+      86,
+      251
+    ],
+    [
+      37,
+      182
+    ]
+  ]
+}

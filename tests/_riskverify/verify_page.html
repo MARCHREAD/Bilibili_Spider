@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="spm_prefix" content="333.1194" />
+    <title></title>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+    />
+    <script>window._BiliGreyResult={"method":"base","grayVersion":"292186"}</script><script>
+      var url = window.location.href
+      var testTag = ['uat-', 'ff-dev']
+      var isDev = false
+      for (var i = 0; i < testTag.length; i++) {
+        if (url.indexOf(testTag[i]) > -1) {
+          isDev = true
+          break
+        }
+      }
+
+      window.__MIRROR_CONFIG__ = {
+        origin: 'main',
+        module: 'passport-h5',
+        config: {
+          ignoreErrorReport: isDev,
+          isAutoInit: true,
+        },
+      }
+    </script>
+    <script src="https://s1.hdslb.com/bfs/seed/jinkela/short/b-mirror/biliMirror.umd.mini.js"></script>
+  <meta charset="UTF-8"><script defer src="//s1.hdslb.com/bfs/static/2233-monorepo/passport-h5/static/js/lib-polyfill.8728d617.js"></script><script defer src="//s1.hdslb.com/bfs/static/2233-monorepo/passport-h5/static/js/lib-vue.e25557ad.js"></script><script defer src="//s1.hdslb.com/bfs/static/2233-monorepo/passport-h5/static/js/lib-router.46035d60.js"></script><script defer src="//s1.hdslb.com/bfs/static/2233-monorepo/passport-h5/static/js/622.622fc7ab.js"></script><script defer src="//s1.hdslb.com/bfs/static/2233-monorepo/passport-h5/static/js/index.933966bb.js"></script><link href="//s1.hdslb.com/bfs/static/2233-monorepo/passport-h5/static/css/622.fdac4d95.css" rel="stylesheet"><link href="//s1.hdslb.com/bfs/static/2233-monorepo/passport-h5/static/css/index.488be2f8.css" rel="stylesheet"></head>
+  <body>
+    <div id="passport-app"></div>
+    <script>
+      window.reportMsgObj = {}
+      window.reportConfig = {
+        sample: 1,
+        scrollTracker: false,
+        msgObjects: 'reportMsgObj',
+      }
+    </script>
+    <!-- 为了一个na上报 添加了 旧的上报js -->
+    <script src="https://s1.hdslb.com/bfs/seed/jinkela/short/report-native/log-reporter.js"></script>
+  </body>
+</html>

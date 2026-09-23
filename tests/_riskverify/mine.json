@@ -1,0 +1,48 @@
+{
+  "index.933966bb.js": {
+    "len": 300166,
+    "x_paths": [],
+    "routes": [
+      "/anqp",
+      "/anqp/appeal",
+      "/anqp/query",
+      "/anqp/query/result",
+      "/anqp/result",
+      "/anqp/unbind",
+      "/find-account",
+      "/find-account-next/bind-phone",
+      "/find-account-next/receive-pwd",
+      "/find-account-next/verify/account",
+      "/find-account-next/verify/diverse",
+      "/find-account-next/verify/email",
+      "/find-account-next/verify/face",
+      "/find-account-next/verify/form-:business",
+      "/find-account-next/verify/orders",
+      "/find-account-next/verify/phone",
+      "/find-account-next/verify/phone-bind-conflict",
+      "/find-account-next/verify/result",
+      "/find-account/result",
+      "/find-account/select-success",
+      "/find-account/select/:key",
+      "/find-account/send-pwd",
+      "/find-account/verify/check-:business",
+      "/find-account/verify/face",
+      "/find-account/verify/form-:business",
+      "/login",
+      "/login/findPassword",
+      "/login/scan",
+      "/login/scan-pad",
+      "/risk/general-version-tip",
+      "/risk/logout-tip",
+      "/risk/pwd-tip",
+      "/risk/verify",
+      "/risk/version-tip",
+      "/risk/w-auth"
+    ]
+  },
+  "622.622fc7ab.js": {
+    "len": 252262,
+    "x_paths": [],
+    "routes": []
+  }
+}
