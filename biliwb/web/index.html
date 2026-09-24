@@ -3,155 +3,201 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>bilibili 本地采集工作台</title>
+<meta name="color-scheme" content="light">
+<title>哔哩采集台</title>
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
+<a class="skip-link" href="#collector">跳到数据采集</a>
+
 <header class="topbar">
-  <div class="brand">
-    <strong>bilibili 本地采集工作台</strong>
-    <span class="muted" id="version"></span>
-  </div>
+  <a class="brand" href="#collector" aria-label="返回数据采集">
+    <span class="brand-mark" aria-hidden="true">哔</span>
+    <span class="brand-copy"><strong>哔哩采集台</strong><small id="version"></small></span>
+  </a>
+  <nav class="topnav" aria-label="工作台导航">
+    <a class="active" href="#collector">数据采集</a>
+    <a href="#jobs">任务中心</a>
+  </nav>
   <div class="session" id="session-bar">
-    <span class="muted" id="session-text">正在读取…</span>
-    <button class="btn" id="btn-verify-all">校验全部账号</button>
-    <button class="btn ghost" id="btn-add-account">+ 添加账号</button>
+    <span class="health"><span class="dot off" id="health-dot"></span><span id="session-text">正在读取...</span></span>
+    <button class="btn" id="btn-verify-all">校验账号</button>
+    <button class="btn primary" id="btn-add-account">添加账号</button>
   </div>
 </header>
 
-<main class="layout">
+<main class="app-shell" id="collector">
   <aside class="sidebar">
-    <div class="side-title">账号</div>
-    <nav id="account-nav"></nav>
-    <div class="side-title">接口</div>
-    <nav id="kind-nav"></nav>
-    <div class="side-title">并发</div>
-    <div class="worker-box">
-      <label class="worker-row">
-        <span>worker 数</span>
+    <section class="side-section">
+      <div class="side-heading"><span>账号</span><span class="side-count" id="account-count">0</span></div>
+      <nav id="account-nav" aria-label="账号列表"></nav>
+    </section>
+
+    <section class="side-section">
+      <div class="side-heading"><span>采集能力</span><span class="side-count">8</span></div>
+      <nav id="kind-nav" aria-label="采集类型"></nav>
+    </section>
+
+    <section class="side-section worker-box">
+      <div class="side-heading"><span>任务并发</span></div>
+      <label class="worker-row" for="workers">
+        <span>Worker</span>
         <input id="workers" type="number" min="1" max="32" value="3">
       </label>
-      <div class="hint" id="worker-hint"></div>
-      <button class="btn block" id="btn-apply-workers">应用</button>
-    </div>
+      <p class="hint" id="worker-hint"></p>
+      <button class="btn block" id="btn-apply-workers">应用并发数</button>
+    </section>
   </aside>
 
-  <section class="panel">
-    <h2 id="panel-title">选择一个接口</h2>
-    <p class="hint" id="panel-hint"></p>
-
-    <div class="target-row">
-      <input id="target" type="text" placeholder="目标（BV 号 / 链接 / UID / 关键词）">
-      <button class="btn primary" id="btn-run">运行一次</button>
-      <button class="btn" id="btn-batch">加入批量</button>
+  <section class="workspace">
+    <div class="workspace-head">
+      <div>
+        <p class="section-kicker">DATA COLLECTION</p>
+        <h1 id="panel-title">综合搜索</h1>
+        <p class="workspace-desc" id="panel-hint"></p>
+      </div>
+      <div class="account-picker">
+        <label for="job-account">采集账号</label>
+        <select id="job-account"></select>
+      </div>
     </div>
 
-    <details class="opts" open>
-      <summary>参数</summary>
-      <div id="fields" class="fields"></div>
-    </details>
+    <section class="collector-panel" aria-label="采集条件">
+      <div class="search-row">
+        <input id="target" type="search" autocomplete="off" placeholder="输入关键词、BV 号或 UID">
+        <button class="btn primary action" id="btn-run">开始采集</button>
+        <button class="btn action" id="btn-batch">创建批量任务</button>
+      </div>
 
-    <details class="opts">
-      <summary>批量目标与账号分配（每行一个目标，最多 2000）</summary>
-      <textarea id="targets" rows="4" placeholder="BV1BHez6cEEm&#10;BV1X9eb6tEvy"></textarea>
-      <div class="fields" style="margin-top:8px">
-        <div class="field">
-          <label for="job-account">使用账号</label>
-          <select id="job-account"></select>
+      <details class="opts" open>
+        <summary>筛选与采集参数</summary>
+        <div id="fields" class="fields"></div>
+      </details>
+
+      <details class="opts batch-options">
+        <summary>批量目标与账号分配</summary>
+        <textarea id="targets" rows="4" placeholder="每行一个目标，最多 2000 个"></textarea>
+        <div class="fields batch-fields">
+          <div class="field">
+            <label for="job-shard">执行方式</label>
+            <select id="job-shard">
+              <option value="0">单账号串行</option>
+              <option value="1">多账号分片并行</option>
+            </select>
+          </div>
         </div>
-        <div class="field">
-          <label for="job-shard">多账号分片并行</label>
-          <select id="job-shard">
-            <option value="0">关闭（单账号串行）</option>
-            <option value="1">开启（按可用账号切分）</option>
-          </select>
+        <p class="hint" id="shard-hint"></p>
+      </details>
+    </section>
+
+    <section class="result-section" aria-live="polite">
+      <div class="section-head">
+        <div>
+          <h2>采集结果</h2>
+          <p class="hint" id="result-status">等待开始采集</p>
+        </div>
+        <div class="result-actions">
+          <button class="btn hidden" id="btn-export-current">导出 CSV</button>
+          <button class="btn hidden" id="btn-toggle-json">查看 JSON</button>
         </div>
       </div>
-      <p class="hint" id="shard-hint"></p>
-    </details>
-
-    <div id="result" class="result"></div>
+      <div id="result" class="result empty-state">
+        <div class="empty-graphic" aria-hidden="true"><span></span><span></span><span></span></div>
+        <strong>采集结果将在这里呈现</strong>
+        <p>选择左侧能力并填写目标后开始采集</p>
+      </div>
+    </section>
   </section>
+
+  <aside class="trace-panel" aria-label="接口调用监控">
+    <div class="trace-head">
+      <div>
+        <p class="section-kicker">REQUEST TRACE</p>
+        <h2>接口调用链</h2>
+      </div>
+      <span class="trace-live"><span class="dot on"></span>实时</span>
+    </div>
+    <div class="trace-summary" id="trace-summary">
+      <div><strong>-</strong><span>总耗时</span></div>
+      <div><strong>0</strong><span>请求数</span></div>
+      <div><strong>-</strong><span>状态</span></div>
+    </div>
+    <div id="trace-list" class="trace-list">
+      <div class="trace-empty">开始采集后，这里会按顺序显示每个接口的状态与耗时。</div>
+    </div>
+  </aside>
 </main>
 
-<section class="jobs">
+<section class="jobs" id="jobs">
   <div class="jobs-head">
-    <h2>批量任务</h2>
-    <button class="btn ghost" id="btn-refresh-jobs">刷新</button>
+    <div>
+      <p class="section-kicker">TASK CENTER</p>
+      <h2>批量采集任务</h2>
+      <p class="hint">查看进度、逐目标耗时和持久化结果</p>
+    </div>
+    <button class="btn" id="btn-refresh-jobs">刷新任务</button>
   </div>
   <div id="job-list" class="job-list"></div>
   <div id="job-detail" class="job-detail"></div>
 </section>
 
-<!-- 添加账号 -->
-<div class="modal hidden" id="account-modal">
+<div class="modal hidden" id="account-modal" role="dialog" aria-modal="true" aria-labelledby="account-title">
   <div class="modal-box wide">
-    <h3>添加账号</h3>
+    <div class="modal-title"><h3 id="account-title">添加账号</h3><button class="icon-btn" id="btn-acc-x" aria-label="关闭">×</button></div>
     <div class="fields">
       <div class="field">
-        <label for="acc-alias">别名（仅本地标识）</label>
-        <input id="acc-alias" type="text" placeholder="例如：主号 / 小号A">
+        <label for="acc-alias">账号别名</label>
+        <input id="acc-alias" type="text" placeholder="例如：主号">
       </div>
       <div class="field">
         <label for="acc-method">登录方式</label>
         <select id="acc-method">
-          <option value="qr">扫码登录（推荐，不过验证码）</option>
-          <option value="password">账号密码（自动过 GT3 验证码）</option>
-          <option value="cookie">粘贴 Cookie</option>
+          <option value="qr">扫码登录</option>
+          <option value="password">账号密码</option>
+          <option value="cookie">导入 Cookie</option>
         </select>
       </div>
     </div>
-    <div id="acc-fields" class="fields" style="margin-top:10px"></div>
+    <div id="acc-fields" class="fields modal-fields"></div>
     <p class="hint" id="acc-hint"></p>
     <div class="modal-actions">
       <button class="btn" id="btn-acc-cancel">取消</button>
-      <button class="btn primary" id="btn-acc-create">创建</button>
+      <button class="btn primary" id="btn-acc-create">创建账号</button>
     </div>
   </div>
 </div>
 
-<!-- 扫码 -->
-<div class="modal hidden" id="qr-modal">
+<div class="modal hidden" id="qr-modal" role="dialog" aria-modal="true" aria-labelledby="qr-title">
   <div class="modal-box">
-    <h3 id="qr-title">扫码登录</h3>
-    <p class="hint">二维码由本地生成，登录全程不经浏览器。</p>
-    <div id="qr-holder" class="qr-holder">正在申请二维码…</div>
+    <div class="modal-title"><h3 id="qr-title">扫码登录</h3><button class="icon-btn" id="btn-qr-x" aria-label="关闭">×</button></div>
+    <p class="hint">使用 bilibili 客户端扫码确认</p>
+    <div id="qr-holder" class="qr-holder">正在申请二维码...</div>
     <p id="qr-state" class="hint"></p>
-    <button class="btn" id="btn-qr-close">关闭</button>
+    <button class="btn block" id="btn-qr-close">关闭</button>
   </div>
 </div>
 
-<!-- 二次安全验证（密码登录返回 status=2：短信校验绑定手机号） -->
-<div class="modal hidden" id="risk-modal">
+<div class="modal hidden" id="risk-modal" role="dialog" aria-modal="true" aria-labelledby="risk-title">
   <div class="modal-box">
-    <h3 id="risk-title">需要二次安全验证</h3>
+    <div class="modal-title"><h3 id="risk-title">二次安全验证</h3><button class="icon-btn" id="btn-risk-x" aria-label="关闭">×</button></div>
     <p class="hint" id="risk-desc"></p>
-
     <div id="risk-step-send">
-      <p class="hint">
-        验证码与账号密码都已通过，是 B 站要求再用<strong>短信校验你绑定的手机号</strong>。<br>
-        点下面的按钮：协议先过一次人机验证码（约 15~75 秒），然后把短信发到你手机。
-      </p>
+      <p class="hint">先完成人机校验并向绑定手机号发送验证码。</p>
       <button class="btn primary block" id="btn-risk-send">发送短信验证码</button>
     </div>
-
     <div id="risk-step-code" class="hidden">
       <div class="field">
-        <label for="risk-code">手机收到的验证码</label>
-        <input id="risk-code" type="text" inputmode="numeric" autocomplete="one-time-code"
-               placeholder="请输入短信验证码" maxlength="10">
+        <label for="risk-code">短信验证码</label>
+        <input id="risk-code" type="text" inputmode="numeric" autocomplete="one-time-code" placeholder="输入验证码" maxlength="10">
       </div>
       <div class="modal-actions">
         <button class="btn" id="btn-risk-resend">重新发送</button>
         <button class="btn primary" id="btn-risk-submit">提交验证</button>
       </div>
     </div>
-
     <p class="hint" id="risk-status"></p>
-    <div class="modal-actions">
-      <button class="btn ghost" id="btn-risk-close">关闭</button>
-    </div>
+    <div class="modal-actions"><button class="btn" id="btn-risk-close">关闭</button></div>
   </div>
 </div>
 

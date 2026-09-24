@@ -17,6 +17,7 @@ import random
 import threading
 import time
 from typing import Any
+from urllib.parse import urlsplit
 
 from curl_cffi import requests as cffi
 
@@ -113,6 +114,7 @@ class BiliClient:
         self._nav_cache: dict | None = None
         self.http_calls = 0
         self._recovering = False          # 软风控自愈的可重入保护
+        self._trace_local = threading.local()
         # 可选的持久化 midHash 字典（由 server 注入；见 store.MidHashIndex）
         self.midhash_index = None
 
@@ -127,6 +129,54 @@ class BiliClient:
         # 关键请求/响应摘要一律走 stderr，stdout 留给机器可读 JSON
         if self.verbose:
             print("[biliwb]", *parts, file=__import__("sys").stderr)
+
+    # ------------------------------------------------------------ 调用追踪
+
+    def begin_trace(self) -> None:
+        """为当前线程开启一次业务调用追踪。"""
+        self._trace_local.events = []
+
+    def end_trace(self) -> list[dict[str, Any]]:
+        """结束当前线程追踪并返回按实际发出顺序排列的请求。"""
+        events = list(getattr(self._trace_local, "events", []) or [])
+        self._trace_local.events = None
+        return events
+
+    def _record_trace(self, method: str, url: str, *, status: int | None,
+                      wait_ms: float, request_ms: float, total_ms: float,
+                      error: str | None = None) -> None:
+        events = getattr(self._trace_local, "events", None)
+        if events is None:
+            return
+        parsed = urlsplit(url)
+        events.append({
+            "sequence": len(events) + 1,
+            "method": method.upper(),
+            "host": parsed.netloc,
+            "endpoint": parsed.path or "/",
+            "status": status,
+            "ok": bool(status is not None and 200 <= status < 400 and not error),
+            "wait_ms": round(wait_ms, 1),
+            "request_ms": round(request_ms, 1),
+            "duration_ms": round(total_ms, 1),
+            "error": error,
+        })
+
+    def _annotate_last_trace(self, *, code: int | None = None,
+                             message: str | None = None,
+                             accepted: bool = True,
+                             soft_risk: bool = False) -> None:
+        events = getattr(self._trace_local, "events", None)
+        if not events:
+            return
+        event = events[-1]
+        event["business_code"] = code
+        if message:
+            event["business_message"] = str(message)[:160]
+        if soft_risk:
+            event["soft_risk"] = True
+        if not accepted or soft_risk:
+            event["ok"] = False
 
     # ------------------------------------------------------------ 会话持久化
 
@@ -213,7 +263,8 @@ class BiliClient:
 
     # ------------------------------------------------------------ 限速
 
-    def _throttle(self) -> None:
+    def _throttle(self) -> float:
+        started = time.perf_counter()
         with self._lock:
             gap = time.time() - self._last_call
             wait = self.min_delay - gap
@@ -222,6 +273,7 @@ class BiliClient:
             if self.jitter:
                 time.sleep(random.uniform(0, self.jitter))
             self._last_call = time.time()
+        return (time.perf_counter() - started) * 1000
 
     # ------------------------------------------------------------ 底层请求
 
@@ -241,9 +293,26 @@ class BiliClient:
             kwargs["data"] = data
         if headers:
             kwargs["headers"] = {**BASE_HEADERS, **headers}
-        self._throttle()
+        started = time.perf_counter()
+        wait_ms = self._throttle()
         self.http_calls += 1
-        return self.session.request(method, url, **kwargs)
+        request_started = time.perf_counter()
+        try:
+            response = self.session.request(method, url, **kwargs)
+        except Exception as exc:
+            request_ms = (time.perf_counter() - request_started) * 1000
+            self._record_trace(
+                method, url, status=None, wait_ms=wait_ms, request_ms=request_ms,
+                total_ms=(time.perf_counter() - started) * 1000,
+                error=f"{type(exc).__name__}: {exc}",
+            )
+            raise
+        request_ms = (time.perf_counter() - request_started) * 1000
+        self._record_trace(
+            method, url, status=response.status_code, wait_ms=wait_ms,
+            request_ms=request_ms, total_ms=(time.perf_counter() - started) * 1000,
+        )
+        return response
 
     def request_json(
         self,
@@ -332,13 +401,20 @@ class BiliClient:
 
             code = int(body.get("code", 0))
             data = body.get("data")
+            is_soft_risk = soft_risk_hit(body)
+            self._annotate_last_trace(
+                code=code,
+                message=body.get("message"),
+                accepted=(code == 0 or code in allow),
+                soft_risk=is_soft_risk,
+            )
             if soft:
                 self._log(f"soft {url} code={code}")
                 return body
             # 软风控：HTTP 200 + code 0，但业务载荷被 gaia 占位符 v_voucher 顶掉。
             # 成因是会话信誉的**概率性**抖动，不是频率也不是页数深浅。这里按独立预算
             # 多试几轮，并且每轮先**自愈**（重新暖场 + 续签 ticket + 刷新 wbi key）。
-            if soft_risk_hit(body):
+            if is_soft_risk:
                 soft_seen = attempt + 1
                 self._log(f"SOFT-RISK v_voucher {url} -> 自愈+退避 (第 {soft_seen} 次)")
                 last = SoftRisk(

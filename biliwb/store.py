@@ -35,6 +35,8 @@ CREATE TABLE IF NOT EXISTS job_results (
     ok          INTEGER NOT NULL,
     payload     TEXT,
     error       TEXT,
+    duration_ms REAL,
+    trace       TEXT,
     created_at  INTEGER NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_job_results_job ON job_results(job_id);
@@ -101,6 +103,15 @@ class Store:
                           ("shard", "ALTER TABLE jobs ADD COLUMN shard INTEGER DEFAULT 0")):
             if name not in cols:
                 self._conn.execute(ddl)
+        result_cols = {
+            row["name"] for row in self._conn.execute("PRAGMA table_info(job_results)")
+        }
+        for name, ddl in (
+            ("duration_ms", "ALTER TABLE job_results ADD COLUMN duration_ms REAL"),
+            ("trace", "ALTER TABLE job_results ADD COLUMN trace TEXT"),
+        ):
+            if name not in result_cols:
+                self._conn.execute(ddl)
 
     def close(self) -> None:
         self._conn.close()
@@ -161,14 +172,18 @@ class Store:
         return job
 
     def add_result(self, job_id: int, target: str, ok: bool,
-                   payload: Any = None, error: str | None = None) -> None:
+                   payload: Any = None, error: str | None = None,
+                   duration_ms: float | None = None,
+                   trace: list[dict] | None = None) -> None:
         with self._lock:
             self._conn.execute(
-                "INSERT INTO job_results(job_id,target,ok,payload,error,created_at)"
-                " VALUES (?,?,?,?,?,?)",
+                "INSERT INTO job_results(job_id,target,ok,payload,error,duration_ms,trace,created_at)"
+                " VALUES (?,?,?,?,?,?,?,?)",
                 (job_id, target, 1 if ok else 0,
                  json.dumps(payload, ensure_ascii=False, default=str) if payload is not None else None,
-                 error, int(time.time())),
+                 error, duration_ms,
+                 json.dumps(trace, ensure_ascii=False, default=str) if trace is not None else None,
+                 int(time.time())),
             )
             self._conn.commit()
 
@@ -184,6 +199,13 @@ class Store:
                     item["payload"] = json.loads(item["payload"])
                 except Exception:
                     pass
+            if item.get("trace"):
+                try:
+                    item["trace"] = json.loads(item["trace"])
+                except Exception:
+                    item["trace"] = []
+            else:
+                item["trace"] = []
             out.append(item)
         return out
 

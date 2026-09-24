@@ -1,0 +1,15 @@
+# start.cmd 是 GBK 编码 + CRLF 换行，中文 Windows 的 cmd.exe 才能正确解析。
+# 用 -text 让 Git 原样存储、不做任何 EOL 转换 —— 无论是 git clone 还是从网页
+# 直接下载，拿到的都是可运行的 CRLF 版本（eol=crlf 会把仓库内版本规范化成 LF，
+# 网页下载就会拿到坏文件）。
+*.cmd -text
+*.bat -text
+
+# 其余按文本处理
+*.py   text
+*.js   text
+*.css  text
+*.html text
+*.json text
+*.txt  text
+*.md   text

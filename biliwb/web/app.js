@@ -150,6 +150,8 @@ const KINDS = [
 
 const KIND_MAP = Object.fromEntries(KINDS.map((k) => [k.kind, k]));
 let current = KINDS[0];
+let currentPayload = null;
+let currentMeta = null;
 
 /* ---------------------------------------------------------- 工具 */
 
@@ -162,6 +164,21 @@ function fmtTs(v) {
   const d = new Date(n * 1000);
   const p = (x) => String(x).padStart(2, '0');
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`;
+}
+
+function fmtCount(value) {
+  const n = Number(value);
+  if (!Number.isFinite(n)) return value == null ? '-' : String(value);
+  if (n >= 100000000) return `${(n / 100000000).toFixed(n >= 1000000000 ? 0 : 1)}亿`;
+  if (n >= 10000) return `${(n / 10000).toFixed(n >= 100000 ? 0 : 1)}万`;
+  return String(n);
+}
+
+function imageUrl(value) {
+  let url = String(value || '');
+  if (url.startsWith('//')) url = 'https:' + url;
+  if (url.startsWith('http://')) url = 'https://' + url.slice(7);
+  return url ? `/api/image?url=${encodeURIComponent(url)}` : '';
 }
 
 function cell(value, mode) {
@@ -178,6 +195,8 @@ function el(tag, attrs = {}, children = []) {
     if (k === 'class') node.className = v;
     else if (k === 'text') node.textContent = v;
     else if (k.startsWith('on')) node.addEventListener(k.slice(2), v);
+    else if (v === false || v == null) continue;
+    else if (v === true) node.setAttribute(k, '');
     else node.setAttribute(k, v);
   }
   for (const c of [].concat(children)) if (c) node.appendChild(c);
@@ -185,7 +204,9 @@ function el(tag, attrs = {}, children = []) {
 }
 
 async function api(path, options) {
-  const res = await fetch(path, options);
+  let res;
+  try { res = await fetch(path, options); }
+  catch (error) { return { ok: false, error: `网络请求失败：${error.message}`, meta: { duration_ms: 0, http_calls: 0, trace: [] } }; }
   let body;
   try { body = await res.json(); } catch (e) { body = { ok: false, error: `HTTP ${res.status}` }; }
   return body;
@@ -212,6 +233,8 @@ async function refreshStatus() {
   ACCOUNTS = d.accounts || [];
   $('version').textContent = `v${d.version} · ${d.workers.workers} workers`;
   $('version').title = `记录 ${d.store.records} · 任务 ${d.store.jobs} · midHash 字典 ${d.store.midhash_index}`;
+  $('account-count').textContent = String(d.account_count || 0);
+  $('health-dot').className = 'dot ' + (d.healthy_count ? 'on' : (d.account_count ? 'warn' : 'off'));
   $('session-text').textContent = d.account_count
     ? `账号 ${d.account_count} 个 · 会话健康 ${d.healthy_count} 个`
     : '还没有账号，点右上角「+ 添加账号」';
@@ -577,10 +600,17 @@ function renderNav() {
 }
 
 function renderForm() {
-  $('panel-title').textContent = current.label;
+  $('panel-title').textContent = current.label.replace(/^2\.\d\s*/, '');
   $('panel-hint').textContent = current.hint;
   $('target').placeholder = current.ph || '目标';
-  $('result').innerHTML = '';
+  currentPayload = null;
+  currentMeta = null;
+  $('result-status').textContent = '等待开始采集';
+  $('btn-export-current').classList.add('hidden');
+  $('btn-toggle-json').classList.add('hidden');
+  $('result').className = 'result empty-state';
+  $('result').innerHTML = '<div class="empty-graphic" aria-hidden="true"><span></span><span></span><span></span></div>'
+    + '<strong>采集结果将在这里呈现</strong><p>填写目标后开始采集</p>';
 
   const box = $('fields');
   box.innerHTML = '';
@@ -652,6 +682,73 @@ function renderTable(payload, tbl) {
   return wrap;
 }
 
+function pageWindow(page, total) {
+  const values = new Set([1, total]);
+  for (let i = Math.max(1, page - 2); i <= Math.min(total, page + 2); i += 1) values.add(i);
+  const sorted = [...values].filter((n) => n > 0).sort((a, b) => a - b);
+  const out = [];
+  sorted.forEach((n, i) => {
+    if (i && n - sorted[i - 1] > 1) out.push('gap-' + n);
+    out.push(n);
+  });
+  return out;
+}
+
+function runSearchPage(page) {
+  const pageInput = $('f_page');
+  const pagesInput = $('f_pages');
+  if (pageInput) pageInput.value = page;
+  if (pagesInput) pagesInput.value = 1;
+  runOnce();
+  document.getElementById('collector').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function renderSearchGrid(payload) {
+  const fragment = document.createDocumentFragment();
+  const grid = el('div', { class: 'video-grid' });
+  (payload.items || []).forEach((item) => {
+    const link = item.arcurl || (item.bvid ? `https://www.bilibili.com/video/${item.bvid}` : '#');
+    const cover = el('a', { class: 'video-cover', href: link, target: '_blank', rel: 'noopener' });
+    const img = el('img', { src: imageUrl(item.pic), alt: item.title || '视频封面', loading: 'lazy' });
+    img.addEventListener('error', () => { img.style.visibility = 'hidden'; });
+    cover.appendChild(img);
+    if (item.duration) cover.appendChild(el('span', { class: 'duration-chip', text: item.duration }));
+    const title = el('h3', { class: 'video-title' }, [
+      el('a', { href: link, target: '_blank', rel: 'noopener', text: item.title || item.bvid || '未命名视频' }),
+    ]);
+    const meta = el('div', { class: 'video-meta' }, [
+      el('span', { text: `播放 ${fmtCount(item.play)}` }),
+      el('span', { text: `弹幕 ${fmtCount(item.danmaku)}` }),
+    ]);
+    const author = el('div', { class: 'video-author' }, [
+      el('span', { text: item.author || '未知 UP 主' }),
+      el('span', { text: item.pubdate ? fmtTs(item.pubdate).slice(0, 10) : '' }),
+    ]);
+    grid.appendChild(el('article', { class: 'video-card' }, [cover, title, meta, author]));
+  });
+  fragment.appendChild(grid);
+
+  const page = Number(payload.page_start || 1);
+  const total = Math.max(1, Number(payload.total_pages || payload.page_end || 1));
+  if (total > 1) {
+    const pager = el('nav', { class: 'pagination', 'aria-label': '搜索结果分页' });
+    pager.appendChild(el('button', { class: 'page-btn', text: '上一页', disabled: page <= 1,
+      onclick: () => runSearchPage(page - 1) }));
+    pageWindow(page, total).forEach((value) => {
+      if (typeof value === 'string') pager.appendChild(el('span', { class: 'page-gap', text: '...' }));
+      else pager.appendChild(el('button', {
+        class: 'page-btn' + (value === page ? ' active' : ''),
+        text: String(value), 'aria-current': value === page ? 'page' : 'false',
+        onclick: () => runSearchPage(value),
+      }));
+    });
+    pager.appendChild(el('button', { class: 'page-btn', text: '下一页', disabled: page >= total,
+      onclick: () => runSearchPage(page + 1) }));
+    fragment.appendChild(pager);
+  }
+  return fragment;
+}
+
 function renderVerdict(payload) {
   const v = payload.ad_verdict;
   if (!v) return null;
@@ -671,11 +768,13 @@ function renderVerdict(payload) {
 
 function renderResult(payload, spec) {
   const box = $('result');
+  box.className = 'result';
   box.innerHTML = '';
   const verdict = spec.verdict ? renderVerdict(payload) : null;
   if (verdict) box.appendChild(verdict);
   box.appendChild(renderSummary(payload, spec.summary));
-  if (spec.table) box.appendChild(renderTable(payload, spec.table));
+  if (spec.kind === 'search') box.appendChild(renderSearchGrid(payload));
+  else if (spec.table) box.appendChild(renderTable(payload, spec.table));
   (spec.sub || []).forEach((s) => {
     const rows = get(payload, s.path) || [];
     box.appendChild(el('h3', { text: `${s.title}（${rows.length}）` }));
@@ -686,7 +785,7 @@ function renderResult(payload, spec) {
 
   let pretty = '';
   try { pretty = JSON.stringify(payload, null, 2); } catch (e) { pretty = String(payload); }
-  const det = el('details', {}, [
+  const det = el('details', { class: 'raw-json hidden' }, [
     el('summary', { text: `原始 JSON（${pretty.length} 字符）` }),
     el('pre', { class: 'json', text: pretty.length > 400000 ? pretty.slice(0, 400000) + '\n…(已截断)' : pretty }),
   ]);
@@ -695,8 +794,73 @@ function renderResult(payload, spec) {
 
 function renderError(body) {
   const box = $('result');
+  box.className = 'result';
   box.innerHTML = '';
   box.appendChild(el('div', { class: 'error', text: '失败：' + (body.error || '未知错误') + (body.code != null ? `（code ${body.code}）` : '') }));
+}
+
+function renderTrace(meta, ok) {
+  const data = meta || { duration_ms: 0, http_calls: 0, trace: [] };
+  const trace = data.trace || [];
+  $('trace-summary').innerHTML = '';
+  [
+    [`${Number(data.duration_ms || 0).toFixed(0)}ms`, '总耗时'],
+    [String(data.http_calls ?? trace.length), '请求数'],
+    [ok ? '成功' : '失败', '状态'],
+  ].forEach(([value, label]) => $('trace-summary').appendChild(
+    el('div', {}, [el('strong', { text: value }), el('span', { text: label })])));
+
+  const list = $('trace-list');
+  list.innerHTML = '';
+  if (!trace.length) {
+    list.appendChild(el('div', { class: 'trace-empty', text: '本次调用没有产生外部 HTTP 请求。' }));
+    return;
+  }
+  trace.forEach((item) => {
+    const state = item.ok ? 'ok' : 'fail';
+    list.appendChild(el('div', { class: `trace-row ${state}` }, [
+      el('span', { class: 'trace-seq', text: String(item.sequence) }),
+      el('div', { class: 'trace-main' }, [
+        el('strong', { text: `${item.method} ${item.endpoint}`, title: `${item.host}${item.endpoint}` }),
+        el('span', { text: `HTTP ${item.status ?? '-'}${item.business_code != null ? ` · code ${item.business_code}` : ''}${item.soft_risk ? ' · 软风控' : ''} · 网络 ${Number(item.request_ms || 0).toFixed(0)}ms · 等待 ${Number(item.wait_ms || 0).toFixed(0)}ms` }),
+      ]),
+      el('span', { class: 'trace-time', text: `${Number(item.duration_ms || 0).toFixed(0)}ms` }),
+    ]));
+  });
+}
+
+function flattenCsv(value, prefix = '', out = {}) {
+  if (value && typeof value === 'object' && !Array.isArray(value)) {
+    Object.entries(value).forEach(([key, item]) => flattenCsv(item, prefix ? `${prefix}.${key}` : key, out));
+  } else if (Array.isArray(value)) {
+    out[prefix || 'value'] = JSON.stringify(value);
+  } else {
+    out[prefix || 'value'] = value ?? '';
+  }
+  return out;
+}
+
+function csvCell(value) {
+  let text = String(value ?? '');
+  if (/^[=+\-@]/.test(text)) text = "'" + text;
+  return `"${text.replaceAll('"', '""')}"`;
+}
+
+function exportCurrentCsv() {
+  if (!currentPayload) return;
+  const source = Array.isArray(currentPayload.items) ? currentPayload.items : [currentPayload];
+  const rows = source.map((item) => flattenCsv(item));
+  const fields = [];
+  rows.forEach((row) => Object.keys(row).forEach((key) => { if (!fields.includes(key)) fields.push(key); }));
+  const csv = '\ufeff' + [fields.map(csvCell).join(','),
+    ...rows.map((row) => fields.map((key) => csvCell(row[key])).join(','))].join('\r\n');
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.download = `biliwb-${current.kind}-${new Date().toISOString().slice(0, 19).replaceAll(':', '-')}.csv`;
+  anchor.click();
+  URL.revokeObjectURL(url);
 }
 
 /* ---------------------------------------------------------- 运行 */
@@ -706,14 +870,32 @@ async function runOnce() {
   if (!target) { alert('请填写目标'); return; }
   const accountId = $('job-account').value;
   const btn = $('btn-run');
-  btn.disabled = true; btn.textContent = '运行中…';
+  btn.disabled = true; btn.textContent = '采集中...';
+  $('result').className = 'result empty-state loading-state';
+  $('result').innerHTML = '<div class="empty-graphic" aria-hidden="true"><span></span><span></span><span></span></div>'
+    + '<strong>正在采集数据</strong><p>接口响应会同步显示在右侧调用链</p>';
+  $('result-status').textContent = '正在请求接口';
+  $('btn-export-current').classList.add('hidden');
+  $('btn-toggle-json').classList.add('hidden');
+  $('trace-list').innerHTML = '<div class="trace-empty">正在等待接口响应...</div>';
   const body = await post('/api/call', {
     kind: current.kind, target, options: collectOptions(),
     account_id: accountId ? Number(accountId) : null,
   });
-  btn.disabled = false; btn.textContent = '运行一次';
-  if (!body.ok) { renderError(body); return; }
+  btn.disabled = false; btn.textContent = '开始采集';
+  renderTrace(body.meta, !!body.ok);
+  currentMeta = body.meta || null;
+  if (!body.ok) {
+    currentPayload = null;
+    $('result-status').textContent = `采集失败 · ${Number(body.meta?.duration_ms || 0).toFixed(0)}ms`;
+    renderError(body);
+    return;
+  }
+  currentPayload = body.data;
   renderResult(body.data, current);
+  $('result-status').textContent = `已完成 · ${body.data.count ?? (body.data.items?.length ?? 1)} 条数据 · ${Number(body.meta?.duration_ms || 0).toFixed(0)}ms`;
+  $('btn-export-current').classList.remove('hidden');
+  $('btn-toggle-json').classList.remove('hidden');
   refreshStatus();
 }
 
@@ -764,7 +946,14 @@ async function showJob(id) {
   const j = body.data;
   const box = $('job-detail');
   box.innerHTML = '';
-  box.appendChild(el('h3', { text: `任务 #${j.id} · ${(KIND_MAP[j.kind] || {}).label || j.kind}` }));
+  const exportLink = el('a', {
+    class: 'btn', href: `/api/jobs/${j.id}/export.csv`,
+    download: `biliwb-job-${j.id}.csv`, text: '导出任务 CSV',
+  });
+  box.appendChild(el('div', { class: 'job-detail-head' }, [
+    el('h3', { text: `任务 #${j.id} · ${(KIND_MAP[j.kind] || {}).label || j.kind}` }),
+    exportLink,
+  ]));
   box.appendChild(el('p', { class: 'hint', text:
     `状态 ${j.status} · 成功 ${j.done} · 失败 ${j.failed}`
     + (j.account_alias ? ` · 账号 ${j.account_alias}` : '')
@@ -773,7 +962,8 @@ async function showJob(id) {
   const wrap = el('div', { class: 'scroll' });
   const table = el('table');
   table.appendChild(el('thead', {}, [el('tr', {}, [
-    el('th', { text: '目标' }), el('th', { text: '结果' }), el('th', { text: '详情' }),
+    el('th', { text: '目标' }), el('th', { text: '结果' }), el('th', { text: '用时' }),
+    el('th', { text: '接口数' }), el('th', { text: '详情与调用链' }),
   ])]));
   const tbody = el('tbody');
   (j.results || []).forEach((r) => {
@@ -785,10 +975,22 @@ async function showJob(id) {
             `${k}=${typeof v === 'object' ? '…' : String(v).slice(0, 40)}`).join(' · ')
         : t;
     }
+    const trace = Array.isArray(r.trace) ? r.trace : [];
+    const details = el('div', { text: String(detail).slice(0, 300) });
+    if (trace.length) {
+      const traceDetails = el('details', { class: 'job-trace' });
+      traceDetails.appendChild(el('summary', { text: `查看 ${trace.length} 条接口调用` }));
+      trace.forEach((item) => traceDetails.appendChild(el('div', {
+        text: `${item.sequence}. ${item.method} ${item.endpoint} · HTTP ${item.status ?? '-'}${item.business_code != null ? ` · code ${item.business_code}` : ''} · ${Number(item.duration_ms || 0).toFixed(0)}ms`,
+      })));
+      details.appendChild(traceDetails);
+    }
     const tr = el('tr', {}, [
       el('td', { text: r.target }),
       el('td', { text: r.ok ? '成功' : '失败' }),
-      el('td', { text: String(detail).slice(0, 300) }),
+      el('td', { text: r.duration_ms == null ? '-' : `${Number(r.duration_ms).toFixed(0)}ms` }),
+      el('td', { text: String(trace.length) }),
+      el('td', {}, [details]),
     ]);
     tbody.appendChild(tr);
   });
@@ -800,10 +1002,12 @@ async function showJob(id) {
 /* ---------------------------------------------------------- 启动 */
 
 $('btn-qr-close').onclick = closeQr;
+$('btn-qr-x').onclick = closeQr;
 $('btn-risk-send').onclick = riskSend;
 $('btn-risk-resend').onclick = riskSend;
 $('btn-risk-submit').onclick = riskSubmit;
 $('btn-risk-close').onclick = closeRiskModal;
+$('btn-risk-x').onclick = closeRiskModal;
 $('risk-code').addEventListener('keydown', (e) => {
   if (e.key === 'Enter') { e.preventDefault(); riskSubmit(); }
 });
@@ -811,11 +1015,23 @@ $('btn-verify-all').onclick = verifyAll;
 $('btn-add-account').onclick = openAccountModal;
 $('btn-apply-workers').onclick = applyWorkers;
 $('btn-acc-cancel').onclick = () => $('account-modal').classList.add('hidden');
+$('btn-acc-x').onclick = () => $('account-modal').classList.add('hidden');
 $('btn-acc-create').onclick = createAccount;
 $('acc-method').onchange = renderAccFields;
 $('btn-run').onclick = runOnce;
 $('btn-batch').onclick = addBatch;
 $('btn-refresh-jobs').onclick = refreshJobs;
+$('btn-export-current').onclick = exportCurrentCsv;
+$('btn-toggle-json').onclick = () => {
+  const raw = document.querySelector('.raw-json');
+  if (!raw) return;
+  raw.classList.toggle('hidden');
+  $('btn-toggle-json').textContent = raw.classList.contains('hidden') ? '查看 JSON' : '隐藏 JSON';
+  if (!raw.classList.contains('hidden')) raw.open = true;
+};
+$('target').addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') { event.preventDefault(); runOnce(); }
+});
 
 renderNav();
 renderForm();

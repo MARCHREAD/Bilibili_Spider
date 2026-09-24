@@ -9,13 +9,19 @@
 
 from __future__ import annotations
 
+import csv
+import io
+import json
 import sys
+import time
 import traceback
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlsplit
 
+from curl_cffi import requests as cffi
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse, Response
 
 from . import __version__
 from . import constants as C
@@ -31,6 +37,63 @@ WEB = ROOT / "web"
 OUR_BUGS = (ImportError, NameError, AttributeError, TypeError)
 DEFAULT_WORKERS = 3
 MAX_WORKERS = 32
+
+
+def _flatten_csv(value: Any, prefix: str = "", out: dict | None = None) -> dict:
+    out = out if out is not None else {}
+    if isinstance(value, dict):
+        for key, item in value.items():
+            path = f"{prefix}.{key}" if prefix else str(key)
+            _flatten_csv(item, path, out)
+    elif isinstance(value, list):
+        out[prefix or "value"] = json.dumps(value, ensure_ascii=False, default=str)
+    else:
+        out[prefix or "value"] = value
+    return out
+
+
+def _csv_safe(value: Any) -> Any:
+    if value is None:
+        return ""
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    text = str(value)
+    if text.startswith(("=", "+", "-", "@")):
+        return "'" + text
+    return text
+
+
+def _results_csv(results: list[dict]) -> str:
+    rows: list[dict] = []
+    fields: list[str] = ["target", "ok", "error", "duration_ms"]
+    for result in results:
+        payload = result.get("payload")
+        items = payload.get("items") if isinstance(payload, dict) else None
+        values = items if isinstance(items, list) else [payload]
+        if not values:
+            values = [None]
+        for value in values:
+            row = {
+                "target": result.get("target"),
+                "ok": bool(result.get("ok")),
+                "error": result.get("error"),
+                "duration_ms": result.get("duration_ms"),
+            }
+            if isinstance(value, dict):
+                _flatten_csv(value, out=row)
+            elif value is not None:
+                row["value"] = value
+            for key in row:
+                if key not in fields:
+                    fields.append(key)
+            rows.append(row)
+
+    stream = io.StringIO(newline="")
+    writer = csv.DictWriter(stream, fieldnames=fields, extrasaction="ignore")
+    writer.writeheader()
+    for row in rows:
+        writer.writerow({key: _csv_safe(row.get(key)) for key in fields})
+    return "\ufeff" + stream.getvalue()
 
 
 def create_app(data_dir: str | Path = "data", workers: int = DEFAULT_WORKERS) -> FastAPI:
@@ -57,25 +120,41 @@ def create_app(data_dir: str | Path = "data", workers: int = DEFAULT_WORKERS) ->
 
     # ------------------------------------------------------------ 工具
 
-    def guard(fn):
+    def guard(fn, trace_client: BiliClient | None = None):
         """统一错误出口：我方 bug 响亮报警，外部错误结构化返回。"""
+        started = time.perf_counter()
+        trace: list[dict] | None = None
+        if trace_client is not None:
+            trace_client.begin_trace()
+
+        def meta() -> dict:
+            nonlocal trace
+            if trace is None:
+                trace = trace_client.end_trace() if trace_client is not None else []
+            return {
+                "duration_ms": round((time.perf_counter() - started) * 1000, 1),
+                "http_calls": len(trace),
+                "trace": trace,
+            }
+
         try:
-            return {"ok": True, "data": fn()}
+            return {"ok": True, "data": fn(), "meta": meta()}
         except HTTPException:
             raise
         except OUR_BUGS as exc:
             print(f"!!! 我方代码缺陷: {type(exc).__name__}: {exc}", file=sys.stderr)
             traceback.print_exc()
             return JSONResponse({"ok": False, "error": f"我方代码缺陷: {exc}",
-                                 "kind": "internal"}, status_code=500)
+                                 "kind": "internal", "meta": meta()}, status_code=500)
         except BiliError as exc:
             print(f"[api] {type(exc).__name__}: {exc}", file=sys.stderr)
             return JSONResponse({"ok": False, "error": str(exc),
-                                 "code": exc.code, "kind": type(exc).__name__})
+                                 "code": exc.code, "kind": type(exc).__name__,
+                                 "meta": meta()})
         except Exception as exc:  # noqa: BLE001
             print(f"[api] {type(exc).__name__}: {exc}", file=sys.stderr)
             return JSONResponse({"ok": False, "error": f"{type(exc).__name__}: {exc}",
-                                 "kind": "external"})
+                                 "kind": "external", "meta": meta()})
 
     def account_or_400(account_id: int | None) -> int:
         aid = account_id if account_id else pool.pick()
@@ -98,6 +177,34 @@ def create_app(data_dir: str | Path = "data", workers: int = DEFAULT_WORKERS) ->
     @app.get("/style.css")
     def style_css() -> FileResponse:
         return FileResponse(WEB / "style.css", media_type="text/css")
+
+    @app.get("/api/image")
+    def image_proxy(url: str) -> Response:
+        """为搜索卡片转发 B 站图片，补齐 Referer 并限制可访问域名。"""
+        parsed = urlsplit(url)
+        host = (parsed.hostname or "").lower()
+        allowed = host == "bilibili.com" or host.endswith((".bilibili.com", ".hdslb.com"))
+        if parsed.scheme != "https" or not allowed:
+            raise HTTPException(400, "仅支持 bilibili/hdslb 的 HTTPS 图片")
+        try:
+            response = cffi.get(
+                url,
+                headers={"Referer": C.WWW + "/"},
+                impersonate=C.IMPERSONATE,
+                timeout=15,
+            )
+        except Exception as exc:  # noqa: BLE001
+            raise HTTPException(502, f"图片请求失败: {type(exc).__name__}") from exc
+        if response.status_code != 200:
+            raise HTTPException(502, f"图片上游返回 HTTP {response.status_code}")
+        content_type = response.headers.get("content-type", "image/jpeg").split(";")[0]
+        if not content_type.startswith("image/"):
+            raise HTTPException(502, "图片上游返回了非图片内容")
+        return Response(
+            content=response.content,
+            media_type=content_type,
+            headers={"Cache-Control": "public, max-age=3600"},
+        )
 
     # ------------------------------------------------------------ 总览
 
@@ -226,8 +333,14 @@ def create_app(data_dir: str | Path = "data", workers: int = DEFAULT_WORKERS) ->
             raise HTTPException(400, "target 不能为空")
         options = payload.get("options") or {}
         account_id = account_or_400(payload.get("account_id"))
+        client = pool.client(account_id)
         api = pool.api(account_id)
-        return guard(lambda: KINDS[kind](api, target, options))
+
+        def run():
+            with pool.lock(account_id):
+                return KINDS[kind](api, target, options)
+
+        return guard(run, trace_client=client)
 
     @app.post("/api/jobs")
     def create_job(payload: dict) -> Any:
@@ -261,6 +374,19 @@ def create_app(data_dir: str | Path = "data", workers: int = DEFAULT_WORKERS) ->
             acc = store.get_account(job["account_id"]) or {}
             job["account_alias"] = acc.get("alias")
         return {"ok": True, "data": job}
+
+    @app.get("/api/jobs/{job_id}/export.csv")
+    def job_export_csv(job_id: int) -> Response:
+        job = store.get_job(job_id)
+        if not job:
+            raise HTTPException(404, "任务不存在")
+        content = _results_csv(store.list_results(job_id, limit=100000))
+        filename = f"biliwb-job-{job_id}-{job['kind']}.csv"
+        return Response(
+            content=content,
+            media_type="text/csv; charset=utf-8",
+            headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+        )
 
     @app.post("/api/jobs/{job_id}/cancel")
     def cancel_job(job_id: int) -> Any:

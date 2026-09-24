@@ -294,18 +294,28 @@ class JobRunner:
                 return
             if target in done_set:
                 continue
+            trace: list[dict] = []
+            started = time.perf_counter()
             try:
                 with acct_lock:      # 同账号串行，避免风控
-                    payload = fn(api, target, options)
-                self.store.add_result(job_id, target, True, payload)
+                    api.client.begin_trace()
+                    try:
+                        payload = fn(api, target, options)
+                    finally:
+                        trace = api.client.end_trace()
+                duration_ms = round((time.perf_counter() - started) * 1000, 1)
+                self.store.add_result(job_id, target, True, payload,
+                                      duration_ms=duration_ms, trace=trace)
                 self.store.save_record(job["kind"], target, payload)
                 finished += 1
             except Exception as exc:  # noqa: BLE001
+                duration_ms = round((time.perf_counter() - started) * 1000, 1)
                 failed += 1
                 detail = f"{type(exc).__name__}: {exc}"
                 print(f"[job {job_id}][{alias}] {job['kind']} {target} 失败: {detail}",
                       file=__import__("sys").stderr)
-                self.store.add_result(job_id, target, False, None, detail)
+                self.store.add_result(job_id, target, False, None, detail,
+                                      duration_ms=duration_ms, trace=trace)
             self.store.update_job(job_id, done=finished, failed=failed)
 
         self.store.update_job(job_id, status="finished", done=finished,
@@ -340,18 +350,28 @@ class JobRunner:
                     with counter_lock:
                         counters["done"] += 1
                     continue
+                trace: list[dict] = []
+                started = time.perf_counter()
                 try:
                     with acct_lock:
-                        payload = fn(api, target, options)
-                    self.store.add_result(job_id, target, True, payload)
+                        api.client.begin_trace()
+                        try:
+                            payload = fn(api, target, options)
+                        finally:
+                            trace = api.client.end_trace()
+                    duration_ms = round((time.perf_counter() - started) * 1000, 1)
+                    self.store.add_result(job_id, target, True, payload,
+                                          duration_ms=duration_ms, trace=trace)
                     self.store.save_record(job["kind"], target, payload)
                     with counter_lock:
                         counters["done"] += 1
                 except Exception as exc:  # noqa: BLE001
+                    duration_ms = round((time.perf_counter() - started) * 1000, 1)
                     detail = f"{type(exc).__name__}: {exc}"
                     print(f"[job {job_id}][{alias}] {job['kind']} {target} 失败: {detail}",
                           file=__import__("sys").stderr)
-                    self.store.add_result(job_id, target, False, None, detail)
+                    self.store.add_result(job_id, target, False, None, detail,
+                                          duration_ms=duration_ms, trace=trace)
                     with counter_lock:
                         counters["failed"] += 1
                 with counter_lock:
